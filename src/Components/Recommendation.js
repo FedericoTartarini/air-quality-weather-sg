@@ -4,7 +4,7 @@ import { HealthAdvisory } from "../Functions/Utils";
 
 function Recommendation(props) {
   return (
-    <div className="container mx-auto flex-col p-8 items-center justify-center rounded overflow-hidden shadow-lg">
+    <div className="container mx-auto flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
       <div className="px-6 py-4 text-gray-800">
         <div className="font-bold text-md mb-2">
           The 24-h Pollutant Standards Index (PSI) is "Good". It is advised

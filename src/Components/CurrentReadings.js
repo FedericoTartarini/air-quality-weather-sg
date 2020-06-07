@@ -4,7 +4,7 @@ import sunny from "../Static/Icons/sunny.png";
 
 function CurrentReadings({ data }) {
   return (
-    <div className="container mx-auto my-3 flex px-5 items-center justify-center shadow-lg">
+    <div className="container mx-auto my-3 flex px-5 items-center justify-center shadow-lg border rounded">
       <section className="text-gray-700 body-font flex-grow">
         <div className="container px-5 py-5 mx-auto">
           <div className="text-center mb-5">
@@ -25,7 +25,11 @@ function CurrentReadings({ data }) {
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
             </div>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Air temperature: 30°C; Relative humidity: 80%
+              Temperature: 30°C
+              {/* todo change based on user's location */}
+            </p>
+            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+              Relative humidity: 80%
               {/* todo change based on user's location */}
             </p>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
