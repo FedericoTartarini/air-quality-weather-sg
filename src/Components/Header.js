@@ -17,7 +17,7 @@ function Header() {
           <a className="mr-5 hover:text-gray-900">Current Observation</a>
           <a className="mr-5 hover:text-gray-900">2-h Forecast</a>
         </nav>
-        <FontAwesomeIcon icon={faBars} />
+        {/*<FontAwesomeIcon icon={faBars} />*/}
       </div>
     </header>
   );

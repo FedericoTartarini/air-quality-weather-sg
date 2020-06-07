@@ -24,21 +24,25 @@ function MajorPollutants({ data }) {
 
     content = (
       <div className="p-4 w-1/2 md:mb-0 mb-6 flex flex-col text-center items-center">
-        <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-gray-100 text-indigo-500 mb-5 flex-shrink-0">
+        <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-3 flex-shrink-0">
           {/* todo change the icon and color as a function of the description*/}
-          <FontAwesomeIcon icon={faGrinWink} size={"3x"} />
+          <FontAwesomeIcon
+            icon={faGrinWink}
+            size={"3x"}
+            color={"rgb(14,156,16)"}
+          />
         </div>
         <div className="flex-grow">
-          <h2 className="text-gray-900 text-lg title-font font-medium mb-3">
+          <h2 className="text-lg title-font font-medium mb-3">
             {/* todo change the text as a function of props*/}
             24-h PSI: 55
           </h2>
           <p className="leading-relaxed text-base">Moderate</p>
-          <a className="mt-3 text-indigo-500 inline-flex items-center text-sm">
+          <a className="mt-3 mr-2 inline-flex items-center text-sm">
             {/* todo add space between learn more and icon*/}
             Learn More
-            <FontAwesomeIcon icon={faQuestionCircle} />
           </a>
+          <FontAwesomeIcon icon={faQuestionCircle} />
         </div>
       </div>
     );

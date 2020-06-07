@@ -2,6 +2,7 @@ import React from "react";
 import TopImage from "../Components/TopImage";
 import MajorPollutants from "../Components/MajorPollutants";
 import CurrentReadings from "../Components/CurrentReadings";
+import Recommendation from "../Components/Recommendation";
 
 function CurrentReadingsView({ data }) {
   return (
@@ -9,8 +10,11 @@ function CurrentReadingsView({ data }) {
       <div className="flex">
         <TopImage />
       </div>
-      <div className="flex">
+      <div>
         <CurrentReadings data={data} />
+      </div>
+      <div>
+        <Recommendation />
       </div>
     </React.Fragment>
   );
