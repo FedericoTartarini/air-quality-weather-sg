@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Components/Header";
+import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
 import CurrentReadingsView from "./Views/CurrentReadingsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className="relative pb-10 min-h-screen">
-      <Header />
+      <NavigationBar />
       <div className="py-5">
         <CurrentReadingsView data={psiData} />
       </div>
