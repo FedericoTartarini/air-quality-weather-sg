@@ -27,7 +27,9 @@ function App() {
       <div className="py-5">
         <CurrentReadingsView data={psiData} />
       </div>
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
