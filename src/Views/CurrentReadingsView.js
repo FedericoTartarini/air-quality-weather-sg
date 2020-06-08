@@ -6,7 +6,7 @@ import Recommendation from "../Components/Recommendation";
 
 function CurrentReadingsView({ data }) {
   return (
-    <React.Fragment>
+    <div className="py-3">
       <div className="flex">
         <TopImage />
       </div>
@@ -16,7 +16,7 @@ function CurrentReadingsView({ data }) {
       <div>
         <Recommendation />
       </div>
-    </React.Fragment>
+    </div>
   );
 }
 

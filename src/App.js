@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
 import CurrentReadingsView from "./Views/CurrentReadingsView";
+import ChartsView from "./Views/ChartsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   let currentDate = new Date();
@@ -22,15 +24,22 @@ function App() {
   const psiData = useHttpRequest(url);
 
   return (
-    <div className="relative pb-10 min-h-screen">
-      <NavigationBar />
-      <div className="py-5">
-        <CurrentReadingsView data={psiData} />
+    <Router>
+      <div className="relative pb-10 min-h-screen">
+        <NavigationBar />
+        <Switch>
+          <Route exact path="/">
+            <CurrentReadingsView data={psiData} />
+          </Route>
+          <Route path="/charts">
+            <ChartsView></ChartsView>
+          </Route>
+        </Switch>
+        <div>
+          <Footer />
+        </div>
       </div>
-      <div>
-        <Footer />
-      </div>
-    </div>
+    </Router>
   );
 }
 

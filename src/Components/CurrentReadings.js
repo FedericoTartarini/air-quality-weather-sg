@@ -7,7 +7,7 @@ function CurrentReadings({ data }) {
     <div className="container mx-auto my-3 flex px-5 items-center justify-center shadow-lg border rounded">
       <section className="text-gray-700 body-font flex-grow">
         <div className="container px-5 py-5 mx-auto">
-          <div className="text-center mb-5">
+          <div className="text-center my-5">
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Closest station: Novena
               {/* todo change based on user's location */}
@@ -20,7 +20,7 @@ function CurrentReadings({ data }) {
             <MajorPollutants data={data} />
             <MajorPollutants data={data} />
           </div>
-          <div className="text-center mb-5">
+          <div className="text-center my-5">
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
             </div>
