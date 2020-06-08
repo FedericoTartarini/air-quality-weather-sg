@@ -30,19 +30,19 @@ function NavigationBar() {
         <div className="w-full block flex-end lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
             <Link to="/charts">
-              <a className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600 mr-4">
+              <span className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600 mr-4">
                 Charts
-              </a>
+              </span>
             </Link>
-            <Link>
-              <a className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
+            <Link to="/charts">
+              <span className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
                 2-h Forecast
-              </a>
+              </span>
             </Link>
-            <Link>
-              <a className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600">
+            <Link to="/charts">
+              <span className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600">
                 Map Pollutants
-              </a>
+              </span>
             </Link>
           </div>
         </div>

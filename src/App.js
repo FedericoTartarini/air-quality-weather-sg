@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
 import CurrentReadingsView from "./Views/CurrentReadingsView";
@@ -32,7 +32,7 @@ function App() {
             <CurrentReadingsView data={psiData} />
           </Route>
           <Route path="/charts">
-            <ChartsView></ChartsView>
+            <ChartsView data={psiData} />
           </Route>
         </Switch>
         <div>

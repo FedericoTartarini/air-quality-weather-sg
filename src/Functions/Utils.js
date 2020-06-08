@@ -49,3 +49,27 @@ export function HealthAdvisory(airQualityDescription) {
       };
   }
 }
+
+export function MapNamePollutants(pollutant, abbreviated) {
+  abbreviated = typeof abbreviated !== "undefined" ? abbreviated : true;
+  switch (pollutant) {
+    case "psi_twenty_four_hourly":
+      return abbreviated ? "24-h PSI" : "24-h Pollution Standard Index (PSI)";
+    case "o3_sub_index":
+      return "O3 sub-index*";
+    case "pm25_sub_index":
+      return "PM2.5 sub-index**";
+    case "pm10_sub_index":
+      return "PM10 sub-index*";
+    case "co_sub_index":
+      return abbreviated ? "CO" : "CO sub-index**";
+    case "so2_sub_index":
+      return abbreviated ? "SO2" : "SO2 sub-index***";
+    case "no2_one_hour_max":
+      return abbreviated ? "NO2" : "NO2 1-h max (µg/m3)";
+    case "pm25_one_hourly":
+      return abbreviated ? "1-h PM2.5" : "NO2 1-h max (µg/m3)";
+    default:
+      return "Not mapped";
+  }
+}
