@@ -1,5 +1,6 @@
 import React from "react";
 import LineChart from "../Components/LineChart";
+import TableIndicesCategories from "../Components/TableIndicesCategories";
 
 function ChartsView({ data }) {
   // todo update station name based on user's location
@@ -19,6 +20,7 @@ function ChartsView({ data }) {
         pollutants={["o3_sub_index", "co_sub_index", "so2_sub_index"]}
         stationName={stationName}
       />
+      <TableIndicesCategories />
     </div>
   );
 }
