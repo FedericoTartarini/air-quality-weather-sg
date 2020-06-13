@@ -5,6 +5,8 @@ import CurrentReadingsView from "./Views/CurrentReadingsView";
 import ChartsView from "./Views/ChartsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useGetLocation } from "./Hooks/GetLocation";
+import { useGetClosestStation } from "./Hooks/GetClosestStation";
 
 function App() {
   let currentDate = new Date();
@@ -22,6 +24,10 @@ function App() {
   const url = "https://api.data.gov.sg/v1/environment/psi?date=" + todayDate;
 
   const psiData = useHttpRequest(url);
+
+  const location = useGetLocation(url);
+
+  const psiStation = useGetClosestStation(psiData, location);
 
   return (
     <Router>

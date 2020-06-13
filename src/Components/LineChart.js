@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import Loader from "./Loader";
 import { MapNamePollutants } from "../Functions/Utils";
 
-function LineChart({ data, pollutants, stationName }) {
+function LineChart({ data, pollutants, stationName, footNote }) {
   let dataChart = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -71,6 +71,22 @@ function LineChart({ data, pollutants, stationName }) {
         pointHitRadius: 10,
         data: [65, 59, 80, 81, 56, 55, 40],
       },
+      {
+        label: "",
+        fill: true,
+        lineTension: 0.1,
+        backgroundColor: "rgba(17,167,7,0.18)",
+        borderCapStyle: "butt",
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: "miter",
+        pointBorderWidth: 0,
+        pointHoverRadius: 0,
+        pointHoverBorderWidth: 0,
+        pointRadius: 0,
+        pointHitRadius: 0,
+        data: [50, 50],
+      },
     ],
   };
 
@@ -94,8 +110,9 @@ function LineChart({ data, pollutants, stationName }) {
         (value) => value.readings[pollutant][stationName]
       );
       dataChart.datasets[ix].label = MapNamePollutants(pollutant, false);
-      return null;
     });
+
+    dataChart.datasets[3].data = data.data.items.map((value) => 50);
 
     content = (
       <div className="container mx-auto my-3 p-4 shadow-lg border rounded">
@@ -132,6 +149,9 @@ function LineChart({ data, pollutants, stationName }) {
               },
             }}
           />
+          {footNote.map((prop) => (
+            <p className="text-xs text-center text-gray-800">{prop}</p>
+          ))}
         </div>
       </div>
     );
