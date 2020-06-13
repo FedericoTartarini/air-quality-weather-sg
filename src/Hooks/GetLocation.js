@@ -8,19 +8,26 @@ export function useGetLocation(props) {
   });
 
   function getCoordinates(position) {
-    setLocation(position.coords);
-    console.log(position);
+    setLocation({
+      loading: false,
+      data: position.coords,
+      error: false,
+    });
   }
 
   function showError(error) {
     setLocation({
-      accuracy: 2678,
-      altitude: null,
-      altitudeAccuracy: null,
-      heading: null,
-      latitude: 1.3271039999999998,
-      longitude: 103.841792,
-      speed: null,
+      loading: false,
+      data: {
+        accuracy: 2678,
+        altitude: null,
+        altitudeAccuracy: null,
+        heading: null,
+        latitude: 1.3271039999999998,
+        longitude: 103.841792,
+        speed: null,
+      },
+      error: false,
     });
 
     switch (error.code) {
