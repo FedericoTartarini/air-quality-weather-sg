@@ -1,6 +1,7 @@
 import React from "react";
 import Loader from "./Loader";
 import {
+  ClosestStation,
   GetHelpURL,
   GetLatestReading,
   MapNamePollutants,
@@ -9,7 +10,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
-function MajorPollutants({ dataPSI, psiStation, pollutant }) {
+function MajorPollutants({ dataPSI, locationUser, pollutant }) {
   let content = null;
 
   if (dataPSI.error) {
@@ -20,24 +21,26 @@ function MajorPollutants({ dataPSI, psiStation, pollutant }) {
     content = <Loader />;
   }
 
-  if (psiStation.data && dataPSI.data) {
-    const lastReading = GetLatestReading(psiStation.data, dataPSI.data);
+  if (locationUser.data && dataPSI.data) {
+    const stationName = ClosestStation(dataPSI.data, locationUser.data).name;
+
+    const latestReading = GetLatestReading(stationName, dataPSI.data);
 
     content = (
       <div className="p-4 w-1/2 md:mb-0 mb-6 flex flex-col text-center items-center">
         <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-3 flex-shrink-0">
           <FontAwesomeIcon
-            icon={PollutantClass(lastReading[pollutant], pollutant).icon}
+            icon={PollutantClass(latestReading[pollutant], pollutant).icon}
             size={"3x"}
-            color={PollutantClass(lastReading[pollutant], pollutant).color}
+            color={PollutantClass(latestReading[pollutant], pollutant).color}
           />
         </div>
         <div className="flex-grow">
           <h2 className="text-lg title-font font-medium mb-3">
             {MapNamePollutants(pollutant, true)}:
           </h2>
-          <h2 className="text-lg title-font font-medium mb-3">
-            {lastReading[pollutant]}
+          <h2 className="text-3xl title-font font-medium mb-3">
+            {latestReading[pollutant]}
             {pollutant === "pm25_one_hourly" ? (
               <span className="text-sm">
                 {" "}
@@ -48,7 +51,7 @@ function MajorPollutants({ dataPSI, psiStation, pollutant }) {
             )}
           </h2>
           <p className="leading-relaxed text-base">
-            {PollutantClass(lastReading[pollutant], pollutant).description}
+            {PollutantClass(latestReading[pollutant], pollutant).description}
           </p>
           <div onClick={() => window.open(GetHelpURL(pollutant))}>
             <p className="mt-3 mr-2 inline-flex items-center text-sm">

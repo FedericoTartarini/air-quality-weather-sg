@@ -6,7 +6,6 @@ import ChartsView from "./Views/ChartsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useGetLocation } from "./Hooks/GetLocation";
-import { useGetClosestStation } from "./Hooks/GetClosestStation";
 
 function App() {
   let currentDate = new Date();
@@ -45,8 +44,6 @@ function App() {
 
   const locationUser = useGetLocation(urlPSI);
 
-  const psiStation = useGetClosestStation(dataPSI, locationUser);
-
   // todo get latest readings for that PSI station
 
   return (
@@ -57,7 +54,6 @@ function App() {
           <Route exact path="/">
             <CurrentReadingsView
               dataPSI={dataPSI}
-              psiStation={psiStation}
               dataTmp={dataTmp}
               dataRH={dataRH}
               dataFor2H={dataFor2H}

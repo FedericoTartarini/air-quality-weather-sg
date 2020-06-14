@@ -5,7 +5,6 @@ import Recommendation from "../Components/Recommendation";
 
 function CurrentReadingsView({
   dataPSI,
-  psiStation,
   dataTmp,
   dataRH,
   dataFor2H,
@@ -20,7 +19,6 @@ function CurrentReadingsView({
       <div>
         <CurrentReadings
           dataPSI={dataPSI}
-          psiStation={psiStation}
           dataTmp={dataTmp}
           dataRH={dataRH}
           dataFor2H={dataFor2H}
@@ -29,7 +27,7 @@ function CurrentReadingsView({
         />
       </div>
       <div>
-        <Recommendation />
+        <Recommendation dataPSI={dataPSI} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import singaporeLine from "../Static/Icons/singapore-line.png";
 import { HealthAdvisory } from "../Functions/Utils";
 
-function Recommendation(props) {
+function Recommendation({ dataPSI }) {
   return (
     <div className="container mx-auto flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
       <div className="px-6 py-4 text-gray-800">

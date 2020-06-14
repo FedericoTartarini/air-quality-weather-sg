@@ -256,5 +256,30 @@ export function ClosestStation(data, userLocation) {
     }
   } catch {}
 
+  try {
+    for (let ix in data.region_metadata) {
+      // console.log('closest station: ' + weatherForecastStations[ix]);
+      const _distance = Math.sqrt(
+        Math.pow(
+          userLocation.latitude -
+            data.region_metadata[ix].label_location.latitude,
+          2
+        ) +
+          Math.pow(
+            userLocation.longitude -
+              data.region_metadata[ix].label_location.longitude,
+            2
+          )
+      );
+      if (_distance < lowestDistance) {
+        lowestDistance = _distance;
+        station = {
+          id: data.region_metadata[ix].id,
+          name: data.region_metadata[ix].name,
+        };
+      }
+    }
+  } catch {}
+
   return station;
 }

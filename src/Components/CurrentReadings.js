@@ -12,7 +12,6 @@ import ForecastToIcon from "./ForecastToIcon";
 
 function CurrentReadings({
   dataPSI,
-  psiStation,
   dataTmp,
   dataRH,
   dataFor2H,
@@ -39,12 +38,12 @@ function CurrentReadings({
           <div className="flex flex-wrap content-between sm:-m-4 -mx-4 my-3">
             <MajorPollutants
               dataPSI={dataPSI}
-              psiStation={psiStation}
+              locationUser={locationUser}
               pollutant={"psi_twenty_four_hourly"}
             />
             <MajorPollutants
               dataPSI={dataPM25}
-              psiStation={psiStation}
+              locationUser={locationUser}
               pollutant={"pm25_one_hourly"}
             />
           </div>
