@@ -1,14 +1,11 @@
 import React from "react";
 import MajorPollutants from "./MajorPollutants";
-import sunny from "../Static/Icons/sunny.png";
 import CurrentValue from "./CurrentValue";
 import {
   ClosestStation,
-  ReadingAtUserLocation,
+  ForecastToIcon,
   TwoHForecastsAtUserLocation,
 } from "../Functions/Utils";
-import Loader from "./Loader";
-import ForecastToIcon from "./ForecastToIcon";
 
 function CurrentReadings({
   dataPSI,
@@ -69,14 +66,17 @@ function CurrentReadings({
                     ClosestStation(dataFor2H.data, locationUser.data).name
                   )
                 : ""}
-              {/* todo change based on user's location */}
             </p>
             {dataFor2H.data && locationUser.data ? (
-              <ForecastToIcon
-                description={TwoHForecastsAtUserLocation(
-                  dataFor2H.data,
-                  ClosestStation(dataFor2H.data, locationUser.data).name
+              <img
+                className="h-12 w-full object-contain my-3"
+                src={ForecastToIcon(
+                  TwoHForecastsAtUserLocation(
+                    dataFor2H.data,
+                    ClosestStation(dataFor2H.data, locationUser.data).name
+                  )
                 )}
+                alt="weather icon"
               />
             ) : (
               ""

@@ -2,13 +2,22 @@ import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
-import { TwoHForecastsAtUserLocation } from "../Functions/Utils";
+import {
+  ClosestStation,
+  ForecastToIcon,
+  TwoHForecastsAtUserLocation,
+} from "../Functions/Utils";
 
 function MyMap({ data }) {
-  const Icon = L.icon({
-    iconUrl: require("../Static/Icons/partly-cloudy-night.png"),
-    iconSize: [35], // size of the icon
-  });
+  function GetIcon(stationName) {
+    const Icon = L.icon({
+      iconUrl: ForecastToIcon(
+        TwoHForecastsAtUserLocation(data.data, stationName)
+      ),
+      iconSize: [35], // size of the icon
+    });
+    return Icon;
+  }
 
   const { innerWidth: width, innerHeight: height } = window;
   const position = [1.3521, 103.8198];
@@ -31,11 +40,13 @@ function MyMap({ data }) {
                 marker.label_location.latitude,
                 marker.label_location.longitude,
               ]}
-              icon={Icon}
+              icon={GetIcon(marker.name)}
             >
               <Popup>
-                {marker.name} <br />{" "}
-                {TwoHForecastsAtUserLocation(data.data, marker.name)}
+                <div className="text-center">
+                  {marker.name} <br />{" "}
+                  {TwoHForecastsAtUserLocation(data.data, marker.name)}
+                </div>
               </Popup>
             </Marker>
           ))
