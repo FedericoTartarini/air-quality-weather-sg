@@ -31,8 +31,6 @@ export function useGetClosestStation(data, location) {
           });
         }
       });
-
-      return station;
     }
   }, [data, location]);
 
