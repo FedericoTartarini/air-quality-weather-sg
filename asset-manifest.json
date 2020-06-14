@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css",
+    "main.js": "/air-quality-weather-sg/static/js/main.14ac5510.chunk.js",
+    "main.js.map": "/air-quality-weather-sg/static/js/main.14ac5510.chunk.js.map",
+    "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js",
+    "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js.map",
+    "static/css/2.7c35e809.chunk.css": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css",
+    "static/js/2.80af3272.chunk.js": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js",
+    "static/js/2.80af3272.chunk.js.map": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js.map",
+    "index.html": "/air-quality-weather-sg/index.html",
+    "precache-manifest.03826383f4e24c63b17c3642d6294272.js": "/air-quality-weather-sg/precache-manifest.03826383f4e24c63b17c3642d6294272.js",
+    "service-worker.js": "/air-quality-weather-sg/service-worker.js",
+    "static/css/2.7c35e809.chunk.css.map": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css.map",
+    "static/css/main.cca977cc.chunk.css.map": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css.map",
+    "static/js/2.80af3272.chunk.js.LICENSE.txt": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js.LICENSE.txt",
+    "static/media/good-day.jpg": "/air-quality-weather-sg/static/media/good-day.bcb615f1.jpg",
+    "static/media/hazy.png": "/air-quality-weather-sg/static/media/hazy.52c8dcb0.png",
+    "static/media/logo.svg": "/air-quality-weather-sg/static/media/logo.f95ef2cb.svg",
+    "static/media/singapore-line.png": "/air-quality-weather-sg/static/media/singapore-line.d67ab07e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5dba31b.js",
+    "static/css/2.7c35e809.chunk.css",
+    "static/js/2.80af3272.chunk.js",
+    "static/css/main.cca977cc.chunk.css",
+    "static/js/main.14ac5510.chunk.js"
+  ]
+}
