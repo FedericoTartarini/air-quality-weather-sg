@@ -29,13 +29,15 @@ function App() {
 
   const psiStation = useGetClosestStation(psiData, location);
 
+  // todo get latest readings for that PSI station
+
   return (
     <Router>
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
         <Switch>
           <Route exact path="/">
-            <CurrentReadingsView data={psiData} />
+            <CurrentReadingsView data={psiData} psiStation={psiStation} />
           </Route>
           <Route path="/charts">
             <ChartsView data={psiData} />

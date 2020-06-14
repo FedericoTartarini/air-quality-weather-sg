@@ -1,12 +1,14 @@
-export function GetLatestReading(stationName, _data) {
-  const lastReading = _data.items[_data.items.length - 1].readings;
-  // console.log(lastReading);
-  let values = {};
-  for (let key of Object.keys(lastReading)) {
-    // console.log('last reading: ' + lastReading[key]['west']);
-    values[key] = lastReading[key][stationName];
+export function GetLatestReading(stationName, data) {
+  if (data.data && stationName.data) {
+    const lastReading = data.data.items[data.data.items.length - 1].readings;
+    // console.log(lastReading);
+    let values = {};
+    for (let key of Object.keys(lastReading)) {
+      // console.log('last reading: ' + lastReading[key]['west']);
+      values[key] = lastReading[key][stationName];
+    }
+    return values;
   }
-  return values;
 }
 
 export function HealthAdvisory(airQualityDescription) {

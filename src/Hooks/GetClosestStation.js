@@ -10,7 +10,6 @@ export function useGetClosestStation(data, location) {
   useEffect(() => {
     if (data.data && location.data) {
       let lowestDistance = 10000;
-      let closestStation = "";
 
       data.data.region_metadata.map((station) => {
         const distance = Math.sqrt(
@@ -25,11 +24,15 @@ export function useGetClosestStation(data, location) {
         );
         if (distance < lowestDistance) {
           lowestDistance = distance;
-          closestStation = station.name;
+          setStation({
+            loading: false,
+            data: station.name,
+            error: false,
+          });
         }
       });
 
-      return closestStation;
+      return station;
     }
   }, [data, location]);
 

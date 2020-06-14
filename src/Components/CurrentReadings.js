@@ -2,7 +2,7 @@ import React from "react";
 import MajorPollutants from "./MajorPollutants";
 import sunny from "../Static/Icons/sunny.png";
 
-function CurrentReadings({ data }) {
+function CurrentReadings({ data, psiStation }) {
   return (
     <div className="container mx-auto my-3 flex px-5 items-center justify-center shadow-lg border rounded">
       <section className="text-gray-700 body-font flex-grow">
@@ -17,8 +17,8 @@ function CurrentReadings({ data }) {
             </div>
           </div>
           <div className="flex flex-wrap content-between sm:-m-4 -mx-4 my-3">
-            <MajorPollutants data={data} />
-            <MajorPollutants data={data} />
+            <MajorPollutants data={data} psiStation={psiStation} />
+            <MajorPollutants data={data} psiStation={psiStation} />
           </div>
           <div className="text-center my-5">
             <div className="flex my-3 justify-center">

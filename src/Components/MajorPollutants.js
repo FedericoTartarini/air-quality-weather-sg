@@ -7,7 +7,7 @@ import {
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-function MajorPollutants({ data }) {
+function MajorPollutants({ data, psiStation }) {
   let content = null;
 
   if (data.error) {

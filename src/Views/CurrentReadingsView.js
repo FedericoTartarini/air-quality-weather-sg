@@ -1,17 +1,16 @@
 import React from "react";
 import TopImage from "../Components/TopImage";
-import MajorPollutants from "../Components/MajorPollutants";
 import CurrentReadings from "../Components/CurrentReadings";
 import Recommendation from "../Components/Recommendation";
 
-function CurrentReadingsView({ data }) {
+function CurrentReadingsView({ data, psiStation }) {
   return (
     <div className="py-3">
       <div className="flex">
         <TopImage />
       </div>
       <div>
-        <CurrentReadings data={data} />
+        <CurrentReadings data={data} psiStation={psiStation} />
       </div>
       <div>
         <Recommendation />
