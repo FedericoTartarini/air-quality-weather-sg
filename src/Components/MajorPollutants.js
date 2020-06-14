@@ -1,13 +1,15 @@
 import React from "react";
 import Loader from "./Loader";
-import { GetLatestReading } from "../Functions/Utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faGrinWink,
-  faQuestionCircle,
-} from "@fortawesome/free-solid-svg-icons";
+  GetHelpURL,
+  GetLatestReading,
+  MapNamePollutants,
+  PollutantClass,
+} from "../Functions/Utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
-function MajorPollutants({ data, psiStation }) {
+function MajorPollutants({ data, psiStation, pollutant }) {
   let content = null;
 
   if (data.error) {
@@ -18,31 +20,31 @@ function MajorPollutants({ data, psiStation }) {
     content = <Loader />;
   }
 
-  if (data.data) {
-    // todo change this once you get users location
-    const lastReading = GetLatestReading("west", data.data);
+  if (psiStation.data && data.data) {
+    const lastReading = GetLatestReading(psiStation.data, data.data);
 
     content = (
       <div className="p-4 w-1/2 md:mb-0 mb-6 flex flex-col text-center items-center">
         <div className="w-20 h-20 inline-flex items-center justify-center rounded-full mb-3 flex-shrink-0">
-          {/* todo change the icon and color as a function of the description*/}
           <FontAwesomeIcon
-            icon={faGrinWink}
+            icon={PollutantClass(lastReading[pollutant], pollutant).icon}
             size={"3x"}
-            color={"rgb(14,156,16)"}
+            color={PollutantClass(lastReading[pollutant], pollutant).color}
           />
         </div>
         <div className="flex-grow">
           <h2 className="text-lg title-font font-medium mb-3">
-            {/* todo change the text as a function of props*/}
-            24-h PSI: 55
+            {MapNamePollutants(pollutant, true)}: {lastReading[pollutant]}
           </h2>
-          <p className="leading-relaxed text-base">Moderate</p>
-          <a className="mt-3 mr-2 inline-flex items-center text-sm">
-            {/* todo add space between learn more and icon*/}
-            Learn More
-          </a>
-          <FontAwesomeIcon icon={faQuestionCircle} />
+          <p className="leading-relaxed text-base">
+            {PollutantClass(lastReading[pollutant], pollutant).description}
+          </p>
+          <div onClick={() => window.open(GetHelpURL(pollutant))}>
+            <p className="mt-3 mr-2 inline-flex items-center text-sm">
+              Learn More
+            </p>
+            <FontAwesomeIcon icon={faQuestionCircle} />
+          </div>
         </div>
       </div>
     );

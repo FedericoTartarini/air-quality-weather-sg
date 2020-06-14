@@ -17,8 +17,16 @@ function CurrentReadings({ data, psiStation }) {
             </div>
           </div>
           <div className="flex flex-wrap content-between sm:-m-4 -mx-4 my-3">
-            <MajorPollutants data={data} psiStation={psiStation} />
-            <MajorPollutants data={data} psiStation={psiStation} />
+            <MajorPollutants
+              data={data}
+              psiStation={psiStation}
+              pollutant={"psi_twenty_four_hourly"}
+            />
+            <MajorPollutants
+              data={data}
+              psiStation={psiStation}
+              pollutant={"pm10_twenty_four_hourly"}
+            />
           </div>
           <div className="text-center my-5">
             <div className="flex my-3 justify-center">
