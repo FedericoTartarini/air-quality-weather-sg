@@ -9,19 +9,19 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 
-function MajorPollutants({ data, psiStation, pollutant }) {
+function MajorPollutants({ dataPSI, psiStation, pollutant }) {
   let content = null;
 
-  if (data.error) {
+  if (dataPSI.error) {
     content = <div>Could not fetch API</div>;
   }
 
-  if (data.loading) {
+  if (dataPSI.loading) {
     content = <Loader />;
   }
 
-  if (psiStation.data && data.data) {
-    const lastReading = GetLatestReading(psiStation.data, data.data);
+  if (psiStation.data && dataPSI.data) {
+    const lastReading = GetLatestReading(psiStation.data, dataPSI.data);
 
     content = (
       <div className="p-4 w-1/2 md:mb-0 mb-6 flex flex-col text-center items-center">

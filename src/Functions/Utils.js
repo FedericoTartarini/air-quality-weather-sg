@@ -179,3 +179,44 @@ export function PollutantClass(value, parameter) {
     };
   }
 }
+
+export function ReadingAtUserLocation(data, userLocation) {
+  let temperature;
+  const stationID = ClosestStation(data, userLocation).id;
+  for (let ix in data.items[0].readings) {
+    if (data.items[0].readings[ix].station_id === stationID) {
+      temperature = data.items[0].readings[ix].value;
+    }
+  }
+  return temperature;
+}
+
+export function ClosestStation(data, userLocation) {
+  // let distance = {};
+  let lowestDistance = 10000;
+  let station = "";
+
+  for (let ix in data.metadata.stations) {
+    // console.log('closest station: ' + weatherForecastStations[ix]);
+    const _distance = Math.sqrt(
+      Math.pow(
+        userLocation.latitude - data.metadata.stations[ix].location.latitude,
+        2
+      ) +
+        Math.pow(
+          userLocation.longitude -
+            data.metadata.stations[ix].location.longitude,
+          2
+        )
+    );
+    if (_distance < lowestDistance) {
+      lowestDistance = _distance;
+      station = {
+        id: data.metadata.stations[ix].id,
+        name: data.metadata.stations[ix].name,
+      };
+    }
+  }
+
+  return station;
+}

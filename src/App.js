@@ -10,24 +10,38 @@ import { useGetClosestStation } from "./Hooks/GetClosestStation";
 
 function App() {
   let currentDate = new Date();
+  currentDate = currentDate - currentDate.getTimezoneOffset() * 60000;
+  currentDate = new Date(currentDate);
+  let isoString = currentDate.toISOString().substr(0, 19);
 
-  // convert to SG time
-  currentDate.setHours(currentDate.getHours() + 8);
+  const urlRH =
+    "https://api.data.gov.sg/v1/environment/relative-humidity?date_time=" +
+    isoString;
+  const urlTmp =
+    "https://api.data.gov.sg/v1/environment/air-temperature?date_time=" +
+    isoString;
 
-  // the API does not provide data at midnight hence I am querying the previous day
-  if (currentDate.getHours() === 0) {
-    currentDate.setHours(currentDate.getHours() - 24);
+  // if it is midnight I am querying the previous day
+  if (isoString.split("T")[1].split(":")[0] === "00") {
+    currentDate = currentDate - 12 * 60 * 60000;
+    currentDate = new Date(currentDate);
+    isoString = currentDate.toISOString().substr(0, 19);
   }
 
-  const todayDate = currentDate.toISOString().split("T")[0];
+  const dateString = isoString.split("T")[0];
+  const urlPSI =
+    "https://api.data.gov.sg/v1/environment/psi?date=" + dateString;
+  const urlPM25 =
+    "https://api.data.gov.sg/v1/environment/pm25?date=" + dateString;
 
-  const url = "https://api.data.gov.sg/v1/environment/psi?date=" + todayDate;
+  const dataPSI = useHttpRequest(urlPSI);
+  const dataTmp = useHttpRequest(urlTmp);
+  const dataRH = useHttpRequest(urlRH);
+  const dataPM25 = useHttpRequest(urlPM25);
 
-  const psiData = useHttpRequest(url);
+  const locationUser = useGetLocation(urlPSI);
 
-  const location = useGetLocation(url);
-
-  const psiStation = useGetClosestStation(psiData, location);
+  const psiStation = useGetClosestStation(dataPSI, locationUser);
 
   // todo get latest readings for that PSI station
 
@@ -37,10 +51,16 @@ function App() {
         <NavigationBar />
         <Switch>
           <Route exact path="/">
-            <CurrentReadingsView data={psiData} psiStation={psiStation} />
+            <CurrentReadingsView
+              dataPSI={dataPSI}
+              psiStation={psiStation}
+              dataTmp={dataTmp}
+              dataRH={dataRH}
+              locationUser={locationUser}
+            />
           </Route>
           <Route path="/charts">
-            <ChartsView data={psiData} />
+            <ChartsView data={dataPSI} />
           </Route>
         </Switch>
         <div>
