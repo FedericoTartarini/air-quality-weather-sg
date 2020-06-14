@@ -191,32 +191,70 @@ export function ReadingAtUserLocation(data, userLocation) {
   return temperature;
 }
 
+export function TwoHForecastsAtUserLocation(data, stationName) {
+  let forecastString;
+  for (let ix in data.items[0].forecasts) {
+    // console.log(data.items[0].forecasts[ix]);
+    if (data.items[0].forecasts[ix].area === stationName) {
+      forecastString = data.items[0].forecasts[ix].forecast;
+    }
+  }
+  return forecastString;
+}
+
 export function ClosestStation(data, userLocation) {
-  // let distance = {};
   let lowestDistance = 10000;
   let station = "";
 
-  for (let ix in data.metadata.stations) {
-    // console.log('closest station: ' + weatherForecastStations[ix]);
-    const _distance = Math.sqrt(
-      Math.pow(
-        userLocation.latitude - data.metadata.stations[ix].location.latitude,
-        2
-      ) +
+  // this is for Tmp, RH data
+  try {
+    for (let ix in data.metadata.stations) {
+      // console.log('closest station: ' + weatherForecastStations[ix]);
+      const _distance = Math.sqrt(
         Math.pow(
-          userLocation.longitude -
-            data.metadata.stations[ix].location.longitude,
+          userLocation.latitude - data.metadata.stations[ix].location.latitude,
           2
-        )
-    );
-    if (_distance < lowestDistance) {
-      lowestDistance = _distance;
-      station = {
-        id: data.metadata.stations[ix].id,
-        name: data.metadata.stations[ix].name,
-      };
+        ) +
+          Math.pow(
+            userLocation.longitude -
+              data.metadata.stations[ix].location.longitude,
+            2
+          )
+      );
+      if (_distance < lowestDistance) {
+        lowestDistance = _distance;
+        station = {
+          id: data.metadata.stations[ix].id,
+          name: data.metadata.stations[ix].name,
+        };
+      }
     }
-  }
+  } catch {}
+
+  try {
+    for (let ix in data.area_metadata) {
+      // console.log('closest station: ' + weatherForecastStations[ix]);
+      const _distance = Math.sqrt(
+        Math.pow(
+          userLocation.latitude -
+            data.area_metadata[ix].label_location.latitude,
+          2
+        ) +
+          Math.pow(
+            userLocation.longitude -
+              data.area_metadata[ix].label_location.longitude,
+            2
+          )
+      );
+      if (_distance < lowestDistance) {
+        lowestDistance = _distance;
+        station = {
+          id: data.area_metadata[ix].id,
+          name: data.area_metadata[ix].name,
+        };
+      }
+    }
+  } catch {}
 
   return station;
 }

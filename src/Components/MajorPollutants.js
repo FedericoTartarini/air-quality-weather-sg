@@ -34,7 +34,18 @@ function MajorPollutants({ dataPSI, psiStation, pollutant }) {
         </div>
         <div className="flex-grow">
           <h2 className="text-lg title-font font-medium mb-3">
-            {MapNamePollutants(pollutant, true)}: {lastReading[pollutant]}
+            {MapNamePollutants(pollutant, true)}:
+          </h2>
+          <h2 className="text-lg title-font font-medium mb-3">
+            {lastReading[pollutant]}
+            {pollutant === "pm25_one_hourly" ? (
+              <span className="text-sm">
+                {" "}
+                µg/m<sup>3</sup>
+              </span>
+            ) : (
+              ""
+            )}
           </h2>
           <p className="leading-relaxed text-base">
             {PollutantClass(lastReading[pollutant], pollutant).description}

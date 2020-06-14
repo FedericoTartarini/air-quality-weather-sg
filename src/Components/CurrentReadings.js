@@ -2,13 +2,21 @@ import React from "react";
 import MajorPollutants from "./MajorPollutants";
 import sunny from "../Static/Icons/sunny.png";
 import CurrentValue from "./CurrentValue";
-import { ClosestStation, ReadingAtUserLocation } from "../Functions/Utils";
+import {
+  ClosestStation,
+  ReadingAtUserLocation,
+  TwoHForecastsAtUserLocation,
+} from "../Functions/Utils";
+import Loader from "./Loader";
+import ForecastToIcon from "./ForecastToIcon";
 
 function CurrentReadings({
   dataPSI,
   psiStation,
   dataTmp,
   dataRH,
+  dataFor2H,
+  dataPM25,
   locationUser,
 }) {
   return (
@@ -17,11 +25,12 @@ function CurrentReadings({
         <div className="container px-5 py-5 mx-auto">
           <div className="text-center my-5">
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              {/* todo change based on user's location */}
               Closest station:{" "}
-              {dataTmp.data && locationUser.data
-                ? ClosestStation(dataTmp.data, locationUser.data).name
-                : ""}
+              {dataFor2H.data && locationUser.data ? (
+                ClosestStation(dataFor2H.data, locationUser.data).name
+              ) : (
+                <Loader />
+              )}
             </p>
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
@@ -34,39 +43,49 @@ function CurrentReadings({
               pollutant={"psi_twenty_four_hourly"}
             />
             <MajorPollutants
-              dataPSI={dataPSI}
+              dataPSI={dataPM25}
               psiStation={psiStation}
-              pollutant={"pm10_twenty_four_hourly"}
+              pollutant={"pm25_one_hourly"}
             />
           </div>
           <div className="text-center my-5">
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
             </div>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Temperature:{" "}
               <CurrentValue data={dataTmp} locationUser={locationUser} />
               °C
-            </p>
+            </div>
 
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Relative humidity:{" "}
               <CurrentValue data={dataRH} locationUser={locationUser} />%
-            </p>
+            </div>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               2-hour forecast for{" "}
-              {dataTmp.data && locationUser.data
-                ? ClosestStation(dataTmp.data, locationUser.data).name
-                : ""}
-              : Partly Cloudy (Night)
+              {dataFor2H.data && locationUser.data ? (
+                ClosestStation(dataFor2H.data, locationUser.data).name +
+                ": " +
+                TwoHForecastsAtUserLocation(
+                  dataFor2H.data,
+                  ClosestStation(dataFor2H.data, locationUser.data).name
+                )
+              ) : (
+                <Loader />
+              )}
               {/* todo change based on user's location */}
             </p>
-            <img
-              // className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-              className="h-20 w-full object-contain my-3"
-              alt="sunny"
-              src={sunny}
-            />
+            {dataFor2H.data && locationUser.data ? (
+              <ForecastToIcon
+                description={TwoHForecastsAtUserLocation(
+                  dataFor2H.data,
+                  ClosestStation(dataFor2H.data, locationUser.data).name
+                )}
+              />
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </section>

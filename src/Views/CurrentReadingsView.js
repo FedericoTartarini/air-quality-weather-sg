@@ -8,6 +8,8 @@ function CurrentReadingsView({
   psiStation,
   dataTmp,
   dataRH,
+  dataFor2H,
+  dataPM25,
   locationUser,
 }) {
   return (
@@ -21,6 +23,8 @@ function CurrentReadingsView({
           psiStation={psiStation}
           dataTmp={dataTmp}
           dataRH={dataRH}
+          dataFor2H={dataFor2H}
+          dataPM25={dataPM25}
           locationUser={locationUser}
         />
       </div>
