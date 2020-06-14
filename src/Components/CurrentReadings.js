@@ -25,11 +25,9 @@ function CurrentReadings({
           <div className="text-center my-5">
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Closest station:{" "}
-              {dataFor2H.data && locationUser.data ? (
-                ClosestStation(dataFor2H.data, locationUser.data).name
-              ) : (
-                <Loader />
-              )}
+              {dataFor2H.data && locationUser.data
+                ? ClosestStation(dataFor2H.data, locationUser.data).name
+                : ""}
             </p>
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
@@ -63,16 +61,14 @@ function CurrentReadings({
             </div>
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               2-hour forecast for{" "}
-              {dataFor2H.data && locationUser.data ? (
-                ClosestStation(dataFor2H.data, locationUser.data).name +
-                ": " +
-                TwoHForecastsAtUserLocation(
-                  dataFor2H.data,
-                  ClosestStation(dataFor2H.data, locationUser.data).name
-                )
-              ) : (
-                <Loader />
-              )}
+              {dataFor2H.data && locationUser.data
+                ? ClosestStation(dataFor2H.data, locationUser.data).name +
+                  ": " +
+                  TwoHForecastsAtUserLocation(
+                    dataFor2H.data,
+                    ClosestStation(dataFor2H.data, locationUser.data).name
+                  )
+                : ""}
               {/* todo change based on user's location */}
             </p>
             {dataFor2H.data && locationUser.data ? (

@@ -1,14 +1,12 @@
 import React from "react";
 import LineChart from "../Components/LineChart";
 import TableIndicesCategories from "../Components/TableIndicesCategories";
-import MyMap from "../Components/MyMap";
 
 function ChartsView({ data }) {
   // todo update station name based on user's location
   const stationName = ["north"];
   return (
     <div className="container mx-auto py-3">
-      <MyMap />
       <div className="flex justify-center">
         Last 24-h readings for the {stationName} station.
       </div>

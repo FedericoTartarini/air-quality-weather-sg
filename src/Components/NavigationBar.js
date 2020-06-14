@@ -5,7 +5,7 @@ const logo = require("../logo.svg");
 
 function NavigationBar() {
   return (
-    <div className="bg-gray-200">
+    <div className="bg-gray-100">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
         <Link to="/">
           <div className="flex items-center flex-shrink-0 mr-6">
@@ -34,14 +34,9 @@ function NavigationBar() {
                 Charts
               </span>
             </Link>
-            <Link to="/charts">
+            <Link to="/forecastTwoHours">
               <span className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
                 2-h Forecast
-              </span>
-            </Link>
-            <Link to="/charts">
-              <span className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600">
-                Map Pollutants
               </span>
             </Link>
           </div>

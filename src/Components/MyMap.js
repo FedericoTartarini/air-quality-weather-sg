@@ -1,24 +1,45 @@
-import React, { Component } from "react";
+import React from "react";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { TwoHForecastsAtUserLocation } from "../Functions/Utils";
 
-function MyMap(props) {
-  const position = [1.35, 103.8];
+function MyMap({ data }) {
+  const Icon = L.icon({
+    iconUrl: require("../Static/Icons/partly-cloudy-night.png"),
+    iconSize: [35], // size of the icon
+  });
+
+  const { innerWidth: width, innerHeight: height } = window;
+  const position = [1.3521, 103.8198];
   return (
     <Map
-      className="map"
       center={position}
-      zoom={10}
-      style={{ height: 300, width: "100%" }}
+      zoom={11}
+      style={{ height: height - 108 - 104, width: "100%" }}
     >
       <TileLayer
+        className="leaflet-tile-pane"
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
-      </Marker>
+      {data.data
+        ? data.data["area_metadata"].map((marker) => (
+            <Marker
+              key={marker.name}
+              position={[
+                marker.label_location.latitude,
+                marker.label_location.longitude,
+              ]}
+              icon={Icon}
+            >
+              <Popup>
+                {marker.name} <br />{" "}
+                {TwoHForecastsAtUserLocation(data.data, marker.name)}
+              </Popup>
+            </Marker>
+          ))
+        : ""}
     </Map>
   );
 }

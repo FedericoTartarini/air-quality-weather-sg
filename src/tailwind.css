@@ -14362,6 +14362,10 @@ video {
   }
 }
 
+.leaflet-tile-pane {
+  filter: grayscale(100%);
+}
+
 @media (min-width: 400px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
