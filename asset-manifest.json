@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css",
-    "main.js": "/air-quality-weather-sg/static/js/main.8a7117a9.chunk.js",
-    "main.js.map": "/air-quality-weather-sg/static/js/main.8a7117a9.chunk.js.map",
+    "main.js": "/air-quality-weather-sg/static/js/main.994df49a.chunk.js",
+    "main.js.map": "/air-quality-weather-sg/static/js/main.994df49a.chunk.js.map",
     "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js",
     "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js.map",
     "static/css/2.7c35e809.chunk.css": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css",
-    "static/js/2.80af3272.chunk.js": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js",
-    "static/js/2.80af3272.chunk.js.map": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js.map",
+    "static/js/2.a6040169.chunk.js": "/air-quality-weather-sg/static/js/2.a6040169.chunk.js",
+    "static/js/2.a6040169.chunk.js.map": "/air-quality-weather-sg/static/js/2.a6040169.chunk.js.map",
     "index.html": "/air-quality-weather-sg/index.html",
-    "precache-manifest.db3aa5ec654c03716ba218de647985c3.js": "/air-quality-weather-sg/precache-manifest.db3aa5ec654c03716ba218de647985c3.js",
+    "precache-manifest.52c3c6919243d8605f5ee7e581a5bb65.js": "/air-quality-weather-sg/precache-manifest.52c3c6919243d8605f5ee7e581a5bb65.js",
     "service-worker.js": "/air-quality-weather-sg/service-worker.js",
     "static/css/2.7c35e809.chunk.css.map": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css.map",
     "static/css/main.cca977cc.chunk.css.map": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css.map",
-    "static/js/2.80af3272.chunk.js.LICENSE.txt": "/air-quality-weather-sg/static/js/2.80af3272.chunk.js.LICENSE.txt",
+    "static/js/2.a6040169.chunk.js.LICENSE.txt": "/air-quality-weather-sg/static/js/2.a6040169.chunk.js.LICENSE.txt",
     "static/media/good-day.jpg": "/air-quality-weather-sg/static/media/good-day.bcb615f1.jpg",
     "static/media/hazy.png": "/air-quality-weather-sg/static/media/hazy.52c8dcb0.png",
     "static/media/logo.svg": "/air-quality-weather-sg/static/media/logo.f95ef2cb.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.f5dba31b.js",
     "static/css/2.7c35e809.chunk.css",
-    "static/js/2.80af3272.chunk.js",
+    "static/js/2.a6040169.chunk.js",
     "static/css/main.cca977cc.chunk.css",
-    "static/js/main.8a7117a9.chunk.js"
+    "static/js/main.994df49a.chunk.js"
   ]
 }
