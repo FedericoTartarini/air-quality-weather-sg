@@ -9,22 +9,32 @@ import {
 } from "../Functions/Utils";
 
 function MyMap({ data }) {
-  function GetIcon(stationName) {
+  function GetIcon(stationName, _iconSize) {
     const Icon = L.icon({
       iconUrl: ForecastToIcon(
         TwoHForecastsAtUserLocation(data.data, stationName)
       ),
-      iconSize: [35], // size of the icon
+      iconSize: [_iconSize], // size of the icon
     });
     return Icon;
   }
 
   const { innerWidth: width, innerHeight: height } = window;
+
+  let zoom, iconSize;
+  if (width > 500) {
+    zoom = 11;
+    iconSize = 35;
+  } else {
+    zoom = 10;
+    iconSize = 25;
+  }
+
   const position = [1.3521, 103.8198];
   return (
     <Map
       center={position}
-      zoom={11}
+      zoom={zoom}
       style={{ height: height - 108 - 104, width: "100%" }}
     >
       <TileLayer
@@ -40,7 +50,7 @@ function MyMap({ data }) {
                 marker.label_location.latitude,
                 marker.label_location.longitude,
               ]}
-              icon={GetIcon(marker.name)}
+              icon={GetIcon(marker.name, iconSize)}
             >
               <Popup>
                 <div className="text-center">
