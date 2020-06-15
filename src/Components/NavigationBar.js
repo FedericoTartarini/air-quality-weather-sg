@@ -39,6 +39,11 @@ function NavigationBar() {
                 2-h Forecast
               </span>
             </Link>
+            <Link to="/mapPollution">
+              <span className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
+                Map Pollution
+              </span>
+            </Link>
           </div>
         </div>
       </nav>

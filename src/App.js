@@ -6,7 +6,8 @@ import ChartsView from "./Views/ChartsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useGetLocation } from "./Hooks/GetLocation";
-import Forecast2H from "./Views/Forecast2H";
+import MapForecast2H from "./Views/MapForecast2H";
+import MapPollutionView from "./Views/MapPollutionView";
 
 function App() {
   let currentDate = new Date();
@@ -66,7 +67,10 @@ function App() {
             <ChartsView data={dataPSI} />
           </Route>
           <Route path="/forecastTwoHours">
-            <Forecast2H data={dataFor2H} />
+            <MapForecast2H data={dataFor2H} />
+          </Route>
+          <Route path="/mapPollution">
+            <MapPollutionView data={dataPSI} />
           </Route>
         </Switch>
         <div>

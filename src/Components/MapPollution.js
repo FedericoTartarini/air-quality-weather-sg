@@ -8,18 +8,22 @@ import {
   TwoHForecastsAtUserLocation,
 } from "../Functions/Utils";
 
-function MyMap({ data }) {
-  function GetIcon(stationName, _iconSize) {
-    const Icon = L.icon({
-      iconUrl: ForecastToIcon(
-        TwoHForecastsAtUserLocation(data.data, stationName)
-      ),
-      iconSize: [_iconSize], // size of the icon
-    });
-    return Icon;
-  }
+function GetIcon(data, marker, _iconSize) {
+  const Icon = L.icon({
+    // todo change icon type
+    iconUrl: require("../Static/Icons/sunny.png"),
+    iconSize: [_iconSize], // size of the icon
+  });
+  return Icon;
+}
 
+function MapPollution({ data }) {
   const { innerWidth: width, innerHeight: height } = window;
+
+  if (data.data) {
+    const latestReading = data.data.items[data.data.items.length - 1];
+    console.log(latestReading);
+  }
 
   let zoom, iconSize;
   if (width > 500) {
@@ -43,21 +47,22 @@ function MyMap({ data }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       {data.data
-        ? data.data["area_metadata"].map((marker) => (
+        ? data.data["region_metadata"].map((marker) => (
             <Marker
               key={marker.name}
               position={[
                 marker.label_location.latitude,
                 marker.label_location.longitude,
               ]}
-              icon={GetIcon(marker.name, iconSize)}
+              icon={GetIcon(data, marker, iconSize)}
             >
-              <Popup>
-                <div className="text-center">
-                  {marker.name} <br />{" "}
-                  {TwoHForecastsAtUserLocation(data.data, marker.name)}
-                </div>
-              </Popup>
+              {/* todo define icon popup*/}
+              {/*<Popup>*/}
+              {/*  <div className="text-center">*/}
+              {/*    {marker.name} <br />{" "}*/}
+              {/*    {TwoHForecastsAtUserLocation(data.data, marker.name)}*/}
+              {/*  </div>*/}
+              {/*</Popup>*/}
             </Marker>
           ))
         : ""}
@@ -65,4 +70,4 @@ function MyMap({ data }) {
   );
 }
 
-export default MyMap;
+export default MapPollution;
