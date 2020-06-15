@@ -1,8 +1,8 @@
 {
+  "homepage": "https://federicotartarini.github.io/air-quality-weather-sg/",
   "name": "air-quality-sg-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://FedericoTartarini.github.io/air-quality-weather-sg",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
@@ -32,7 +32,8 @@
     "build": "yarn build:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

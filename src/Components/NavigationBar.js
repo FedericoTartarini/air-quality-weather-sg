@@ -7,7 +7,7 @@ function NavigationBar() {
   return (
     <div className="bg-gray-100">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
-        <Link to="/">
+        <Link to="/air-quality-weather-sg">
           <div className="flex items-center flex-shrink-0 mr-6">
             <img src={logo} alt="logo" width={60} />
             <span className="font-semibold text-xl tracking-tight ml-3 w-40">

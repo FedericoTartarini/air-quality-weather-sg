@@ -52,7 +52,7 @@ function App() {
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
         <Switch>
-          <Route exact path="/">
+          <Route path="/air-quality-weather-sg">
             <CurrentReadingsView
               dataPSI={dataPSI}
               dataTmp={dataTmp}

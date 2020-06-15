@@ -5,6 +5,17 @@ import Loader from "./Loader";
 import { MapNamePollutants } from "../Functions/Utils";
 
 function LineChart({ data, pollutants, stationName, footNote }) {
+  const { innerWidth: width, innerHeight: height } = window;
+
+  console.log(width);
+
+  let chartHeight;
+  if (width > 500) {
+    chartHeight = 150;
+  } else {
+    chartHeight = 250;
+  }
+
   let dataChart = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -71,22 +82,22 @@ function LineChart({ data, pollutants, stationName, footNote }) {
         pointHitRadius: 10,
         data: [65, 59, 80, 81, 56, 55, 40],
       },
-      {
-        label: "",
-        fill: true,
-        lineTension: 0.1,
-        backgroundColor: "rgba(17,167,7,0.18)",
-        borderCapStyle: "butt",
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: "miter",
-        pointBorderWidth: 0,
-        pointHoverRadius: 0,
-        pointHoverBorderWidth: 0,
-        pointRadius: 0,
-        pointHitRadius: 0,
-        data: [50, 50],
-      },
+      // {
+      //   label: "",
+      //   fill: true,
+      //   lineTension: 0.1,
+      //   backgroundColor: "rgba(17,167,7,0.18)",
+      //   borderCapStyle: "butt",
+      //   borderDash: [],
+      //   borderDashOffset: 0.0,
+      //   borderJoinStyle: "miter",
+      //   pointBorderWidth: 0,
+      //   pointHoverRadius: 0,
+      //   pointHoverBorderWidth: 0,
+      //   pointRadius: 0,
+      //   pointHitRadius: 0,
+      //   data: [50, 50],
+      // },
     ],
   };
 
@@ -112,52 +123,51 @@ function LineChart({ data, pollutants, stationName, footNote }) {
       dataChart.datasets[ix].label = MapNamePollutants(pollutant, false);
     });
 
-    dataChart.datasets[3].data = data.data.items.map((value) => 50);
+    // dataChart.datasets[3].data = data.data.items.map((value) => 50);
 
     content = (
       <div className="container mx-auto my-3 p-4 shadow-lg border rounded">
-        <div>
-          <Line
-            data={dataChart}
-            options={{
-              responsive: true,
-              scales: {
-                xAxes: [
-                  {
+        <Line
+          data={dataChart}
+          options={{
+            responsive: true,
+            scales: {
+              xAxes: [
+                {
+                  display: true,
+                  scaleLabel: {
                     display: true,
-                    scaleLabel: {
-                      display: true,
-                      labelString: "Hour",
-                    },
-                    ticks: {
-                      major: {
-                        fontStyle: "bold",
-                        fontColor: "#FF0000",
-                      },
+                    labelString: "Hour",
+                  },
+                  ticks: {
+                    major: {
+                      fontStyle: "bold",
+                      fontColor: "#FF0000",
                     },
                   },
-                ],
-                yAxes: [
-                  {
+                },
+              ],
+              yAxes: [
+                {
+                  display: true,
+                  scaleLabel: {
                     display: true,
-                    scaleLabel: {
-                      display: true,
-                      labelString: "Sub-index value",
-                    },
+                    labelString: "Sub-index value",
                   },
-                ],
-              },
-            }}
-          />
-          {footNote.map((prop) => (
-            <p className="text-xs text-center text-gray-800">{prop}</p>
-          ))}
-        </div>
+                },
+              ],
+            },
+          }}
+          height={chartHeight}
+        />
+        {footNote.map((prop) => (
+          <p className="text-xs text-center text-gray-800">{prop}</p>
+        ))}
       </div>
     );
   }
 
-  return <React.Fragment>{content}</React.Fragment>;
+  return <div>{content}</div>;
 }
 
 export default LineChart;
