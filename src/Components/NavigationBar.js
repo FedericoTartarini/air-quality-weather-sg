@@ -4,19 +4,24 @@ import { Link } from "react-router-dom";
 const logo = require("../logo.svg");
 
 function NavigationBar() {
+  const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <div className="bg-gray-100">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
         <Link to="/air-quality-weather-sg">
-          <div className="flex items-center flex-shrink-0 mr-6">
-            <img src={logo} alt="logo" width={60} />
+          <div className="flex items-center flex-shrink-0">
+            <img src={logo} alt="logo" width={50} />
             <span className="font-semibold text-xl tracking-tight ml-3 w-40">
               Air Quality and Weather - SG
             </span>
           </div>
         </Link>
-        <div className="block lg:hidden">
-          <button className="flex items-center px-3 py-2 border rounded hover:text-gray-600 hover:border-white">
+        <div className="block xl:hidden">
+          <button
+            className="flex items-center px-3 py-2 border rounded hover:text-gray-600 hover:border-white"
+            type="button"
+            onClick={() => setNavbarOpen(!navbarOpen)}
+          >
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
@@ -27,20 +32,31 @@ function NavigationBar() {
             </svg>
           </button>
         </div>
-        <div className="w-full block flex-end lg:flex lg:items-center lg:w-auto">
-          <div className="text-sm lg:flex-grow">
+        <div
+          className={
+            "w-full block flex-end xl:flex xl:items-center xl:w-auto" +
+            (navbarOpen ? "" : " hidden")
+          }
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          <div className="text-sm xl:flex-grow">
+            <Link to="/air-quality-weather-sg">
+              <span className="block mt-4 xl:inline-block xl:mt-0 hover:text-gray-600 ml-4">
+                Home
+              </span>
+            </Link>
             <Link to="/charts">
-              <span className="block mt-4 lg:inline-block lg:mt-0 hover:text-gray-600 mr-4">
+              <span className="block mt-4 xl:inline-block xl:mt-0 hover:text-gray-600 ml-4">
                 Charts
               </span>
             </Link>
             <Link to="/forecastTwoHours">
-              <span className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
+              <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
                 2-h Forecast
               </span>
             </Link>
             <Link to="/mapPollution">
-              <span className="block mt-4 lg:inline-block lg:mt-0 over:text-gray-600 mr-4">
+              <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
                 Map Pollution
               </span>
             </Link>
