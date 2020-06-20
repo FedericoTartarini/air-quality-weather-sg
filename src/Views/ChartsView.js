@@ -10,6 +10,8 @@ function ChartsView({ data, locationUser }) {
   const [dropDownOpen, setDropDownOpen] = useState(false);
   const [stationName, setStationName] = useState("central");
 
+  // todo also add temperature and relative humidity chart
+
   function DropDownItem({ item }) {
     return (
       <span
@@ -38,7 +40,7 @@ function ChartsView({ data, locationUser }) {
     content = (
       <div className="container mx-auto py-3">
         <div className="flex justify-center content-center">
-          <p className="py-2 mr-2">Last 24-h data. Station:</p>
+          <p className="py-2 mr-2">Pollution last 24-h. Station:</p>
           <div className="relative">
             <button
               className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"

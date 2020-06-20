@@ -46,8 +46,6 @@ function App() {
 
   const locationUser = useGetLocation(urlPSI);
 
-  // todo get latest readings for that PSI station
-
   return (
     <Router>
       <div className="relative pb-10 min-h-screen">

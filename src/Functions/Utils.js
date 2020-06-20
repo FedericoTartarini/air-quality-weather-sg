@@ -332,6 +332,9 @@ export function ForecastToIcon(description) {
     case "Passing Showers":
       imgURL = require("../Static/Icons/passing-showers.png");
       break;
+    case "Heavy Rain":
+      imgURL = require("../Static/Icons/heavy-rain.png");
+      break;
     case "Showers":
       imgURL = require("../Static/Icons/showers.png");
       break;
@@ -339,7 +342,7 @@ export function ForecastToIcon(description) {
       imgURL = require("../Static/Icons/windy.png");
       break;
     default:
-      imgURL = require("../Static/Icons/sunny.png");
+      imgURL = require("../Static/Icons/cloudy.png");
   }
   return imgURL;
 }
