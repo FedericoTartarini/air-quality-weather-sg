@@ -64,7 +64,7 @@ function App() {
             />
           </Route>
           <Route path="/charts">
-            <ChartsView data={dataPSI} />
+            <ChartsView data={dataPSI} locationUser={locationUser} />
           </Route>
           <Route path="/forecastTwoHours">
             <MapForecast2H data={dataFor2H} />

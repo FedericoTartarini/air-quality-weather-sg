@@ -53,7 +53,8 @@ function MapWeather({ data }) {
             >
               <Popup>
                 <div className="text-center">
-                  {marker.name} <br />{" "}
+                  <span className="text-lg capitalize">{marker.name}</span>{" "}
+                  <br />
                   {TwoHForecastsAtUserLocation(data.data, marker.name)}
                 </div>
               </Popup>

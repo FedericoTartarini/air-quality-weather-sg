@@ -71,7 +71,6 @@ function MapPollution({ data }) {
                 iconSize
               )}
             >
-              todo define icon popup
               <Popup>{RenderValue(marker.name, latestReading)}</Popup>
             </Marker>
           ))

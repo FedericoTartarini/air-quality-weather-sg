@@ -27,7 +27,7 @@ function CurrentReadingsView({
         />
       </div>
       <div>
-        <Recommendation dataPSI={dataPSI} />
+        <Recommendation dataPSI={dataPSI} locationUser={locationUser} />
       </div>
     </div>
   );
