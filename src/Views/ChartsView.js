@@ -1,30 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LineChart from "../Components/LineChart";
 import TableIndicesCategories from "../Components/TableIndicesCategories";
-import { ClosestStation, PollutantClass } from "../Functions/Utils";
+import { ClosestStation } from "../Functions/Utils";
 import Loader from "../Components/Loader";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import DropDown from "../Components/DropDown";
 
 function ChartsView({ data, locationUser }) {
-  const [dropDownOpen, setDropDownOpen] = useState(false);
-  const [stationName, setStationName] = useState("central");
-
   // todo also add temperature and relative humidity chart
+  const [stationName, setStationName] = useState(false);
 
-  function DropDownItem({ item }) {
-    return (
-      <span
-        className="block py-1 px-8 hover:bg-gray-200 capitalize"
-        onClick={() => {
-          setDropDownOpen(!dropDownOpen);
-          setStationName(item);
-        }}
-      >
-        {item}
-      </span>
-    );
-  }
+  useEffect(() => {
+    if (locationUser.data && data.data) {
+      setStationName(ClosestStation(data.data, locationUser.data).name);
+    }
+  }, [data.data, locationUser.data]);
 
   let content = "";
 
@@ -36,32 +25,16 @@ function ChartsView({ data, locationUser }) {
     content = <Loader />;
   }
 
-  if (locationUser.data && data.data) {
+  if (locationUser.data && data.data && stationName) {
     content = (
       <div className="container mx-auto py-3">
         <div className="flex justify-center content-center">
           <p className="py-2 mr-2">Pollution last 24-h. Station:</p>
-          <div className="relative">
-            <button
-              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
-              onClick={() => setDropDownOpen(!dropDownOpen)}
-            >
-              <span className="capitalize mx-2">{stationName}</span>
-              <FontAwesomeIcon icon={faChevronDown} />
-            </button>
-            <div
-              className={
-                "bg-gray-100 absolute right-0 rounded mt-1 py-1 text-center shadow-md" +
-                (dropDownOpen ? "" : " hidden")
-              }
-            >
-              <DropDownItem item={"north"} />
-              <DropDownItem item={"central"} />
-              <DropDownItem item={"south"} />
-              <DropDownItem item={"east"} />
-              <DropDownItem item={"west"} />
-            </div>
-          </div>
+          <DropDown
+            selected={stationName}
+            listItems={["north", "south", "central", "east", "west"]}
+            setValue={setStationName}
+          />
         </div>
         <LineChart
           data={data}

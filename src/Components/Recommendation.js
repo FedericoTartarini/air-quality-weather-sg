@@ -65,4 +65,6 @@ function Recommendation({ dataPSI, locationUser }) {
   return content;
 }
 
+// todo add note below singapore-line saying that recommendations are not medical advices
+
 export default Recommendation;

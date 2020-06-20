@@ -46,6 +46,10 @@ function App() {
 
   const locationUser = useGetLocation(urlPSI);
 
+  // todo add about page telling the data source and advertising the android app
+  // todo select a better color palette for icons and website
+  // todo add page with weather forecasts
+
   return (
     <Router>
       <div className="relative pb-10 min-h-screen">
