@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css",
-    "main.js": "/air-quality-weather-sg/static/js/main.ad1ae879.chunk.js",
-    "main.js.map": "/air-quality-weather-sg/static/js/main.ad1ae879.chunk.js.map",
+    "main.js": "/air-quality-weather-sg/static/js/main.da17ceaf.chunk.js",
+    "main.js.map": "/air-quality-weather-sg/static/js/main.da17ceaf.chunk.js.map",
     "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js",
     "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.f5dba31b.js.map",
     "static/css/2.7c35e809.chunk.css": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css",
     "static/js/2.6d65eeb0.chunk.js": "/air-quality-weather-sg/static/js/2.6d65eeb0.chunk.js",
     "static/js/2.6d65eeb0.chunk.js.map": "/air-quality-weather-sg/static/js/2.6d65eeb0.chunk.js.map",
     "index.html": "/air-quality-weather-sg/index.html",
-    "precache-manifest.bdd319413619cad78830a7130666e3d5.js": "/air-quality-weather-sg/precache-manifest.bdd319413619cad78830a7130666e3d5.js",
+    "precache-manifest.d389bc179b6f3d3e46a73bccef913831.js": "/air-quality-weather-sg/precache-manifest.d389bc179b6f3d3e46a73bccef913831.js",
     "service-worker.js": "/air-quality-weather-sg/service-worker.js",
     "static/css/2.7c35e809.chunk.css.map": "/air-quality-weather-sg/static/css/2.7c35e809.chunk.css.map",
     "static/css/main.cca977cc.chunk.css.map": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.7c35e809.chunk.css",
     "static/js/2.6d65eeb0.chunk.js",
     "static/css/main.cca977cc.chunk.css",
-    "static/js/main.ad1ae879.chunk.js"
+    "static/js/main.da17ceaf.chunk.js"
   ]
 }
