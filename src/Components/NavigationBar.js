@@ -50,9 +50,9 @@ function NavigationBar() {
                 Charts
               </span>
             </Link>
-            <Link to="/forecastTwoHours">
+            <Link to="/forecast">
               <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
-                2-h Forecast
+                Forecast
               </span>
             </Link>
             <Link to="/mapPollution">

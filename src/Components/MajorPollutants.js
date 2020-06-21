@@ -18,7 +18,11 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
   }
 
   if (dataPSI.loading) {
-    content = <Loader />;
+    content = (
+      <div className="container mx-auto">
+        <Loader />
+      </div>
+    );
   }
 
   if (locationUser.data && dataPSI.data) {
