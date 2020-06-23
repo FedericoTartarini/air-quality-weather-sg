@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useGetLocation } from "./Hooks/GetLocation";
 import Loader from "./Components/Loader";
 
+const AboutView = lazy(() => import( "./Views/AboutView"));
 const MapPollutionView = lazy(() => import("./Views/MapPollutionView"));
 const ForecastView = lazy(() => import("./Views/ForecastView"));
 const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
@@ -43,19 +44,17 @@ function App() {
   const urlPM25 =
     "https://api.data.gov.sg/v1/environment/pm25?date=" + dateString;
 
-  // todo move some of these functions inside the respective component, no need to query all these data on load
   const dataPSI = useHttpRequest(urlPSI);
   const dataTmp = useHttpRequest(urlTmp);
   const dataRH = useHttpRequest(urlRH);
   const dataPM25 = useHttpRequest(urlPM25);
   const dataFor2H = useHttpRequest(urlWeather2H);
   const dataFor24H = useHttpRequest(urlWeather24H);
-
   const locationUser = useGetLocation(urlPSI);
 
-  // todo add about page telling the data source and advertising the android app
   // todo select a better color palette for icons and website
-  // todo add page with weather forecasts
+  // todo add licence file
+  // mention in each page data source
 
   return (
     <Router>
@@ -81,6 +80,9 @@ function App() {
             </Route>
             <Route path="/mapPollution">
               <MapPollutionView data={dataPSI} />
+            </Route>
+            <Route path="/about">
+              <AboutView />
             </Route>
           </Switch>
         </Suspense>
