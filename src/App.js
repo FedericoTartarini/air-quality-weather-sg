@@ -1,13 +1,15 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
-import CurrentReadingsView from "./Views/CurrentReadingsView";
-import ChartsView from "./Views/ChartsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useGetLocation } from "./Hooks/GetLocation";
-import ForecastView from "./Views/ForecastView";
-import MapPollutionView from "./Views/MapPollutionView";
+import Loader from "./Components/Loader";
+
+const MapPollutionView = lazy(() => import("./Views/MapPollutionView"));
+const ForecastView = lazy(() => import("./Views/ForecastView"));
+const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
+const ChartsView = lazy(() => import("./Views/ChartsView"));
 
 function App() {
   let currentDate = new Date();
@@ -41,6 +43,7 @@ function App() {
   const urlPM25 =
     "https://api.data.gov.sg/v1/environment/pm25?date=" + dateString;
 
+  // todo move some of these functions inside the respective component, no need to query all these data on load
   const dataPSI = useHttpRequest(urlPSI);
   const dataTmp = useHttpRequest(urlTmp);
   const dataRH = useHttpRequest(urlRH);
@@ -58,27 +61,29 @@ function App() {
     <Router>
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
-        <Switch>
-          <Route path="/air-quality-weather-sg">
-            <CurrentReadingsView
-              dataPSI={dataPSI}
-              dataTmp={dataTmp}
-              dataRH={dataRH}
-              dataFor2H={dataFor2H}
-              dataPM25={dataPM25}
-              locationUser={locationUser}
-            />
-          </Route>
-          <Route path="/charts">
-            <ChartsView data={dataPSI} locationUser={locationUser} />
-          </Route>
-          <Route path="/forecast">
-            <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
-          </Route>
-          <Route path="/mapPollution">
-            <MapPollutionView data={dataPSI} />
-          </Route>
-        </Switch>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route path="/air-quality-weather-sg">
+              <CurrentReadingsView
+                dataPSI={dataPSI}
+                dataTmp={dataTmp}
+                dataRH={dataRH}
+                dataFor2H={dataFor2H}
+                dataPM25={dataPM25}
+                locationUser={locationUser}
+              />
+            </Route>
+            <Route path="/charts">
+              <ChartsView data={dataPSI} locationUser={locationUser} />
+            </Route>
+            <Route path="/forecast">
+              <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
+            </Route>
+            <Route path="/mapPollution">
+              <MapPollutionView data={dataPSI} />
+            </Route>
+          </Switch>
+        </Suspense>
         <div>
           <Footer />
         </div>
