@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup, ZoomControl } from "react-leaflet";
 import { ForecastToIcon } from "../Functions/Utils";
 
 function GetIcon(description, _iconSize) {
-  const Icon = L.icon({
+  return L.icon({
     iconUrl: ForecastToIcon(description),
     iconSize: [_iconSize], // size of the icon
   });
-  return Icon;
 }
 
 const regionsMetadata = {
@@ -36,7 +35,7 @@ function MapWeather24H({ data }) {
 
   function ButtonForecast({ text, index }) {
     if (text === "12-18") {
-      text = "Next 6-h";
+      text = "Afternoon";
     } else if (text === "18-06") {
       text = "Night";
     } else if (text === "06-12") {
@@ -46,7 +45,7 @@ function MapWeather24H({ data }) {
     return (
       <button
         className={
-          "bg-white hover:bg-gray-200 text-gray-500 py-1 px-3" +
+          "bg-white hover:bg-gray-200 text-gray-500 py-1 px-2" +
           (indexForecast === index
             ? " border text-gray-700 font-semibold"
             : " border-b hover:text-gray-800 ")
@@ -66,7 +65,9 @@ function MapWeather24H({ data }) {
         zoom={zoom}
         style={{ height: height - 108 - 104, width: "100%" }}
         className="z-0"
+        zoomControl={false}
       >
+        <ZoomControl position="bottomleft" />
         <TileLayer
           className="leaflet-tile-pane"
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

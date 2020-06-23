@@ -1,7 +1,7 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup, ZoomControl } from "react-leaflet";
 import { PollutantClass } from "../Functions/Utils";
 
 function RenderValue(stationName, values) {
@@ -22,11 +22,10 @@ function RenderValue(stationName, values) {
 
 function GetIcon(data, _iconSize) {
   const description = PollutantClass(data, "psi_twenty_four_hourly").color;
-  const Icon = L.icon({
+  return L.icon({
     iconUrl: require(`../Static/Icons/${description}.png`),
     iconSize: [_iconSize], // size of the icon
   });
-  return Icon;
 }
 
 function MapPollution({ data }) {
@@ -52,7 +51,9 @@ function MapPollution({ data }) {
       center={position}
       zoom={zoom}
       style={{ height: height - 108 - 104, width: "100%" }}
+      zoomControl={false}
     >
+      <ZoomControl position="bottomleft" />
       <TileLayer
         className="leaflet-tile-pane"
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

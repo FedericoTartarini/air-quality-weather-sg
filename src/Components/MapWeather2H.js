@@ -1,20 +1,19 @@
 import React from "react";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup, ZoomControl } from "react-leaflet";
 import {
   ForecastToIcon,
   TwoHForecastsAtUserLocation,
 } from "../Functions/Utils";
 
 function GetIcon(data, stationName, _iconSize) {
-  const Icon = L.icon({
+  return L.icon({
     iconUrl: ForecastToIcon(
       TwoHForecastsAtUserLocation(data.data, stationName)
     ),
     iconSize: [_iconSize], // size of the icon
   });
-  return Icon;
 }
 
 function MapWeather2H({ data }) {
@@ -35,7 +34,9 @@ function MapWeather2H({ data }) {
       center={position}
       zoom={zoom}
       style={{ height: height - 108 - 104, width: "100%" }}
+      zoomControl={false}
     >
+      <ZoomControl position="bottomleft" />
       <TileLayer
         className="leaflet-tile-pane"
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

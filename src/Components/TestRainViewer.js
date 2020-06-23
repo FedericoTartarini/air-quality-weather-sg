@@ -1,16 +1,14 @@
 import React from "react";
-import { Map, TileLayer } from "react-leaflet";
+import { Map, TileLayer, ZoomControl } from "react-leaflet";
 
-function TestRainViewer({ data }) {
+function TestRainViewer() {
   const { innerWidth: width, innerHeight: height } = window;
 
-  let zoom, iconSize;
+  let zoom;
   if (width > 500) {
     zoom = 11;
-    iconSize = 45;
   } else {
     zoom = 10;
-    iconSize = 30;
   }
 
   const position = [1.3521, 103.8198];
@@ -19,7 +17,9 @@ function TestRainViewer({ data }) {
       center={position}
       zoom={zoom}
       style={{ height: height - 108 - 104, width: "100%" }}
+      zoomControl={false}
     >
+      <ZoomControl position="bottomleft" />
       <TileLayer
         className="leaflet-tile-pane"
         attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
