@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import MapWeather from "../Components/MapWeather";
+import MapWeather2H from "../Components/MapWeather2H";
+import MapWeather24H from "../Components/MapWeather24H";
 import RainViewer from "../Components/RainViewer";
 
-function ForecastView({ data }) {
+function ForecastView({ dataFor2H, dataFor24H }) {
   const [buttonSelection, setButtonSelection] = useState("2-h Forecast");
 
   function LinkViewSelector({ text }) {
@@ -37,9 +38,9 @@ function ForecastView({ data }) {
 
   function View({ selection }) {
     if (selection === "2-h Forecast") {
-      return <MapWeather data={data} />;
+      return <MapWeather2H data={dataFor2H} />;
     } else if (selection === "24-h Forecast") {
-      return "";
+      return <MapWeather24H data={dataFor24H} />;
     } else {
       return <RainViewer />;
     }

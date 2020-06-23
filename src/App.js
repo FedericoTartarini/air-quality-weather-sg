@@ -24,6 +24,9 @@ function App() {
   const urlWeather2H =
     "https://api.data.gov.sg/v1/environment/2-hour-weather-forecast?date_time=" +
     isoString;
+  const urlWeather24H =
+    "https://api.data.gov.sg/v1/environment/24-hour-weather-forecast?date_time=" +
+    isoString;
 
   // if it is midnight I am querying the previous day
   if (isoString.split("T")[1].split(":")[0] === "00") {
@@ -43,6 +46,7 @@ function App() {
   const dataRH = useHttpRequest(urlRH);
   const dataPM25 = useHttpRequest(urlPM25);
   const dataFor2H = useHttpRequest(urlWeather2H);
+  const dataFor24H = useHttpRequest(urlWeather24H);
 
   const locationUser = useGetLocation(urlPSI);
 
@@ -69,7 +73,7 @@ function App() {
             <ChartsView data={dataPSI} locationUser={locationUser} />
           </Route>
           <Route path="/forecast">
-            <ForecastView data={dataFor2H} />
+            <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
           </Route>
           <Route path="/mapPollution">
             <MapPollutionView data={dataPSI} />

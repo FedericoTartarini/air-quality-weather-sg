@@ -17,7 +17,7 @@ function GetIcon(data, stationName, _iconSize) {
   return Icon;
 }
 
-function MapWeather({ data }) {
+function MapWeather2H({ data }) {
   const { innerWidth: width, innerHeight: height } = window;
 
   let zoom, iconSize;
@@ -65,4 +65,4 @@ function MapWeather({ data }) {
   );
 }
 
-export default MapWeather;
+export default MapWeather2H;
