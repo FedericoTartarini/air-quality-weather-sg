@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { Map, TileLayer, Marker, Popup, ZoomControl } from "react-leaflet";
 import { ForecastToIcon } from "../Functions/Utils";
+import { Helmet } from "react-helmet";
 
 function GetIcon(description, _iconSize) {
   return L.icon({
@@ -60,6 +61,13 @@ function MapWeather24H({ data }) {
   const position = [1.3521, 103.8198];
   return (
     <div className="relative">
+      <Helmet>
+        <title>24-hour weather forecasts</title>
+        <meta
+          name="description"
+          content="This page shows the next 24 hours weather forecasts"
+        />
+      </Helmet>
       <Map
         center={position}
         zoom={zoom}

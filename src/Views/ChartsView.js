@@ -4,6 +4,7 @@ import TableIndicesCategories from "../Components/TableIndicesCategories";
 import { ClosestStation } from "../Functions/Utils";
 import Loader from "../Components/Loader";
 import DropDown from "../Components/DropDown";
+import { Helmet } from "react-helmet";
 
 function ChartsView({ data, locationUser }) {
   // todo also add temperature and relative humidity chart
@@ -28,6 +29,13 @@ function ChartsView({ data, locationUser }) {
   if (locationUser.data && data.data && stationName) {
     content = (
       <div className="container mx-auto py-3">
+        <Helmet>
+          <title>Historical pollution data</title>
+          <meta
+            name="description"
+            content="This page shows you the pollutants concentrations over the last 24 hours."
+          />
+        </Helmet>
         <div className="flex justify-center content-center">
           <p className="py-2 mr-2">Pollution last 24-h. Station:</p>
           <DropDown

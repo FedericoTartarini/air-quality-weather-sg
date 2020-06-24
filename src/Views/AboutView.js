@@ -1,11 +1,19 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 function AboutView(props) {
   return (
     <section className="text-gray-700 body-font">
+      <Helmet>
+        <title>About Page</title>
+        <meta
+          name="description"
+          content="This page is about the author, Federico Tartarini."
+        />
+      </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
         <img
-          className="lg:w-2/6 md:w-3/6 w-4/6 mb-8 object-cover object-center rounded-full border-4 shadow-lg"
+          className="lg:w-1/6 md:w-3/6 w-4/6 mb-8 object-cover object-center rounded-full border-4 shadow-lg"
           alt="hero"
           src={require("../Static/Images/me.jpg")}
         />

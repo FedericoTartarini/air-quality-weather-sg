@@ -2,6 +2,7 @@ import React from "react";
 import TopImage from "../Components/TopImage";
 import CurrentReadings from "../Components/CurrentReadings";
 import Recommendation from "../Components/Recommendation";
+import { Helmet } from "react-helmet";
 
 function CurrentReadingsView({
   dataPSI,
@@ -13,6 +14,13 @@ function CurrentReadingsView({
 }) {
   return (
     <div className="py-3">
+      <Helmet>
+        <title>Air quality and weather Singapore</title>
+        <meta
+          name="description"
+          content="This page shows you the current temperature, relative humidity, PM 2.5, PSI readings."
+        />
+      </Helmet>
       <div className="flex">
         <TopImage />
       </div>

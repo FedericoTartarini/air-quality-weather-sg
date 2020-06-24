@@ -62,7 +62,7 @@ function App() {
         <NavigationBar />
         <Suspense fallback={<Loader />}>
           <Switch>
-            <Route path="/air-quality-weather-sg">
+            <Route exact path="/air-quality-weather-sg">
               <CurrentReadingsView
                 dataPSI={dataPSI}
                 dataTmp={dataTmp}
@@ -72,16 +72,16 @@ function App() {
                 locationUser={locationUser}
               />
             </Route>
-            <Route path="/charts">
+            <Route path="/air-quality-weather-sg/charts">
               <ChartsView data={dataPSI} locationUser={locationUser} />
             </Route>
-            <Route path="/forecast">
+            <Route path="/air-quality-weather-sg/forecast">
               <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
             </Route>
-            <Route path="/mapPollution">
+            <Route path="/air-quality-weather-sg/mapPollution">
               <MapPollutionView data={dataPSI} />
             </Route>
-            <Route path="/about">
+            <Route path="/air-quality-weather-sg/about">
               <AboutView />
             </Route>
           </Switch>
