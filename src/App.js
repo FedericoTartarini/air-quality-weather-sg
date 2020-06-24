@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useGetLocation } from "./Hooks/GetLocation";
 import Loader from "./Components/Loader";
 
-const AboutView = lazy(() => import( "./Views/AboutView"));
+const AboutView = lazy(() => import("./Views/AboutView"));
 const MapPollutionView = lazy(() => import("./Views/MapPollutionView"));
 const ForecastView = lazy(() => import("./Views/ForecastView"));
 const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
