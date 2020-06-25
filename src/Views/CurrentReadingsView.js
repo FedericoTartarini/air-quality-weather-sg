@@ -9,6 +9,7 @@ function CurrentReadingsView({
   dataTmp,
   dataRH,
   dataFor2H,
+  dataFor24H,
   dataPM25,
   locationUser,
 }) {
@@ -30,6 +31,7 @@ function CurrentReadingsView({
           dataTmp={dataTmp}
           dataRH={dataRH}
           dataFor2H={dataFor2H}
+          dataFor24H={dataFor24H}
           dataPM25={dataPM25}
           locationUser={locationUser}
         />

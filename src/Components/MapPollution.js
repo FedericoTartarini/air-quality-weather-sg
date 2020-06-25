@@ -39,10 +39,10 @@ function MapPollution({ data }) {
   let zoom, iconSize;
   if (width > 500) {
     zoom = 11;
-    iconSize = 45;
+    iconSize = 50;
   } else {
     zoom = 10;
-    iconSize = 30;
+    iconSize = 40;
   }
 
   const position = [1.3521, 103.8198];

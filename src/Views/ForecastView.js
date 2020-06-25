@@ -4,7 +4,15 @@ import MapWeather24H from "../Components/MapWeather24H";
 import RainViewer from "../Components/RainViewer";
 
 function ForecastView({ dataFor2H, dataFor24H }) {
-  const [buttonSelection, setButtonSelection] = useState("2-h Forecast");
+  const [buttonSelection, setButtonSelection] = useState("24-h Forecast");
+
+  let subViews = ["24-h Forecast", "Rain Radar"];
+
+  if (dataFor2H.data) {
+    if (dataFor2H.data.items === [{}]) {
+      subViews.push("2-h Forecast");
+    }
+  }
 
   function LinkViewSelector({ text }) {
     return (
@@ -28,9 +36,9 @@ function ForecastView({ dataFor2H, dataFor24H }) {
     return (
       <div className="container mx-auto my-2 text-center text-sm">
         <ul className="flex border-b justify-center">
-          <LinkViewSelector text={"2-h Forecast"} />
-          <LinkViewSelector text={"24-h Forecast"} />
-          <LinkViewSelector text={"Rain Radar"} />
+          {subViews.map((view) => (
+            <LinkViewSelector text={view} />
+          ))}
         </ul>
       </div>
     );

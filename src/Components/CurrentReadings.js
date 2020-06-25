@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MajorPollutants from "./MajorPollutants";
 import CurrentValue from "./CurrentValue";
 import {
@@ -6,25 +6,37 @@ import {
   ForecastToIcon,
   TwoHForecastsAtUserLocation,
 } from "../Functions/Utils";
+import CurrentForecast from "./CurrentForecast";
 
 function CurrentReadings({
   dataPSI,
   dataTmp,
   dataRH,
   dataFor2H,
+  dataFor24H,
   dataPM25,
   locationUser,
 }) {
+  const [station, setStation] = useState("central");
+
+  useEffect(() => {
+    let value = "";
+    if (dataFor2H.data && locationUser.data && dataPSI.data) {
+      value = ClosestStation(dataFor2H.data, locationUser.data).name;
+      if (value === undefined) {
+        value = ClosestStation(dataPSI.data, locationUser.data).name;
+      }
+      setStation(value);
+    }
+  }, [dataFor2H, dataPSI, locationUser]);
+
   return (
     <div className="container mx-auto my-3 flex px-5 items-center justify-center shadow-lg border rounded">
       <section className="text-gray-700 body-font flex-grow">
         <div className="container px-5 py-5 mx-auto">
           <div className="text-center my-5">
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Closest station:{" "}
-              {dataFor2H.data && locationUser.data
-                ? ClosestStation(dataFor2H.data, locationUser.data).name
-                : ""}
+              Closest station: {station}
             </p>
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
@@ -56,31 +68,12 @@ function CurrentReadings({
               Relative humidity:{" "}
               <CurrentValue data={dataRH} locationUser={locationUser} />%
             </div>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              2-hour forecast for{" "}
-              {dataFor2H.data && locationUser.data
-                ? ClosestStation(dataFor2H.data, locationUser.data).name +
-                  ": " +
-                  TwoHForecastsAtUserLocation(
-                    dataFor2H.data,
-                    ClosestStation(dataFor2H.data, locationUser.data).name
-                  )
-                : ""}
-            </p>
-            {dataFor2H.data && locationUser.data ? (
-              <img
-                className="h-12 w-full object-contain my-3"
-                src={ForecastToIcon(
-                  TwoHForecastsAtUserLocation(
-                    dataFor2H.data,
-                    ClosestStation(dataFor2H.data, locationUser.data).name
-                  )
-                )}
-                alt="weather icon"
-              />
-            ) : (
-              ""
-            )}
+            <CurrentForecast
+              locationUser={locationUser}
+              dataFor2H={dataFor2H}
+              dataFor24H={dataFor24H}
+              station={station}
+            />
           </div>
         </div>
       </section>
