@@ -8,7 +8,7 @@ function NavigationBar() {
   return (
     <div className="bg-gray-100">
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
-        <Link to="/air-quality-weather-sg">
+        <Link to="/">
           <div className="flex items-center flex-shrink-0">
             <img src={logo} alt="logo" width={50} />
             <span className="font-semibold text-xl tracking-tight ml-3 w-40">
@@ -40,27 +40,27 @@ function NavigationBar() {
           onClick={() => setNavbarOpen(!navbarOpen)}
         >
           <div className="text-sm xl:flex-grow">
-            <Link to="/air-quality-weather-sg">
+            <Link to="/">
               <span className="block mt-4 xl:inline-block xl:mt-0 hover:text-gray-600 ml-4">
                 Home
               </span>
             </Link>
-            <Link to="/air-quality-weather-sg/charts">
+            <Link to="/charts">
               <span className="block mt-4 xl:inline-block xl:mt-0 hover:text-gray-600 ml-4">
                 Charts
               </span>
             </Link>
-            <Link to="/air-quality-weather-sg/forecast">
+            <Link to="/forecast">
               <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
                 Forecast
               </span>
             </Link>
-            <Link to="/air-quality-weather-sg/mapPollution">
+            <Link to="/mapPollution">
               <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
                 Map Pollution
               </span>
             </Link>
-            <Link to="/air-quality-weather-sg/about">
+            <Link to="/about">
               <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
                 About
               </span>

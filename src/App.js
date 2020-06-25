@@ -57,12 +57,12 @@ function App() {
   // mention in each page data source
 
   return (
-    <Router>
+    <Router basename="/">
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
         <Suspense fallback={<Loader />}>
           <Switch>
-            <Route exact path="/air-quality-weather-sg">
+            <Route exact path="/">
               <CurrentReadingsView
                 dataPSI={dataPSI}
                 dataTmp={dataTmp}
@@ -72,16 +72,16 @@ function App() {
                 locationUser={locationUser}
               />
             </Route>
-            <Route path="/air-quality-weather-sg/charts">
+            <Route path="/charts">
               <ChartsView data={dataPSI} locationUser={locationUser} />
             </Route>
-            <Route path="/air-quality-weather-sg/forecast">
+            <Route path="/forecast">
               <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
             </Route>
-            <Route path="/air-quality-weather-sg/mapPollution">
+            <Route path="/mapPollution">
               <MapPollutionView data={dataPSI} />
             </Route>
-            <Route path="/air-quality-weather-sg/about">
+            <Route path="/about">
               <AboutView />
             </Route>
           </Switch>
