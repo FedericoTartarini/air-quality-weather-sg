@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a47f4b1d9acc5cf4e9805ac6a8abc4b7",
+    "revision": "a0faac661f4f90f6af9ad1e0d91c715c",
     "url": "/air-quality-weather-sg/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/css/3.7c35e809.chunk.css"
   },
   {
-    "revision": "4c97fe093e02160fd23b",
+    "revision": "8ae53c6a1fab027d51c8",
     "url": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/11.e5de208b.chunk.js"
   },
   {
-    "revision": "50ee6a0a1cd7fb5ce7b6",
-    "url": "/air-quality-weather-sg/static/js/12.ad163f47.chunk.js"
+    "revision": "5c1ed2e134d5b734ee2c",
+    "url": "/air-quality-weather-sg/static/js/12.4ab2f828.chunk.js"
   },
   {
     "revision": "24c3e227bc76c3597c8f",
@@ -60,20 +60,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/7.8ee06e5d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5228bbbce3c5130a288",
-    "url": "/air-quality-weather-sg/static/js/8.294f6eb9.chunk.js"
+    "revision": "5aed44bf6f5a3e5d51b5",
+    "url": "/air-quality-weather-sg/static/js/8.b163ca10.chunk.js"
   },
   {
-    "revision": "fdead02f2178975706b4",
-    "url": "/air-quality-weather-sg/static/js/9.9b6f2e61.chunk.js"
+    "revision": "6842095e676f873ba31e",
+    "url": "/air-quality-weather-sg/static/js/9.be5c034f.chunk.js"
   },
   {
-    "revision": "4c97fe093e02160fd23b",
-    "url": "/air-quality-weather-sg/static/js/main.0c96b7c4.chunk.js"
+    "revision": "8ae53c6a1fab027d51c8",
+    "url": "/air-quality-weather-sg/static/js/main.d58a5ce6.chunk.js"
   },
   {
-    "revision": "b1e1818fc952253238cf",
-    "url": "/air-quality-weather-sg/static/js/runtime-main.8a4abb3e.js"
+    "revision": "2994a150d19f7f568e61",
+    "url": "/air-quality-weather-sg/static/js/runtime-main.fce5f673.js"
   },
   {
     "revision": "b612829ccff0b01d84f37334727723dd",
