@@ -57,7 +57,7 @@ function App() {
   // mention in each page data source
 
   return (
-    <Router basename="/">
+    <Router basename="/air-quality-weather-sg">
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
         <Suspense fallback={<Loader />}>
