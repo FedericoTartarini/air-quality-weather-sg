@@ -13,7 +13,7 @@ function AboutView(props) {
       </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
         <img
-          className="lg:w-1/6 md:w-3/6 w-4/6 mb-8 object-cover object-center rounded-full border-4 shadow-lg"
+          className="lg:w-2/6 md:w-2/6 w-3/6 mb-8 object-cover object-center rounded-full border-4 shadow-lg"
           alt="hero"
           src={require("../Static/Images/me.jpg")}
         />
@@ -22,10 +22,10 @@ function AboutView(props) {
             Air Quality and Weather Singapore
           </h1>
           <p className="mb-8 leading-relaxed">
-            Hello! My name is Federico Tartarini, developer of the Air Quality
-            and Weather - Singapore website and applications for Android. My aim
-            is to develop a simple to use website that let's you check air
-            quality around you and the weather forecasts.
+            Hello! My name is Federico Tartarini, the developer of the Air
+            Quality and Weather - Singapore website and applications for
+            Android. My aim is to develop an easy to use website that allows you
+            to check the weather forecast and the air quality in Singapore.
           </p>
           <div className="flex w-full justify-center">
             <a href="https://www.buymeacoffee.com/FedericoT" target="_blank">
@@ -70,7 +70,7 @@ function AboutView(props) {
           <p className="leading-relaxed">
             I would like to thank the Singaporean government who provides API
             that can be used to download air quality, weather and forecasts data
-            in real-time. <br /> In addition I would like to thank all the
+            in real-time. <br /> In addition, I would like to thank the
             developers at OpenStreetMap, Leaflet, React, FontAwesome, Inkscape,
             Google and Oleksii Schastlyvyi who created{" "}
             <a href="https://www.rainviewer.com/api.html">RainViewer</a>. <br />
