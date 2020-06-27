@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74a1b02383a30a9680f41b7ceefe15a0",
+    "revision": "a39c2b39d57ca29229c02f3f0c269489",
     "url": "/air-quality-weather-sg/index.html"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/0.4a719da0.chunk.js"
   },
   {
-    "revision": "d18b99519d54d8af64fe",
-    "url": "/air-quality-weather-sg/static/js/1.2fb232f8.chunk.js"
+    "revision": "d16d8b69527e024893d1",
+    "url": "/air-quality-weather-sg/static/js/1.ea0ec742.chunk.js"
   },
   {
-    "revision": "7b1ec5e1dfe3186a101c",
-    "url": "/air-quality-weather-sg/static/js/10.3653390d.chunk.js"
+    "revision": "9cf62a079d5063f3175c",
+    "url": "/air-quality-weather-sg/static/js/10.5b696fd5.chunk.js"
   },
   {
     "revision": "40da856dd8780c0a148b",
@@ -72,20 +72,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/main.67d4277e.chunk.js"
   },
   {
-    "revision": "d363b3602596bd90795e",
-    "url": "/air-quality-weather-sg/static/js/runtime-main.69761b7d.js"
+    "revision": "149f631006a29bff52fe",
+    "url": "/air-quality-weather-sg/static/js/runtime-main.94f7d8df.js"
   },
   {
-    "revision": "8787c55d661e3751144ff38fa02cb00c",
-    "url": "/air-quality-weather-sg/static/media/good-day.8787c55d.jpg"
+    "revision": "d0ccd565ec49c75a497ad42f0235ad08",
+    "url": "/air-quality-weather-sg/static/media/good-day.d0ccd565.webp"
   },
   {
-    "revision": "8233f5f99842a52da2f22310c8dbb9c2",
-    "url": "/air-quality-weather-sg/static/media/good-night.8233f5f9.jpg"
+    "revision": "cdab1bb4b8b4429dd307ed321a81f0e8",
+    "url": "/air-quality-weather-sg/static/media/good-night.cdab1bb4.webp"
   },
   {
-    "revision": "ab61dc3a12e51a9d405d9c8c2e2f958f",
-    "url": "/air-quality-weather-sg/static/media/hazarduos.ab61dc3a.jpg"
+    "revision": "24dcd33a91c23995256bb0f26ca42428",
+    "url": "/air-quality-weather-sg/static/media/hazarduos.24dcd33a.webp"
   },
   {
     "revision": "52c8dcb0b4d425cf1b3ea24b843a0a2b",
@@ -100,31 +100,31 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/media/me.198e98b7.jpg"
   },
   {
-    "revision": "f0e85442e756ef47d6033135c7f5be36",
-    "url": "/air-quality-weather-sg/static/media/moderate-day.f0e85442.jpg"
+    "revision": "36a5ca38c1c049e00676a63cc102a998",
+    "url": "/air-quality-weather-sg/static/media/moderate-day.36a5ca38.webp"
   },
   {
-    "revision": "fcfbd3dbb0a795ce01cb478d671623f7",
-    "url": "/air-quality-weather-sg/static/media/moderate-night.fcfbd3db.jpg"
+    "revision": "3366b727a9bf8f7137b90a715ae97166",
+    "url": "/air-quality-weather-sg/static/media/moderate-night.3366b727.webp"
   },
   {
     "revision": "d67ab07e604a4a18627db0eeaa1a5312",
     "url": "/air-quality-weather-sg/static/media/singapore-line.d67ab07e.png"
   },
   {
-    "revision": "f7b35daee9112599c7a3df794f08e3d7",
-    "url": "/air-quality-weather-sg/static/media/unhealthy-day.f7b35dae.jpg"
+    "revision": "0a84188432024cccaa3c8ba4373658df",
+    "url": "/air-quality-weather-sg/static/media/unhealthy-day.0a841884.webp"
   },
   {
-    "revision": "04bc030af505601f064d77c542e3615d",
-    "url": "/air-quality-weather-sg/static/media/unhealty-night.04bc030a.jpg"
+    "revision": "35e5620e00a2fa97afa28fed823ea15c",
+    "url": "/air-quality-weather-sg/static/media/unhealty-night.35e5620e.webp"
   },
   {
-    "revision": "31ed53102dffcba3bc8f12f29766027f",
-    "url": "/air-quality-weather-sg/static/media/very-unhealthy-day.31ed5310.jpg"
+    "revision": "d87d46ae7eac91052b61fe896a6544bf",
+    "url": "/air-quality-weather-sg/static/media/very-unhealthy-day.d87d46ae.webp"
   },
   {
-    "revision": "e8d0ff4e29dd8d0df320730aa980bf0e",
-    "url": "/air-quality-weather-sg/static/media/very-unhealthy-night.e8d0ff4e.jpg"
+    "revision": "8fe4a98eb5a59b2c758ab6cd7d7fb089",
+    "url": "/air-quality-weather-sg/static/media/very-unhealthy-night.8fe4a98e.webp"
   }
 ]);
