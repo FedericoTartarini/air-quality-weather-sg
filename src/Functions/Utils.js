@@ -346,3 +346,37 @@ export function ForecastToIcon(description) {
   }
   return imgURL;
 }
+
+export function ChooseTopImageSingapore(airQualityDescription) {
+  let imgURL;
+
+  const hour = new Date().getHours();
+
+  // console.log('hour' + hour);
+  if (hour > 7 && hour < 19) {
+    if (airQualityDescription === "Good") {
+      imgURL = require("../Static/Images/good-day.jpg");
+    } else if (airQualityDescription === "Moderate") {
+      imgURL = require("../Static/Images/moderate-day.jpg");
+    } else if (airQualityDescription === "Unhealthy") {
+      imgURL = require("../Static/Images/unhealthy-day.jpg");
+    } else if (airQualityDescription === "Very Unhealthy") {
+      imgURL = require("../Static/Images/very-unhealthy-day.jpg");
+    } else {
+      imgURL = require("../Static/Images/hazarduos.jpg");
+    }
+  } else {
+    if (airQualityDescription === "Good") {
+      imgURL = require("../Static/Images/good-night.jpg");
+    } else if (airQualityDescription === "Moderate") {
+      imgURL = require("../Static/Images/moderate-night.jpg");
+    } else if (airQualityDescription === "Unhealthy") {
+      imgURL = require("../Static/Images/unhealty-night.jpg");
+    } else if (airQualityDescription === "Very Unhealthy") {
+      imgURL = require("../Static/Images/very-unhealthy-night.jpg");
+    } else {
+      imgURL = require("../Static/Images/hazarduos.jpg");
+    }
+  }
+  return imgURL;
+}

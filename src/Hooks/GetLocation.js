@@ -59,7 +59,7 @@ export function useGetLocation(props) {
   }
 
   useEffect(() => {
-    console.log("Requesting location");
+    // console.log("Requesting location");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(getCoordinates, showError);
     } else {
