@@ -14,7 +14,7 @@ function AboutView(props) {
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
         <img
           className="lg:w-2/6 md:w-2/6 w-3/6 mb-8 object-cover object-center rounded-full border-4 shadow-lg"
-          alt="hero"
+          alt="author's image"
           src={require("../Static/Images/me.jpg")}
         />
         <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">

@@ -14,7 +14,10 @@ function Footer(props) {
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center">
           <img src={logo} alt="logo" width={40} />
-          <span className="ml-3 text-xl">Air Quality and Weather</span>
+          <div>
+            <p className="ml-3 text-xl">Air Quality and Weather</p>
+            <p className="text-xs ml-3">v 0.0.1</p>
+          </div>
         </a>
         <p className="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
           © 2020
@@ -31,21 +34,28 @@ function Footer(props) {
           <a
             className="mx-1"
             href="https://www.linkedin.com/in/federico-tartarini-3991995b/"
+            aria-label="LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedin} size={"lg"} />
           </a>
-          <a className="mx-1" href="https://github.com/FedericoTartarini">
+          <a
+            className="mx-1"
+            href="https://github.com/FedericoTartarini"
+            aria-label="GitHub"
+          >
             <FontAwesomeIcon icon={faGithub} size={"lg"} />
           </a>
           <a
             className="mx-1"
             href="https://www.researchgate.net/profile/Federico_Tartarini"
+            aria-label="Researchgate"
           >
             <FontAwesomeIcon icon={faResearchgate} size={"lg"} />
           </a>
           <a
             className="mx-1"
             href="https://play.google.com/store/apps/details?id=com.airqualityapp"
+            aria-label="GooglePlay"
           >
             <FontAwesomeIcon icon={faGooglePlay} size={"lg"} />
           </a>

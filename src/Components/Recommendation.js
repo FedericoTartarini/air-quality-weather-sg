@@ -62,11 +62,12 @@ function Recommendation({ dataPSI, locationUser }) {
         <p className="mt-2 text-xs text-center text-gray-800">
           This app does not provide medical advice. It is intended for
           informational purposes only. It is not a substitute for professional
-          medical advice. Click{" "}
+          medical advice. For more information about the above recommendations
+          visit{" "}
           <a className="text-gray-600" href={GetHelpURL("help")}>
-            here
-          </a>{" "}
-          to learn more about the recommendations provided above.
+            NEA's website
+          </a>
+          .
         </p>
       </div>
     );

@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+Sitemap: https://github.com/FedericoTartarini/air-quality-weather-sg/blob/master/public/sitemap.xml

@@ -23,7 +23,7 @@ function CurrentReadingsView({
         />
       </Helmet>
       <div className="flex">
-        <TopImage />
+        <TopImage dataPSI={dataPSI} locationUser={locationUser} />
       </div>
       <div>
         <CurrentReadings

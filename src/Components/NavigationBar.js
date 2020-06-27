@@ -10,7 +10,7 @@ function NavigationBar() {
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
         <Link to="/">
           <div className="flex items-center flex-shrink-0">
-            <img src={logo} alt="logo" width={50} />
+            <img src={logo} alt="logo website" width={50} />
             <span className="font-semibold text-xl tracking-tight ml-3 w-40">
               Air Quality and Weather - SG
             </span>
@@ -18,7 +18,7 @@ function NavigationBar() {
         </Link>
         <div className="block xl:hidden">
           <button
-            className="flex items-center px-3 py-2 border rounded hover:text-gray-600 hover:border-white"
+            className="flex items-center px-3 py-2 border rounded hover:text-gray-700 hover:border-white"
             type="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
