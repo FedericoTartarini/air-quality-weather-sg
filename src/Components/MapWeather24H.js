@@ -118,6 +118,7 @@ function MapWeather24H({ data }) {
           {data.data
             ? data.data["items"][0]["periods"].map((period, index) => (
                 <ButtonForecast
+                  key={period.time.start}
                   text={
                     period.time.start.split("T")[1].split(":")[0] +
                     "-" +

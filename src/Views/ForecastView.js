@@ -37,7 +37,7 @@ function ForecastView({ dataFor2H, dataFor24H }) {
       <div className="container mx-auto my-2 text-center text-sm">
         <ul className="flex border-b justify-center">
           {subViews.map((view) => (
-            <LinkViewSelector text={view} />
+            <LinkViewSelector key={view} text={view} />
           ))}
         </ul>
       </div>
