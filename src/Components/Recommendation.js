@@ -32,7 +32,7 @@ function Recommendation({ dataPSI, locationUser }) {
 
     content = (
       <div className="container mx-auto flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
-        <div className="px-6 py-4 text-gray-800">
+        <div className="text-gray-800 mb-2">
           <div className="font-bold text-md mb-2">
             The 24-h Pollutant Standards Index (PSI) is "{description}".
             Advisory for the general public regarding activities outdoors:

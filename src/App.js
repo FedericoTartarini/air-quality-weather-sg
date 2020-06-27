@@ -53,7 +53,6 @@ function App() {
   const locationUser = useGetLocation(urlPSI);
 
   // todo select a better color palette for icons and website
-  // mention in each page data source
 
   return (
     <Router basename="/air-quality-weather-sg">
