@@ -21,39 +21,39 @@ export function HealthAdvisory(airQualityDescription) {
   switch (airQualityDescription) {
     case "Good":
       return {
-        healthy: "Normal activities outdoors.",
-        old: "Normal activities outdoors.",
-        sick: "Normal activities outdoors.",
+        healthy: "Normal activities.",
+        old: "Normal activities.",
+        sick: "Normal activities.",
       };
     case "Moderate":
       return {
-        healthy: "Normal activities outdoors.",
-        old: "Normal activities outdoors.",
-        sick: "Normal activities outdoors.",
+        healthy: "Normal activities.",
+        old: "Normal activities.",
+        sick: "Normal activities.",
       };
     case "Unhealthy":
       return {
-        healthy: "Reduce prolonged or strenuous outdoor physical activities.",
-        old: "Minimise prolonged or strenuous outdoor physical activities.",
-        sick: "Avoid prolonged or strenuous outdoor physical activities.",
+        healthy: "Reduce prolonged or strenuous physical exertion.",
+        old: "Minimise prolonged or strenuous physical exertion.",
+        sick: "Avoid prolonged or strenuous physical exertion.",
       };
     case "Very Unhealthy":
       return {
-        healthy: "Avoid prolonged or strenuous outdoor physical activities.",
-        old: "Minimise outdoor activity.",
-        sick: "Avoid outdoor activity.",
+        healthy: "Avoid prolonged or strenuous physical exertion.",
+        old: "Minimise activities.",
+        sick: "Avoid activities.",
       };
     case "Hazardous":
       return {
-        healthy: "Minimise outdoor activity.",
-        old: "Avoid outdoor activity.",
-        sick: "Avoid outdoor activity.",
+        healthy: "Minimise activities.",
+        old: "Avoid activities.",
+        sick: "Avoid activities.",
       };
     default:
       return {
-        healthy: "Minimise outdoor activity.",
-        old: "Avoid outdoor activity.",
-        sick: "Avoid outdoor activity.",
+        healthy: "Minimise activities.",
+        old: "Avoid activities.",
+        sick: "Avoid activities.",
       };
   }
 }

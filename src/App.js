@@ -53,7 +53,6 @@ function App() {
   const locationUser = useGetLocation(urlPSI);
 
   // todo select a better color palette for icons and website
-  // todo add licence file
   // mention in each page data source
 
   return (

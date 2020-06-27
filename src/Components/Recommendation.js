@@ -5,6 +5,7 @@ import {
   GetLatestReading,
   HealthAdvisory,
   PollutantClass,
+  GetHelpURL,
 } from "../Functions/Utils";
 import Loader from "./Loader";
 
@@ -33,8 +34,8 @@ function Recommendation({ dataPSI, locationUser }) {
       <div className="container mx-auto flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
         <div className="px-6 py-4 text-gray-800">
           <div className="font-bold text-md mb-2">
-            The 24-h Pollutant Standards Index (PSI) is "{description}". It is
-            advised that:
+            The 24-h Pollutant Standards Index (PSI) is "{description}".
+            Advisory for the general public regarding activities outdoors:
           </div>
           <p className="text-base">
             <span className="font-bold">Healthy persons: </span>
@@ -58,13 +59,20 @@ function Recommendation({ dataPSI, locationUser }) {
           src={singaporeLine}
           alt="Singapore's line"
         />
+        <p className="mt-2 text-xs text-center text-gray-800">
+          This app does not provide medical advice. It is intended for
+          informational purposes only. It is not a substitute for professional
+          medical advice. Click{" "}
+          <a className="text-gray-600" href={GetHelpURL("help")}>
+            here
+          </a>{" "}
+          to learn more about the recommendations provided above.
+        </p>
       </div>
     );
   }
 
   return content;
 }
-
-// todo add note below singapore-line saying that recommendations are not medical advices
 
 export default Recommendation;
