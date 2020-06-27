@@ -64,7 +64,7 @@ function Recommendation({ dataPSI, locationUser }) {
           informational purposes only. It is not a substitute for professional
           medical advice. For more information about the above recommendations
           visit{" "}
-          <a className="text-gray-600" href={GetHelpURL("help")}>
+          <a className="text-gray-700" href={GetHelpURL("help")}>
             NEA's website
           </a>
           .

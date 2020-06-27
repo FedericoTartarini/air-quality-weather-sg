@@ -14,7 +14,7 @@ function CurrentReadingsView({
   locationUser,
 }) {
   return (
-    <div className="py-3">
+    <div className>
       <Helmet>
         <title>Air quality and weather Singapore</title>
         <meta

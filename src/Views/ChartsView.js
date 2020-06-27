@@ -28,7 +28,7 @@ function ChartsView({ data, locationUser }) {
 
   if (locationUser.data && data.data && stationName) {
     content = (
-      <div className="container mx-auto py-3">
+      <div className="container mx-auto">
         <Helmet>
           <title>Historical pollution data</title>
           <meta
