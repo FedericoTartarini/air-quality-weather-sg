@@ -5,9 +5,7 @@ import Loader from "./Loader";
 import { MapNamePollutants } from "../Functions/Utils";
 
 function LineChart({ data, pollutants, stationName, footNote }) {
-  const { innerWidth: width, innerHeight: height } = window;
-
-  // console.log(width);
+  const { innerWidth: width } = window;
 
   let chartHeight;
   if (width > 500) {
