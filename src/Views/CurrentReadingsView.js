@@ -16,7 +16,7 @@ function CurrentReadingsView({
   showRequestLocButton,
 }) {
   return (
-    <div className>
+    <div>
       <Helmet>
         <title>Air quality and weather Singapore</title>
         <meta

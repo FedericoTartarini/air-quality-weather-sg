@@ -35,7 +35,7 @@ function DropDown({ selected, listItems, setValue }) {
         }
       >
         {listItems.map((item) => (
-          <DropDownItem item={item} />
+          <DropDownItem key={item} item={item} />
         ))}
       </div>
     </div>

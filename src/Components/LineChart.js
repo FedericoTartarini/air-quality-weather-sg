@@ -153,7 +153,9 @@ function LineChart({ data, pollutants, stationName, footNote }) {
           height={chartHeight}
         />
         {footNote.map((prop) => (
-          <p className="text-xs text-center text-gray-800">{prop}</p>
+          <p key={prop} className="text-xs text-center text-gray-800">
+            {prop}
+          </p>
         ))}
       </div>
     );

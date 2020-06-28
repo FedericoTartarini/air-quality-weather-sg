@@ -38,6 +38,8 @@ function CurrentReadings({
             <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
               Closest air quality station:{" "}
               <span className="capitalize">{station}</span>
+              {/*  todo print Novena, Juron, etc. not west, east. Get the info from location metadata */}
+              {/*  todo allow user to select a station */}
             </p>
           </div>
 

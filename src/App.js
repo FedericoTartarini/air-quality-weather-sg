@@ -98,8 +98,8 @@ function App() {
     switch (error.code) {
       case error.PERMISSION_DENIED:
         alert(
-          "You previously denied the request for Geolocation.\n" +
-            "Please allow us to access your location."
+          "You denied the request for Geolocation.\n" +
+            "Please allow us to access your location if you want to see the data for your current location."
         );
         break;
       case error.POSITION_UNAVAILABLE:
