@@ -58,10 +58,20 @@ export function useGetLocation(props) {
     }
   }
 
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 3000,
+    maximumAge: 0,
+  };
+
   useEffect(() => {
     // console.log("Requesting location");
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getCoordinates, showError);
+      navigator.geolocation.getCurrentPosition(
+        getCoordinates,
+        showError,
+        options
+      );
     } else {
       alert("Geolocation is not supported by this browser");
     }
