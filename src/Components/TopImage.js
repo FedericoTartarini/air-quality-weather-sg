@@ -10,11 +10,11 @@ import Loader from "./Loader";
 function TopImage({ dataPSI, locationUser }) {
   let content = "";
 
-  if (dataPSI.error) {
+  if (locationUser.error && dataPSI.error) {
     content = <div>Could not fetch API</div>;
   }
 
-  if (dataPSI.loading) {
+  if (locationUser.loading && dataPSI.loading) {
     content = <Loader />;
   }
 

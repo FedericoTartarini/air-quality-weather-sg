@@ -13,11 +13,11 @@ import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 function CurrentValue({ data, locationUser }) {
   let content = null;
 
-  if (data.error) {
+  if (data.error && locationUser.error) {
     content = <div>Could not fetch API</div>;
   }
 
-  if (data.loading) {
+  if (data.loading && locationUser.loading) {
     content = <Loader />;
   }
 
