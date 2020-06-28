@@ -3,6 +3,8 @@ import MajorPollutants from "./MajorPollutants";
 import CurrentValue from "./CurrentValue";
 import { ClosestStation } from "../Functions/Utils";
 import CurrentForecast from "./CurrentForecast";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
 
 function CurrentReadings({
   dataPSI,
@@ -12,6 +14,8 @@ function CurrentReadings({
   dataFor24H,
   dataPM25,
   locationUser,
+  RequestedUseLocation,
+  showRequestLocButton,
 }) {
   const [station, setStation] = useState("central");
 
@@ -35,6 +39,25 @@ function CurrentReadings({
               Closest air quality station:{" "}
               <span className="capitalize">{station}</span>
             </p>
+          </div>
+
+          <div
+            className={
+              "container flex mx-auto justify-center" +
+              (showRequestLocButton ? "" : " hidden")
+            }
+          >
+            <button
+              className="bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              onClick={() => {
+                RequestedUseLocation();
+              }}
+            >
+              Use my location
+              <span className="ml-2">
+                <FontAwesomeIcon icon={faCrosshairs} />
+              </span>
+            </button>
           </div>
           <div className="flex my-3 justify-center">
             <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>

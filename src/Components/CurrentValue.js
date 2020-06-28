@@ -1,14 +1,6 @@
 import React from "react";
 import Loader from "./Loader";
-import {
-  GetHelpURL,
-  GetLatestReading,
-  MapNamePollutants,
-  PollutantClass,
-  ReadingAtUserLocation,
-} from "../Functions/Utils";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { ReadingAtUserLocation } from "../Functions/Utils";
 
 function CurrentValue({ data, locationUser }) {
   let content = null;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MapWeather2H from "../Components/MapWeather2H";
 import MapWeather24H from "../Components/MapWeather24H";
 import RainViewer from "../Components/RainViewer";
@@ -32,7 +32,7 @@ function ForecastView({ dataFor2H, dataFor24H }) {
     );
   }
 
-  function ViewSelector({ text }) {
+  function ViewSelector() {
     return (
       <div className="container mx-auto my-2 text-center text-sm">
         <ul className="flex border-b justify-center">

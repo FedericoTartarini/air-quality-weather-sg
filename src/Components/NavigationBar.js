@@ -5,6 +5,7 @@ const logo = require("../logo.svg");
 
 function NavigationBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+
   return (
     <div className>
       <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">

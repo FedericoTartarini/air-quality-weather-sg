@@ -34,7 +34,7 @@ function TopImage({ dataPSI, locationUser }) {
         <img
           // className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
           className="h-48 w-full rounded object-cover shadow-lg"
-          alt="top image website"
+          alt="singapore"
           src={ChooseTopImageSingapore(description)}
         />
       </div>

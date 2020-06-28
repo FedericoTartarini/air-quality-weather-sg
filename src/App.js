@@ -3,7 +3,6 @@ import NavigationBar from "./Components/NavigationBar";
 import Footer from "./Components/Footer";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useGetLocation } from "./Hooks/GetLocation";
 import Loader from "./Components/Loader";
 
 const AboutView = lazy(() => import("./Views/AboutView"));
@@ -55,9 +54,97 @@ function App() {
   const dataPM25 = useHttpRequest(urlPM25);
   const dataFor2H = useHttpRequest(urlWeather2H);
   const dataFor24H = useHttpRequest(urlWeather24H);
-  const locationUser = useGetLocation(urlPSI);
 
   // todo select a better color palette for icons and website
+
+  const [locationUser, setLocationUser] = useState({
+    loading: false,
+    data: {
+      accuracy: 2678,
+      altitude: null,
+      altitudeAccuracy: null,
+      heading: null,
+      latitude: 1.3271039999999998,
+      longitude: 103.841792,
+      speed: null,
+    },
+    error: false,
+  });
+  const [showRequestLocButton, setShowRequestLocButton] = useState(true);
+
+  useEffect(() => {
+    navigator.permissions
+      .query({ name: "geolocation" })
+      .then(function (result) {
+        if (result.state === "granted") {
+          RequestedUseLocation();
+          setShowRequestLocButton(false);
+        } else {
+          console.log("permission not granted");
+        }
+        // Don't do anything if the permission was denied.
+      });
+  }, [isoString]);
+
+  function getCoordinates(position) {
+    setLocationUser({
+      loading: false,
+      data: position.coords,
+      error: false,
+    });
+  }
+
+  function showError(error) {
+    switch (error.code) {
+      case error.PERMISSION_DENIED:
+        alert(
+          "You previously denied the request for Geolocation.\n" +
+            "Please allow us to access your location."
+        );
+        break;
+      case error.POSITION_UNAVAILABLE:
+        alert(
+          "Location information is unavailable.\n" +
+            "We are assuming you are in the center of Singapore"
+        );
+        break;
+      case error.TIMEOUT:
+        alert(
+          "The request to get user location timed out.\n" +
+            "We are assuming you are in the center of Singapore"
+        );
+        break;
+      case error.UNKNOWN_ERR:
+        alert(
+          "An unknown error occurred.\n" +
+            "We are assuming you are in the center of Singapore"
+        );
+        break;
+      default:
+        alert(
+          "An unknown error occurred.\n" +
+            "We are assuming you are in the center of Singapore"
+        );
+    }
+  }
+
+  const options = {
+    enableHighAccuracy: true,
+    timeout: 3000,
+    maximumAge: 0,
+  };
+
+  function RequestedUseLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        getCoordinates,
+        showError,
+        options
+      );
+    } else {
+      alert("Geolocation is not supported by this browser");
+    }
+  }
 
   return (
     <Router basename="/air-quality-weather-sg">
@@ -74,6 +161,8 @@ function App() {
                 dataFor24H={dataFor24H}
                 dataPM25={dataPM25}
                 locationUser={locationUser}
+                RequestedUseLocation={RequestedUseLocation}
+                showRequestLocButton={showRequestLocButton}
               />
             </Route>
             <Route path="/charts">

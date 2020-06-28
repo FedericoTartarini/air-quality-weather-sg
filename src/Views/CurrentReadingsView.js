@@ -12,6 +12,8 @@ function CurrentReadingsView({
   dataFor24H,
   dataPM25,
   locationUser,
+  RequestedUseLocation,
+  showRequestLocButton,
 }) {
   return (
     <div className>
@@ -34,6 +36,8 @@ function CurrentReadingsView({
           dataFor24H={dataFor24H}
           dataPM25={dataPM25}
           locationUser={locationUser}
+          RequestedUseLocation={RequestedUseLocation}
+          showRequestLocButton={showRequestLocButton}
         />
       </div>
       <div>
