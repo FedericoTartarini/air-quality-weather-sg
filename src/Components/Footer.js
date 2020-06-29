@@ -6,7 +6,7 @@ import {
   faResearchgate,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-const logo = require("../logo.svg");
+const logo = require("../Static/Icons/logo192.png");
 
 function Footer() {
   return (

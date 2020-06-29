@@ -55,8 +55,6 @@ function App() {
   const dataFor2H = useHttpRequest(urlWeather2H);
   const dataFor24H = useHttpRequest(urlWeather24H);
 
-  // todo select a better color palette for icons and website
-
   const [locationUser, setLocationUser] = useState({
     loading: false,
     data: {
@@ -72,18 +70,21 @@ function App() {
   });
   const [showRequestLocButton, setShowRequestLocButton] = useState(true);
 
+  // todo for the moment the try and catch below has fixed the issue on Safari but needs to be fixed
   useEffect(() => {
-    navigator.permissions
-      .query({ name: "geolocation" })
-      .then(function (result) {
-        if (result.state === "granted") {
-          RequestedUseLocation();
-          setShowRequestLocButton(false);
-        } else {
-          console.log("permission not granted");
-        }
-        // Don't do anything if the permission was denied.
-      });
+    try {
+      navigator.permissions
+        .query({ name: "geolocation" })
+        .then(function (result) {
+          if (result.state === "granted") {
+            RequestedUseLocation();
+            setShowRequestLocButton(false);
+          } else {
+            console.log("permission not granted");
+          }
+          // Don't do anything if the permission was denied.
+        });
+    } catch {}
   }, [isoString]);
 
   function getCoordinates(position) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const logo = require("../logo.svg");
+const logo = require("../Static/Icons/logo192.png");
 
 function NavigationBar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);

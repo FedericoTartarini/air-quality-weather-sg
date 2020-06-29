@@ -21,7 +21,9 @@ function RenderValue(stationName, values) {
 }
 
 function GetIcon(data, _iconSize) {
-  const description = PollutantClass(data, "psi_twenty_four_hourly").color;
+  const description = PollutantClass(data, "psi_twenty_four_hourly")
+    .description;
+
   return L.icon({
     iconUrl: require(`../Static/Icons/${description}.png`),
     iconSize: [_iconSize], // size of the icon

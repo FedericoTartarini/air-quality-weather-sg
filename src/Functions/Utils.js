@@ -112,7 +112,14 @@ export function GetHelpURL(pollutant) {
 export function PollutantClass(value, parameter) {
   let threshold;
 
-  const colors = ["green", "blue", "yellow", "orange", "red", "purple"];
+  const colors = [
+    "#2ca02c",
+    "#1f77b4",
+    "#ffdd71",
+    "#ff7f0e",
+    "#d62728",
+    "#9467bd",
+  ];
   const icons = [
     faGrinWink,
     faMeh,
@@ -355,27 +362,27 @@ export function ChooseTopImageSingapore(airQualityDescription) {
   // console.log('hour' + hour);
   if (hour > 7 && hour < 19) {
     if (airQualityDescription === "Good") {
-      imgURL = require("../Static/Images/good-day.webp");
+      imgURL = require("../Static/Images/good-day.jpg");
     } else if (airQualityDescription === "Moderate") {
-      imgURL = require("../Static/Images/moderate-day.webp");
+      imgURL = require("../Static/Images/moderate-day.jpg");
     } else if (airQualityDescription === "Unhealthy") {
-      imgURL = require("../Static/Images/unhealthy-day.webp");
+      imgURL = require("../Static/Images/unhealthy-day.jpg");
     } else if (airQualityDescription === "Very Unhealthy") {
-      imgURL = require("../Static/Images/very-unhealthy-day.webp");
+      imgURL = require("../Static/Images/very-unhealthy-day.jpg");
     } else {
-      imgURL = require("../Static/Images/hazarduos.webp");
+      imgURL = require("../Static/Images/hazarduos.jpg");
     }
   } else {
     if (airQualityDescription === "Good") {
-      imgURL = require("../Static/Images/good-night.webp");
+      imgURL = require("../Static/Images/good-night.jpg");
     } else if (airQualityDescription === "Moderate") {
-      imgURL = require("../Static/Images/moderate-night.webp");
+      imgURL = require("../Static/Images/moderate-night.jpg");
     } else if (airQualityDescription === "Unhealthy") {
-      imgURL = require("../Static/Images/unhealty-night.webp");
+      imgURL = require("../Static/Images/unhealty-night.jpg");
     } else if (airQualityDescription === "Very Unhealthy") {
-      imgURL = require("../Static/Images/very-unhealthy-night.webp");
+      imgURL = require("../Static/Images/very-unhealthy-night.jpg");
     } else {
-      imgURL = require("../Static/Images/hazarduos.webp");
+      imgURL = require("../Static/Images/hazarduos.jpg");
     }
   }
   return imgURL;
