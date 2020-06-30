@@ -13,11 +13,11 @@ import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 function MajorPollutants({ dataPSI, locationUser, pollutant }) {
   let content = null;
 
-  if (locationUser.error && dataPSI.error) {
+  if (locationUser.error || dataPSI.error) {
     content = <div>Could not fetch API</div>;
   }
 
-  if (locationUser.loading && dataPSI.loading) {
+  if (locationUser.loading || dataPSI.loading) {
     content = (
       <div className="container mx-auto">
         <Loader />

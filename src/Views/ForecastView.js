@@ -9,7 +9,7 @@ function ForecastView({ dataFor2H, dataFor24H }) {
   let subViews = ["24-h Forecast", "Rain Radar"];
 
   if (dataFor2H.data) {
-    if (dataFor2H.data.items === [{}]) {
+    if (Object.entries(dataFor2H.data.items[0]).length !== 0) {
       subViews.push("2-h Forecast");
     }
   }

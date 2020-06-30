@@ -147,6 +147,8 @@ function App() {
     }
   }
 
+  // todo see if I can add a route with sitemap
+
   return (
     <Router basename="/air-quality-weather-sg">
       <div className="relative pb-10 min-h-screen">

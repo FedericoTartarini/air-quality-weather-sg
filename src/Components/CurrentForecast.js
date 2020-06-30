@@ -21,7 +21,7 @@ function CurrentForecast({ dataFor2H, dataFor24H, locationUser, station }) {
     let stringForecast = "";
     let iconSource = "";
 
-    if (dataFor2H.data.area_metadata.length === 0) {
+    if (Object.entries(dataFor2H.data.items[0]).length === 0) {
       text = "next 6-h forecast";
       stringForecast = dataFor24H.data.items[0].periods[0].regions[station];
       iconSource = ForecastToIcon(stringForecast);

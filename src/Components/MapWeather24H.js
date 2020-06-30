@@ -37,8 +37,10 @@ function MapWeather24H({ data }) {
   function ButtonForecast({ text, index }) {
     if (text === "12-18") {
       text = "Afternoon";
-    } else if (text === "18-06") {
+    } else if (text === "18-06" || text === "00-06") {
       text = "Night";
+    } else if (text === "18-00") {
+      text = "Evening";
     } else if (text === "06-12") {
       text = "Morning";
     }

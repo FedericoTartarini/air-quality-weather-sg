@@ -10,11 +10,13 @@ import Loader from "./Loader";
 function TopImage({ dataPSI, locationUser }) {
   let content = "";
 
-  if (locationUser.error && dataPSI.error) {
+  if (locationUser.error || dataPSI.error) {
+    // todo provide more meaningful descriptions
+    // todo check here and in other locations these if statements
     content = <div>Could not fetch API</div>;
   }
 
-  if (locationUser.loading && dataPSI.loading) {
+  if (locationUser.loading || dataPSI.loading) {
     content = <Loader />;
   }
 
@@ -30,7 +32,6 @@ function TopImage({ dataPSI, locationUser }) {
 
     content = (
       <div className="container mx-auto flex items-center justify-center shadow-lg">
-        {/* todo change image as a function of the time of the day and pollution */}
         <img
           // className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
           className="h-48 w-full rounded object-cover shadow-lg"

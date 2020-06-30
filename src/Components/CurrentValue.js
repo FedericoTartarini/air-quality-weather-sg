@@ -5,7 +5,7 @@ import { ReadingAtUserLocation } from "../Functions/Utils";
 function CurrentValue({ data, locationUser }) {
   let content = null;
 
-  if (data.error && locationUser.error) {
+  if (data.error || locationUser.error) {
     content = <div>Could not fetch API</div>;
   }
 

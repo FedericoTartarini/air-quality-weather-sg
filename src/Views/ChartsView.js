@@ -19,10 +19,10 @@ function ChartsView({ data, locationUser }) {
   let content = "";
 
   if (data.error) {
-    content = <div>Could not fetch API</div>;
+    content = <div>Could download the necessary data to plot the results</div>;
   }
 
-  if (data.loading) {
+  if (data.loading || locationUser.loading) {
     content = <Loader />;
   }
 
