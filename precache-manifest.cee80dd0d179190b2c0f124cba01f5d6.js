@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a84324d5f85690868e8f2395102cff31",
+    "revision": "6656a02c97f7ca743dd21f3f35b26eb4",
     "url": "/air-quality-weather-sg/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/css/3.7c35e809.chunk.css"
   },
   {
-    "revision": "2ebe8dac4baae6adf4f6",
+    "revision": "d6c1e4b45d706203d7e0",
     "url": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/1.ca4e128d.chunk.js"
   },
   {
-    "revision": "954244c69f0a3fc5a522",
-    "url": "/air-quality-weather-sg/static/js/10.dbd5c754.chunk.js"
+    "revision": "8708ec422b15ff9a8690",
+    "url": "/air-quality-weather-sg/static/js/10.9a339d63.chunk.js"
   },
   {
     "revision": "c9198dbed2134f752884",
     "url": "/air-quality-weather-sg/static/js/11.28556198.chunk.js"
   },
   {
-    "revision": "dd922203e5990dac4b43",
-    "url": "/air-quality-weather-sg/static/js/12.5cc3717f.chunk.js"
+    "revision": "624b8709f6bd3367e12f",
+    "url": "/air-quality-weather-sg/static/js/12.1765dcb6.chunk.js"
   },
   {
     "revision": "2a3fea916047a24bfb9e",
@@ -68,12 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/9.80e368c0.chunk.js"
   },
   {
-    "revision": "2ebe8dac4baae6adf4f6",
-    "url": "/air-quality-weather-sg/static/js/main.65b981e5.chunk.js"
+    "revision": "d6c1e4b45d706203d7e0",
+    "url": "/air-quality-weather-sg/static/js/main.7158acbe.chunk.js"
   },
   {
-    "revision": "3ccc51c0b0b69d1c78d0",
-    "url": "/air-quality-weather-sg/static/js/runtime-main.a9327aef.js"
+    "revision": "2bd9deb8f435a347d777",
+    "url": "/air-quality-weather-sg/static/js/runtime-main.4072f9b3.js"
   },
   {
     "revision": "8787c55d661e3751144ff38fa02cb00c",

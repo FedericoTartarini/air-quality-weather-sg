@@ -10,10 +10,10 @@
     "static/js/3.7b768c07.chunk.js": "/air-quality-weather-sg/static/js/3.7b768c07.chunk.js",
     "static/js/3.7b768c07.chunk.js.map": "/air-quality-weather-sg/static/js/3.7b768c07.chunk.js.map",
     "main.css": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css",
-    "main.js": "/air-quality-weather-sg/static/js/main.65b981e5.chunk.js",
-    "main.js.map": "/air-quality-weather-sg/static/js/main.65b981e5.chunk.js.map",
-    "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.a9327aef.js",
-    "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.a9327aef.js.map",
+    "main.js": "/air-quality-weather-sg/static/js/main.7158acbe.chunk.js",
+    "main.js.map": "/air-quality-weather-sg/static/js/main.7158acbe.chunk.js.map",
+    "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.4072f9b3.js",
+    "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.4072f9b3.js.map",
     "static/js/6.79c16272.chunk.js": "/air-quality-weather-sg/static/js/6.79c16272.chunk.js",
     "static/js/6.79c16272.chunk.js.map": "/air-quality-weather-sg/static/js/6.79c16272.chunk.js.map",
     "static/js/7.c039293c.chunk.js": "/air-quality-weather-sg/static/js/7.c039293c.chunk.js",
@@ -22,14 +22,14 @@
     "static/js/8.470b6c60.chunk.js.map": "/air-quality-weather-sg/static/js/8.470b6c60.chunk.js.map",
     "static/js/9.80e368c0.chunk.js": "/air-quality-weather-sg/static/js/9.80e368c0.chunk.js",
     "static/js/9.80e368c0.chunk.js.map": "/air-quality-weather-sg/static/js/9.80e368c0.chunk.js.map",
-    "static/js/10.dbd5c754.chunk.js": "/air-quality-weather-sg/static/js/10.dbd5c754.chunk.js",
-    "static/js/10.dbd5c754.chunk.js.map": "/air-quality-weather-sg/static/js/10.dbd5c754.chunk.js.map",
+    "static/js/10.9a339d63.chunk.js": "/air-quality-weather-sg/static/js/10.9a339d63.chunk.js",
+    "static/js/10.9a339d63.chunk.js.map": "/air-quality-weather-sg/static/js/10.9a339d63.chunk.js.map",
     "static/js/11.28556198.chunk.js": "/air-quality-weather-sg/static/js/11.28556198.chunk.js",
     "static/js/11.28556198.chunk.js.map": "/air-quality-weather-sg/static/js/11.28556198.chunk.js.map",
-    "static/js/12.5cc3717f.chunk.js": "/air-quality-weather-sg/static/js/12.5cc3717f.chunk.js",
-    "static/js/12.5cc3717f.chunk.js.map": "/air-quality-weather-sg/static/js/12.5cc3717f.chunk.js.map",
+    "static/js/12.1765dcb6.chunk.js": "/air-quality-weather-sg/static/js/12.1765dcb6.chunk.js",
+    "static/js/12.1765dcb6.chunk.js.map": "/air-quality-weather-sg/static/js/12.1765dcb6.chunk.js.map",
     "index.html": "/air-quality-weather-sg/index.html",
-    "precache-manifest.8a46352ff486a8b3718460ef97a5e2fa.js": "/air-quality-weather-sg/precache-manifest.8a46352ff486a8b3718460ef97a5e2fa.js",
+    "precache-manifest.cee80dd0d179190b2c0f124cba01f5d6.js": "/air-quality-weather-sg/precache-manifest.cee80dd0d179190b2c0f124cba01f5d6.js",
     "service-worker.js": "/air-quality-weather-sg/service-worker.js",
     "static/css/3.7c35e809.chunk.css.map": "/air-quality-weather-sg/static/css/3.7c35e809.chunk.css.map",
     "static/css/main.cca977cc.chunk.css.map": "/air-quality-weather-sg/static/css/main.cca977cc.chunk.css.map",
@@ -51,9 +51,9 @@
     "static/media/very-unhealthy-night.jpg": "/air-quality-weather-sg/static/media/very-unhealthy-night.e8d0ff4e.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a9327aef.js",
+    "static/js/runtime-main.4072f9b3.js",
     "static/js/7.c039293c.chunk.js",
     "static/css/main.cca977cc.chunk.css",
-    "static/js/main.65b981e5.chunk.js"
+    "static/js/main.7158acbe.chunk.js"
   ]
 }
