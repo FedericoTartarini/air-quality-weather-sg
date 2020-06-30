@@ -14,7 +14,7 @@ export function useHttpRequest(url) {
       data: null,
       error: false,
     });
-    // console.log("Requesting API data: " + url);
+    console.log("Requesting API data: " + url);
     axios
       .get(url)
       .then((response) => {
@@ -31,7 +31,7 @@ export function useHttpRequest(url) {
           error: true,
         });
       });
-  }, [url]);
+  }, [url.split(":")[1]]);
 
   return request;
 }
