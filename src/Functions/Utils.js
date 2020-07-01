@@ -343,7 +343,7 @@ export function ForecastToIcon(description) {
       imgURL = require("../Static/Icons/heavy-rain.png");
       break;
     case "Showers":
-      imgURL = require("../Static/Icons/showers.png");
+      imgURL = require("../Static/Icons/moderate-rain.png");
       break;
     case "Windy":
       imgURL = require("../Static/Icons/windy.png");

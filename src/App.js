@@ -12,12 +12,11 @@ const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
 const ChartsView = lazy(() => import("./Views/ChartsView"));
 
 function App() {
-  let currentDate = new Date();
-  currentDate = currentDate - currentDate.getTimezoneOffset() * 60000;
-  currentDate = new Date(currentDate).toLocaleString("en-US", {
-    timeZone: "Asia/Singapore",
-  });
-  let isoString = new Date(currentDate).toISOString().substr(0, 19);
+  let tzOffset = new Date().getTimezoneOffset(); //offset in milliseconds
+  tzOffset = tzOffset - (480 + tzOffset);
+  let isoString = new Date(Date.now() - tzOffset * 60000)
+    .toISOString()
+    .substr(0, 19);
 
   const urlRH =
     "https://api.data.gov.sg/v1/environment/relative-humidity?date_time=" +
@@ -34,12 +33,11 @@ function App() {
 
   // if it is midnight I am querying the previous day
   if (isoString.split("T")[1].split(":")[0] === "00") {
-    currentDate = new Date();
-    currentDate = currentDate - currentDate.getTimezoneOffset() * 60000;
-    currentDate = new Date(currentDate).toLocaleString("en-US", {
-      timeZone: "Asia/Kolkata",
-    });
-    isoString = new Date(currentDate).toISOString().substr(0, 19);
+    let tzOffset = new Date().getTimezoneOffset(); //offset in milliseconds
+    tzOffset = tzOffset - (360 + tzOffset);
+    isoString = new Date(Date.now() - tzOffset * 60000)
+      .toISOString()
+      .substr(0, 19);
   }
 
   const dateString = isoString.split("T")[0];
