@@ -1,58 +1,83 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
   <head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4QQVHYSL3T"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4QQVHYSL3T"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-4QQVHYSL3T');
+      gtag("config", "G-4QQVHYSL3T");
     </script>
 
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="author" content="Federico Tartarini">
+    <meta name="author" content="Federico Tartarini" />
     <meta
       name="description"
-      content="This web site shows the weather forecast and air quality data for Singapore.
-      You can check haze and pollution around you."
+      content="This website allows you to monitor and track in real-time the standard indexes of the major outdoor
+      pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3), Nitrogen Oxide (NOx), Sulfur Oxide (SOx) and Carbon
+      Monoxide in Singapore. The website also shows how these indices varied over the course of the last 24 hours.
+      The website is a great tool to track the air quality on a day-to-day basis or during the haze season.
+      In addition, the website can be used to monitor the current weather conditions in your location as well as the
+      weather forecasts for Singapore. It also allows you to check the rain radar.
+      I have also created an android application which shows the above mentioned data.
+      I have released the website code open-source on Github.
+      Enjoy the app!"
     />
     <meta
       name="keywords"
       content="weather, forecast, air quality, singapore, pollution, haze."
     />
-    <meta property="og:title" content="Air Quality and Weather - Singapore - Haze and pollution"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://federicotartarini.github.io/air-quality-weather-sg"/>
-    <meta property="og:image" content="https://github.com/FedericoTartarini/air-quality-weather-sg/blob/master/src/Static/Images/website-og-image.png"/>
+    <meta
+      property="og:title"
+      content="Air Quality and Weather - Singapore - Haze and pollution"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://federicotartarini.github.io/air-quality-weather-sg"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/FedericoTartarini/air-quality-weather-sg/blob/master/src/Static/Images/website-og-image.png"
+    />
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Air Quality and Weather - Singapore - Haze and pollution.</title>
 
     <script type="text/javascript">
-      (function(l) {
+      (function (l) {
         if (l.search) {
           var q = {};
-          l.search.slice(1).split('&').forEach(function(v) {
-            var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
-          });
+          l.search
+            .slice(1)
+            .split("&")
+            .forEach(function (v) {
+              var a = v.split("=");
+              q[a[0]] = a.slice(1).join("=").replace(/~and~/g, "&");
+            });
           if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + (q.p || '') +
-                    (q.q ? ('?' + q.q) : '') +
-                    l.hash
+            window.history.replaceState(
+              null,
+              null,
+              l.pathname.slice(0, -1) +
+                (q.p || "") +
+                (q.q ? "?" + q.q : "") +
+                l.hash
             );
           }
         }
-      }(window.location))
+      })(window.location);
     </script>
-
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
