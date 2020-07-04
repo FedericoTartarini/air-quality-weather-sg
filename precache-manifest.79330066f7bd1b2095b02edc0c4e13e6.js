@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5a3bf3e9ac7c68769a9b830817e5461",
+    "revision": "4ec1eb4df4851d81457e3cb9ce3bc2ec",
     "url": "/air-quality-weather-sg/index.html"
   },
   {
