@@ -44,10 +44,10 @@ export function useGetLocation(props) {
         );
         break;
       case error.TIMEOUT:
-        alert(
-          "The request to get user location timed out.\n" +
-            "We are assuming you are in the center of Singapore"
-        );
+        // alert(
+        //   "The request to get user location timed out.\n" +
+        //     "We are assuming you are in the center of Singapore"
+        // );
         break;
       case error.UNKNOWN_ERR:
         alert(
