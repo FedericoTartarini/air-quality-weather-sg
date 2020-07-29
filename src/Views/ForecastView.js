@@ -8,10 +8,9 @@ function ForecastView({ dataFor2H, dataFor24H }) {
 
   let subViews = ["24-h Forecast", "Rain Radar"];
 
-  // todo should not pushed as the last element but as the first
   if (dataFor2H.data) {
     if (Object.entries(dataFor2H.data.items[0]).length !== 0) {
-      subViews.push("2-h Forecast");
+      subViews.unshift("2-h Forecast");
     }
   }
 
