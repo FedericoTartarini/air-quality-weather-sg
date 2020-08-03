@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>https://federicotartarini.github.io/</loc> </url>
 <url> <loc>https://federicotartarini.github.io/air-quality-weather-sg</loc> </url>
-<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/charts</loc> </url>
-<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/forecast</loc> </url>
-<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/mapPollution</loc> </url>
-<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/about</loc> </url>
+<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/?p=/charts</loc> </url>
+<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/?p=/forecast</loc> </url>
+<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/?p=/mapPollution</loc> </url>
+<url> <loc>https://federicotartarini.github.io/air-quality-weather-sg/?p=/about</loc> </url>
 </urlset>
