@@ -33,10 +33,10 @@ function MapWeather2H({ data }) {
   return (
     <div>
       <Helmet>
-        <title>2-hour weather forecasts</title>
+        <title>2-hour weather forecasts in Singapore</title>
         <meta
           name="description"
-          content="This page shows the next two hours weather forecasts"
+          content="This page shows the next two hours weather forecasts for Singapore"
         />
       </Helmet>
       <Map

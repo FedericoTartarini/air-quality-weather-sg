@@ -67,7 +67,7 @@ function MapWeather24H({ data }) {
         <title>24-hour weather forecasts</title>
         <meta
           name="description"
-          content="This page shows the next 24 hours weather forecasts"
+          content="This page shows the next 24 hours weather forecasts for Singapore"
         />
       </Helmet>
       <Map

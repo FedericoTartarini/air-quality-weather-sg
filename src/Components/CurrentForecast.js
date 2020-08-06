@@ -22,11 +22,11 @@ function CurrentForecast({ dataFor2H, dataFor24H, locationUser, station }) {
     let iconSource = "";
 
     if (Object.entries(dataFor2H.data.items[0]).length === 0) {
-      text = "next 6-h forecast";
+      text = "next 6-h weather forecast";
       stringForecast = dataFor24H.data.items[0].periods[0].regions[station];
       iconSource = ForecastToIcon(stringForecast);
     } else {
-      text = "next 2-hour forecast";
+      text = "next 2-hour weather forecast";
       stringForecast = TwoHForecastsAtUserLocation(
         dataFor2H.data,
         ClosestStation(dataFor2H.data, locationUser.data).name
