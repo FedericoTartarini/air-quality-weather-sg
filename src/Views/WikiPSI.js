@@ -38,7 +38,7 @@ function WikiPSI() {
             concentration readings which are a better indicator of the outdoor
             air pollution.
           </p>
-          <p className="mb-8 leading-relaxed">
+          <p className="leading-relaxed">
             The NEA calculates the 24-h PSI value firstly by linearly mapping
             each individual sub-pollutant (i.e., 24-h PM10, 24-h PM2.5, 8-h CO,
             24-h SO2, 1-h NO2, 8-h O3) to a sub-index ranging from 0 to 500.
@@ -46,10 +46,101 @@ function WikiPSI() {
             maximum value of any of the pollutants sub-indices. The table below
             shows the air quality descriptor relative to the specific PSI range.
           </p>
-          <TableIndicesCategories />
-          {/*  todo write about difference between PSI and API */}
+          <div className="flex mx-auto justify-center py-3">
+            <table className="table-auto text-center">
+              <thead>
+                <tr>
+                  <th className="px-4 py-1">PSI value</th>
+                  <th className="px-4 py-1">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="font-medium" style={{ color: "#2ca02c" }}>
+                  <td className="border px-4 py-1">0 - 50</td>
+                  <td className="border px-4 py-1">Good</td>
+                </tr>
+                <tr className="font-medium" style={{ color: "#1f77b4" }}>
+                  {" "}
+                  <td className="border px-4 py-1">51 - 100</td>
+                  <td className="border px-4 py-1">Moderate</td>
+                </tr>
+                <tr className="font-medium" style={{ color: "#fcc105" }}>
+                  <td className="border px-4 py-1">101 - 200</td>
+                  <td className="border px-4 py-1">Unhealthy</td>
+                </tr>
+                <tr className="font-medium" style={{ color: "#ff7f0e" }}>
+                  <td className="border px-4 py-1">201 - 300</td>
+                  <td className="border px-4 py-1">Very Unhealthy</td>
+                </tr>
+                <tr className="font-medium" style={{ color: "#d62728" }}>
+                  <td className="border px-4 py-1">Above 300</td>
+                  <td className="border px-4 py-1">Hazardous</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           {/*  todo add link to NEA website */}
           {/*  todo write about activities */}
+          <h1 className="text-xl mb-4 mt-8 font-medium text-gray-900">
+            Difference between the PSI and the Air Quality Index (AQI)
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            The U.S. Environmental Protection Agency (EPA) and other air quality
+            websites like aqicn.org use the Air Quality Index (AQI) to provide
+            information about the outdoor air quality. The AQI is calculated
+            based on four major air pollutants: particulate matter (PM), sulphur
+            dioxide (SO2), ozone (O3), and carbon monoxide (CO). Hence,
+            currently it does not includes nitrogen dioxide (NO2). As the PSI
+            the AQI ranges on a scale from 0 to 500. Where higher values refer
+            to higher concentrations of outdoor air pollutants. Values of AQI
+            below 100 are considered by the EPA to be satisfactory, while values
+            above 100 are considered to be unhealthy. You can find out more
+            about the AQI{" "}
+            <a href={"https://www3.epa.gov/airnow/aqi_brochure_02_14.pdf"}>
+              in this brochure
+            </a>{" "}
+            published by EPA. The table below shows how the EPA divides the AQI
+            in six levels of health concern.
+            <div className="flex mx-auto justify-center py-3">
+              <table className="table-auto text-center">
+                <thead>
+                  <tr>
+                    <th className="px-4 py-1">AQI value</th>
+                    <th className="px-4 py-1">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="font-medium" style={{ color: "#2ca02c" }}>
+                    <td className="border px-4 py-1">0 - 50</td>
+                    <td className="border px-4 py-1">Good</td>
+                  </tr>
+                  <tr className="font-medium" style={{ color: "#fcc105" }}>
+                    {" "}
+                    <td className="border px-4 py-1">51 - 100</td>
+                    <td className="border px-4 py-1">Moderate</td>
+                  </tr>
+                  <tr className="font-medium" style={{ color: "#ff7f0e" }}>
+                    <td className="border px-4 py-1">101 - 150</td>
+                    <td className="border px-4 py-1">
+                      Unhealthy for Sensitive Groups
+                    </td>
+                  </tr>
+                  <tr className="font-medium" style={{ color: "#d62728" }}>
+                    <td className="border px-4 py-1">151 - 200</td>
+                    <td className="border px-4 py-1">Unhealthy</td>
+                  </tr>
+                  <tr className="font-medium" style={{ color: "#9467bd" }}>
+                    <td className="border px-4 py-1">201 - 300</td>
+                    <td className="border px-4 py-1">Very Unhealthy</td>
+                  </tr>
+                  <tr className="font-medium" style={{ color: "#800000" }}>
+                    <td className="border px-4 py-1">301 - 500</td>
+                    <td className="border px-4 py-1">Hazardous</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </p>
         </div>
       </div>
     </section>
