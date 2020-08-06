@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "./Components/Loader";
 
 const AboutView = lazy(() => import("./Views/AboutView"));
+const WikiPSI = lazy(() => import("./Views/WikiPSI"));
 const MapPollutionView = lazy(() => import("./Views/MapPollutionView"));
 const ForecastView = lazy(() => import("./Views/ForecastView"));
 const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
@@ -177,6 +178,9 @@ function App() {
             </Route>
             <Route path="/about">
               <AboutView />
+            </Route>
+            <Route path="/psi">
+              <WikiPSI />
             </Route>
           </Switch>
         </Suspense>

@@ -2,13 +2,13 @@ import React from "react";
 import Loader from "./Loader";
 import {
   ClosestStation,
-  GetHelpURL,
   GetLatestReading,
   MapNamePollutants,
   PollutantClass,
 } from "../Functions/Utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function MajorPollutants({ dataPSI, locationUser, pollutant }) {
   let content = null;
@@ -57,12 +57,12 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
           <p className="leading-relaxed text-base">
             {PollutantClass(latestReading[pollutant], pollutant).description}
           </p>
-          <div onClick={() => window.open(GetHelpURL(pollutant))}>
+          <Link to="/psi">
             <p className="mt-3 mr-2 inline-flex items-center text-sm">
               Learn More
             </p>
             <FontAwesomeIcon icon={faQuestionCircle} />
-          </div>
+          </Link>
         </div>
       </div>
     );

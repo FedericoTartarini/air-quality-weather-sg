@@ -65,6 +65,7 @@ function CurrentReadings({
             <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
           </div>
           <div className="flex flex-wrap content-between sm:-m-4 -mx-4 my-3">
+            {/* show also AQI */}
             <MajorPollutants
               dataPSI={dataPSI}
               locationUser={locationUser}
