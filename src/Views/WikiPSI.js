@@ -15,11 +15,11 @@ function WikiPSI() {
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
         <img
           className="mb-8 object-cover object-center rounded-sm shadow-lg"
-          alt="author"
+          alt="Pollutant Standards Index"
           src={require("../Static/Images/gas.jpg")}
         />
         <div className="w-full flex flex-col mb-16 items-center text-center">
-          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+          <h1 className="text-3xl mb-4 font-medium text-gray-900">
             Pollutant Standards Index (PSI)
           </h1>
           <p className="mb-8 leading-relaxed">
@@ -47,7 +47,6 @@ function WikiPSI() {
             shows the air quality descriptor relative to the specific PSI range.
           </p>
           <TableIndicesCategories />
-          <p className="mb-8 leading-relaxed"></p>
           {/*  todo write about difference between PSI and API */}
           {/*  todo add link to NEA website */}
           {/*  todo write about activities */}

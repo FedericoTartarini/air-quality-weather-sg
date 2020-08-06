@@ -87,9 +87,9 @@ export function MapNamePollutants(pollutant, abbreviated) {
 export function GetHelpURL(pollutant) {
   switch (pollutant) {
     case "psi_twenty_four_hourly":
-      return "https://www.nea.gov.sg/our-services/pollution-control/air-pollution/faqs#chapterA";
+      return "/psi";
     case "pm25_one_hourly":
-      return "https://www.epa.gov/pm-pollution/particulate-matter-pm-basics";
+      return "/pm25";
     case "o3_sub_index":
       return "https://www.epa.gov/ground-level-ozone-pollution/ground-level-ozone-basics";
     case "pm25_sub_index":
@@ -115,7 +115,7 @@ export function PollutantClass(value, parameter) {
   const colors = [
     "#2ca02c",
     "#1f77b4",
-    "#ffdd71",
+    "#fcc105",
     "#ff7f0e",
     "#d62728",
     "#9467bd",

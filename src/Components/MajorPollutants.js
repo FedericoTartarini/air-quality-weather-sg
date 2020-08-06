@@ -5,6 +5,7 @@ import {
   GetLatestReading,
   MapNamePollutants,
   PollutantClass,
+  GetHelpURL,
 } from "../Functions/Utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
@@ -57,7 +58,7 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
           <p className="leading-relaxed text-base">
             {PollutantClass(latestReading[pollutant], pollutant).description}
           </p>
-          <Link to="/psi">
+          <Link to={GetHelpURL(pollutant)}>
             <p className="mt-3 mr-2 inline-flex items-center text-sm">
               Learn More
             </p>

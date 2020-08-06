@@ -20,7 +20,7 @@ function TableIndicesCategories() {
             <td className="border px-4 py-2">51 - 100</td>
             <td className="border px-4 py-2">Moderate</td>
           </tr>
-          <tr className="font-medium" style={{ color: "#ffdd71" }}>
+          <tr className="font-medium" style={{ color: "#fcc105" }}>
             <td className="border px-4 py-2">101 - 200</td>
             <td className="border px-4 py-2">Unhealthy</td>
           </tr>

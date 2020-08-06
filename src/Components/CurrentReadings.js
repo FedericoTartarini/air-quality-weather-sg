@@ -5,6 +5,7 @@ import { ClosestStation } from "../Functions/Utils";
 import CurrentForecast from "./CurrentForecast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function CurrentReadings({
   dataPSI,
@@ -61,6 +62,7 @@ function CurrentReadings({
               </span>
             </button>
           </div>
+          {/* horizontal line */}
           <div className="flex my-3 justify-center">
             <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
           </div>
@@ -82,15 +84,20 @@ function CurrentReadings({
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
             </div>
             <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Temperature:{" "}
-              <CurrentValue data={dataTmp} locationUser={locationUser} />
-              °C
+              <Link to="/weather">
+                Temperature:{" "}
+                <CurrentValue data={dataTmp} locationUser={locationUser} />
+                °C
+              </Link>
             </div>
 
             <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              Relative humidity:{" "}
-              <CurrentValue data={dataRH} locationUser={locationUser} />%
+              <Link to="/weather">
+                Relative humidity:{" "}
+                <CurrentValue data={dataRH} locationUser={locationUser} />%
+              </Link>
             </div>
+
             <CurrentForecast
               locationUser={locationUser}
               dataFor2H={dataFor2H}
