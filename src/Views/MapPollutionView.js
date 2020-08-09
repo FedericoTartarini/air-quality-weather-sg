@@ -1,6 +1,7 @@
 import React from "react";
 import MapPollution from "../Components/MapPollution";
 import { Helmet } from "react-helmet";
+import TableIndicesCategories from "../Components/TableIndicesCategories";
 
 function MapPollutionView({ data }) {
   return (
@@ -13,6 +14,7 @@ function MapPollutionView({ data }) {
         />
       </Helmet>
       <MapPollution data={data} />
+      <TableIndicesCategories index={"PSI value"} />
     </div>
   );
 }
