@@ -41,9 +41,14 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
           />
         </div>
         <div className="flex-grow">
-          <h2 className="text-lg title-font font-medium mb-3">
-            {MapNamePollutants(pollutant, true)}:
-          </h2>
+          <Link to={GetHelpURL(pollutant)}>
+            <h2 className="text-lg title-font font-medium mb-3">
+              {MapNamePollutants(pollutant, true)}:{" "}
+              <sup>
+                <FontAwesomeIcon icon={faQuestionCircle} />
+              </sup>
+            </h2>
+          </Link>
           <h2 className="text-3xl title-font font-medium mb-3">
             {latestReading[pollutant]}
             {pollutant === "pm25_one_hourly" ? (
@@ -58,12 +63,6 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
           <p className="leading-relaxed text-base">
             {PollutantClass(latestReading[pollutant], pollutant).description}
           </p>
-          <Link to={GetHelpURL(pollutant)}>
-            <p className="mt-3 mr-2 inline-flex items-center text-sm">
-              Learn More
-            </p>
-            <FontAwesomeIcon icon={faQuestionCircle} />
-          </Link>
         </div>
       </div>
     );

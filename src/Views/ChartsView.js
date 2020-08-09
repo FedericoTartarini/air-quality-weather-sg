@@ -63,7 +63,7 @@ function ChartsView({ data, locationUser }) {
             "*** computed on 24-hour average Sulphur Dioxide (SO2) reading (µg/m3)",
           ]}
         />
-        <TableIndicesCategories />
+        <TableIndicesCategories index={"Sub-Index value"} />
       </div>
     );
   }

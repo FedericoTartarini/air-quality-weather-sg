@@ -1,12 +1,12 @@
 import React from "react";
 
-function TableIndicesCategories() {
+function TableIndicesCategories({ index }) {
   return (
     <div className="flex mx-auto justify-center py-3">
       <table className="table-auto text-center">
         <thead>
           <tr>
-            <th className="px-4 py-2">Sub-Index value</th>
+            <th className="px-4 py-2">{index}</th>
             <th className="px-4 py-2">Description</th>
           </tr>
         </thead>
