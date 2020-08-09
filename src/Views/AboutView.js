@@ -34,20 +34,30 @@ function AboutView() {
           <p className="mb-8 leading-relaxed">
             Hello! My name is Federico Tartarini, the developer of the Air
             Quality and Weather - Singapore website and applications for
-            Android. My aim is to develop an easy to use website that allows you
-            to check the weather forecast and the air quality in Singapore.
+            Android.
           </p>
           <p className="mb-8 leading-relaxed">
-            This website lets you to monitor and track in real-time the standard
-            indices of the major outdoor pollutants: Particulate matter (PM10
-            and PM2.5), Ozone (O3), Nitrogen Oxide (NOx), Sulphur Oxide (SOx)
-            and Carbon Monoxide in Singapore. The websites also displays how
-            these indices varied over the course of the last 24 hours. So you
-            can easily check and track outdoor air pollutants in Singapore on a
-            day-to-day basis or during the haze season. The application can also
-            be used to monitor the current weather conditions in your location
-            as well as the 24-h and 2-h weather forecasts for Singapore. It also
-            features a rain radar.
+            Air Quality and Weather - Singapore is an easy to use website that
+            allows you to check the weather forecast and air quality in
+            Singapore. You can monitor the current weather conditions in your
+            location as well as the 24-h and 2-h weather forecasts for
+            Singapore. It also features a rain radar.
+          </p>
+          <p className="mb-8 leading-relaxed">
+            This website is also a great tool to monitor outdoor pollutants
+            during the haze season in Singapore since it lets you to monitor and
+            track in real-time all the standard indices of the major outdoor
+            pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3),
+            Nitrogen Oxide (NOx), Sulphur Oxide (SOx) and Carbon Monoxide in
+            Singapore. The websites also displays how these indices varied over
+            the course of the last 24 hours. So you can take informed decision
+            before heading out.
+          </p>
+          <p className="mb-8 leading-relaxed">
+            Air Quality and Weather - Singapore uses data from the National
+            Environment Agency (NEA) in Singapore, hence, you trust the data. We
+            update weather forecast, outdoor pollutants concentrations and rain
+            radar data in real-time.
           </p>
           <div className="flex w-full justify-center">
             <a href="https://www.buymeacoffee.com/FedericoT">

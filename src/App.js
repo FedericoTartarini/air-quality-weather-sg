@@ -5,6 +5,7 @@ import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "./Components/Loader";
 
+const WikiClimate = lazy(() => import("./Views/WikiClimate"));
 const WikiPM25 = lazy(() => import("./Views/WikiPM25"));
 const WikiWeather = lazy(() => import("./Views/WikiWeather"));
 const AboutView = lazy(() => import("./Views/AboutView"));
@@ -189,6 +190,9 @@ function App() {
             </Route>
             <Route path="/weather">
               <WikiWeather />
+            </Route>
+            <Route path="/climate">
+              <WikiClimate />
             </Route>
           </Switch>
         </Suspense>

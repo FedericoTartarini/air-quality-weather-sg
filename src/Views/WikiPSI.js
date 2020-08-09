@@ -49,7 +49,7 @@ function WikiPSI() {
           <TableIndicesCategories index={"PSI value"} />
           {/*  todo add link to NEA website */}
           {/*  todo write about activities */}
-          <h1 className="text-xl mb-4 mt-8 font-medium text-gray-900">
+          <h1 className="text-2xl mb-4 mt-8 font-medium text-gray-900">
             Difference between the PSI and the Air Quality Index (AQI)
           </h1>
           <p className="mb-8 leading-relaxed">
