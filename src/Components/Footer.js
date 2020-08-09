@@ -13,9 +13,23 @@ function Footer() {
     <footer className="text-gray-900 body-font absolute w-full">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <span className="flex title-font font-medium items-center md:justify-start justify-center">
-          <img src={logo} alt="logo" width={40} />
+          <picture className={"flex justify-center align-center"}>
+            <source
+              type="image/webp"
+              srcSet={require("../Static/Icons/logo192.webp")}
+            />
+            <source
+              type="image/png"
+              srcSet={require("../Static/Icons/logo192.png")}
+            />
+            <img
+              src={logo}
+              className="w-3/6 rounded-full border-4 shadow-lg"
+              alt="logo website"
+            />
+          </picture>
           <div>
-            <p className="ml-3 text-xl">Air Quality and Weather</p>
+            <p className="text-xl">Air Quality and Weather</p>
             <p className="text-xs ml-3">v 0.0.1</p>
           </div>
         </span>
