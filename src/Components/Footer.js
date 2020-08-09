@@ -32,32 +32,25 @@ function Footer() {
         </p>
         <span className="inline-flex text-gray-700 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
-            className="mx-1"
+            className="mx-3"
             href="https://www.linkedin.com/in/federico-tartarini-3991995b/"
             aria-label="LinkedIn"
           >
-            <FontAwesomeIcon icon={faLinkedin} size={"lg"} />
+            <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
           </a>
           <a
-            className="mx-1"
+            className="mx-3"
             href="https://github.com/FedericoTartarini"
             aria-label="GitHub"
           >
-            <FontAwesomeIcon icon={faGithub} size={"lg"} />
+            <FontAwesomeIcon icon={faGithub} size={"2x"} />
           </a>
           <a
-            className="mx-1"
-            href="https://www.researchgate.net/profile/Federico_Tartarini"
-            aria-label="Researchgate"
-          >
-            <FontAwesomeIcon icon={faResearchgate} size={"lg"} />
-          </a>
-          <a
-            className="mx-1"
+            className="mx-3"
             href="https://play.google.com/store/apps/details?id=com.airqualityapp"
             aria-label="GooglePlay"
           >
-            <FontAwesomeIcon icon={faGooglePlay} size={"lg"} />
+            <FontAwesomeIcon icon={faGooglePlay} size={"2x"} />
           </a>
         </span>
       </div>
