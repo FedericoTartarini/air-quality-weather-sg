@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0757fbab1bb3a754c5f08e3a53e05367",
+    "revision": "848b19a4e416cea0057bdc5f2f060f33",
     "url": "/air-quality-weather-sg/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/css/3.7c35e809.chunk.css"
   },
   {
-    "revision": "c3c3bead7f6d81f04356",
+    "revision": "ddd3a09e35be837f5ab6",
     "url": "/air-quality-weather-sg/static/css/main.cd30f630.chunk.css"
   },
   {
@@ -84,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/air-quality-weather-sg/static/js/9.205f8007.chunk.js"
   },
   {
-    "revision": "c3c3bead7f6d81f04356",
-    "url": "/air-quality-weather-sg/static/js/main.054ac9ec.chunk.js"
+    "revision": "ddd3a09e35be837f5ab6",
+    "url": "/air-quality-weather-sg/static/js/main.b6fb004c.chunk.js"
   },
   {
     "revision": "8acb59d61c5a14070f2d",
