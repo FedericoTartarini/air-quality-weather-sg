@@ -35,12 +35,57 @@ function WikiClimate() {
             Singapore is located between the 1st and 2nd parallel and it is
             characterized by a tropical climate. It has abundant rainfall
             throughout the year, high temperatures and high relative humidity.
-            While temperatures do not vary much between seasons, which are all
-            characterised by mean daily max temperatures between 30 °C and 33 °C
-            and mean daily temperatures between 24 °C and 26 °C. The highest
-            temperature excursions are observed intra-day, where the
-            temperatures at night are significantly lower than during the day.
-            These fluctuations are mainly influenced by the solar heating.
+            The outdoor temperature do not vary much between seasons. All months
+            have mean daily max temperature in the low thirties and mean daily
+            minimum temperatures in the mid twenties. The highest temperature
+            excursions are observed intra-day, at night outdoor temperatures are
+            significantly lower than during the day.
+          </p>
+          <h1 className="text-2xl mb-4 font-medium text-gray-900">Rainfall</h1>
+          <p className="mb-8 leading-relaxed">
+            In Singapore rains approximately every second day on average (167
+            days of rain). Rain if often heavy and afternoon thunderstorms are
+            frequent. The NEA reports that the long term total mean annual
+            rainfall is 2166 mm.
+          </p>
+          <p className="mb-8 leading-relaxed">
+            While in Singapore often rains and there is not an official dry
+            season, it generally rains more between November and January. This
+            is caused bu the fact that the tropical rain-belt moves towards
+            Singapore. While the driest month on average is February since the
+            same rain-belt moves south towards Java. Rainfall frequently occurs
+            in the afternoon, consequently most of the rin falls during the day
+            and not at night. In addition, despite the fact that Singapore is a
+            small country (approximately 50 km in width), most of the rain falls
+            on the western side of the island.
+          </p>
+          <h1 className="text-2xl mb-4 font-medium text-gray-900">
+            Temperature
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            High temperatures are recorded in Singapore throughout the year. The
+            outdoor temperature rarely falls below 23 - 25 °C at night and does
+            not exceed 31 - 33 °C during the hottest hours of the day. May and
+            June are characterized by the highest mean monthly temperatures
+            (daily mean temperature 27.8 °C), while December and January are the
+            coolest months (daily mean temperature 26.0 °C). The tropical heat
+            is mitigated by the sea, which surrounds the whole country and
+            dampens temperature fluctuations between day and night and between
+            seasons. Bukit Timah is the highest point (163 meters) in Singapore
+            the temperature on this hill is not much lower than the other
+            surrounding areas.
+          </p>
+          <h1 className="text-2xl mb-4 font-medium text-gray-900">
+            Relative Humidity
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            Singapore is very humid throughout the year. The biggest
+            fluctuations in relative humidity are observed between dawn and
+            mid-day due to the marked change in temperature between these two
+            periods. With relative higher than 90 % before sunrise and around 60
+            % in the early afternoon, when it does not rain. Despite the hot
+            temperatures recorded in Singapore, relative humidity frequently
+            reaches 100 %.
           </p>
           <h1 className="text-2xl mb-4 font-medium text-gray-900">Seasons</h1>
           <p className="mb-8 leading-relaxed">
@@ -70,6 +115,23 @@ function WikiClimate() {
             This phase is characterized by light and variable winds. Daily
             maximum temperatures which can exceed 32 °C and afternoon and late
             night thunderstorms.
+          </p>
+          <h1 className="text-xl mb-4 font-medium text-gray-900">
+            Southwest Monsoon (Jun - Sep)
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            During this monsoon season Sumatra Squalls occasionally occurs
+            between dawn and noon. With wnd gusts that can reach up to 40-80
+            km/h. Afternoon showers are also common. Southeasterly to southerly
+            winds are frequent in this period.
+          </p>
+          <h1 className="text-xl mb-4 font-medium text-gray-900">
+            Inter-monsoon (Oct - Nov)
+          </h1>
+          <p className="mb-8 leading-relaxed">
+            This phase is characterized by light and variable winds. Afternoon
+            thunderstorms are frequent. Higher rainfalls are registered in this
+            during these months than in the previous inter-monsoon period.
           </p>
           {/*  todo complete */}
           {/* http://www.weather.gov.sg/climate-climate-of-singapore/ */}

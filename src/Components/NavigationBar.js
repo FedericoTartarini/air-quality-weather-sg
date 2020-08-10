@@ -57,7 +57,7 @@ function NavigationBar() {
           </Link>
           <Link to="/mapPollution">
             <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
-              Map Pollution
+              Air Quality Map
             </span>
           </Link>
           <Link to="/about">
