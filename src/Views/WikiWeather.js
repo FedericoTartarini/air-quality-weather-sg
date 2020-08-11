@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 function WikiWeather() {
   return (
@@ -20,7 +21,7 @@ function WikiWeather() {
         />
         <div className="w-full flex flex-col mb-16 items-center text-center">
           <h1 className="text-3xl mb-4 font-medium text-gray-900">
-            Weather data
+            Weather forecast data source
           </h1>
           <p className="mb-8 leading-relaxed">
             The National Environment Agency (NEA) in Singapore provides

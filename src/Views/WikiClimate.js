@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import BarChartRainFall from "../Components/BarChartRainFall";
 
 function WikiClimate() {
   return (
@@ -59,6 +60,9 @@ function WikiClimate() {
             small country (approximately 50 km in width), most of the rain falls
             on the western side of the island.
           </p>
+          <div className="mb-8 container">
+            <BarChartRainFall />
+          </div>
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Temperature
           </h1>

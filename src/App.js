@@ -175,6 +175,7 @@ function App() {
               <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
             </Route>
             <Route path="/mapPollution">
+              {/* todo change mapPollution to airQualityMap*/}
               <MapPollutionView data={dataPSI} />
             </Route>
             <Route path="/about">
