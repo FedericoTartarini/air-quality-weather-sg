@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import BarChartRainFall from "../Components/BarChartRainFall";
+import LineChartTemperature from "../Components/LineChartTemperature";
 
 function WikiClimate() {
   return (
@@ -77,8 +78,14 @@ function WikiClimate() {
             dampens temperature fluctuations between day and night and between
             seasons. Bukit Timah is the highest point (163 meters) in Singapore
             the temperature on this hill is not much lower than the other
-            surrounding areas.
+            surrounding areas. The figure below shows the temperature variation
+            across different months of the year in Singapore from collected
+            between 2016 and 2020 across all weather stations in Singapore.
           </p>
+          <div className="mb-8 container">
+            <LineChartTemperature />
+          </div>
+
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Relative Humidity
           </h1>

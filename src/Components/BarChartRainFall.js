@@ -2,7 +2,7 @@ import React from "react";
 
 import { Bar } from "react-chartjs-2";
 
-function BarChartRainFall(props) {
+function BarChartRainFall() {
   const { innerWidth: width } = window;
 
   let chartHeight;
@@ -14,18 +14,18 @@ function BarChartRainFall(props) {
 
   const data = {
     labels: [
-      "January",
-      "February",
-      "March",
-      "April",
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
       "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
     ],
     datasets: [
       {
@@ -63,10 +63,10 @@ function BarChartRainFall(props) {
               gridLines: {
                 display: false,
                 drawOnChartArea: false,
-                drawTicks: false,
+                drawTicks: true,
               },
               ticks: {
-                display: false,
+                display: true,
               },
             },
           ],

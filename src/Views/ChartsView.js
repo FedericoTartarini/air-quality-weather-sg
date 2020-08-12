@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import LineChart from "../Components/LineChart";
+import LineChartPollutants from "../Components/LineChartPollutants";
 import TableIndicesCategories from "../Components/TableIndicesCategories";
 import { ClosestStation } from "../Functions/Utils";
 import Loader from "../Components/Loader";
@@ -44,7 +44,7 @@ function ChartsView({ data, locationUser }) {
             setValue={setStationName}
           />
         </div>
-        <LineChart
+        <LineChartPollutants
           data={data}
           pollutants={["pm10_sub_index", "pm25_sub_index", "no2_one_hour_max"]}
           stationName={stationName}
@@ -53,7 +53,7 @@ function ChartsView({ data, locationUser }) {
             "** computed on 24-hour average Particulate Matter (PM) 2.5 reading (µg/m3)",
           ]}
         />
-        <LineChart
+        <LineChartPollutants
           data={data}
           pollutants={["o3_sub_index", "co_sub_index", "so2_sub_index"]}
           stationName={stationName}

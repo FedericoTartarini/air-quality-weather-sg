@@ -4,7 +4,7 @@ import { Line } from "react-chartjs-2";
 import Loader from "./Loader";
 import { MapNamePollutants } from "../Functions/Utils";
 
-function LineChart({ data, pollutants, stationName, footNote }) {
+function LineChartPollutants({ data, pollutants, stationName, footNote }) {
   const { innerWidth: width } = window;
 
   let chartHeight;
@@ -137,6 +137,9 @@ function LineChart({ data, pollutants, stationName, footNote }) {
                       fontColor: "#FF0000",
                     },
                   },
+                  gridLines: {
+                    display: false,
+                  },
                 },
               ],
               yAxes: [
@@ -164,4 +167,4 @@ function LineChart({ data, pollutants, stationName, footNote }) {
   return <div>{content}</div>;
 }
 
-export default LineChart;
+export default LineChartPollutants;
