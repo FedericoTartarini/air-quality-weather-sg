@@ -97,13 +97,14 @@ function CurrentReadings({
                 <CurrentValue data={dataRH} locationUser={locationUser} />%
               </Link>
             </div>
-
-            <CurrentForecast
-              locationUser={locationUser}
-              dataFor2H={dataFor2H}
-              dataFor24H={dataFor24H}
-              station={station}
-            />
+            <Link to={"/forecast"}>
+              <CurrentForecast
+                locationUser={locationUser}
+                dataFor2H={dataFor2H}
+                dataFor24H={dataFor24H}
+                station={station}
+              />
+            </Link>
           </div>
         </div>
       </section>

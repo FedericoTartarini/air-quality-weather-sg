@@ -61,9 +61,9 @@ function WikiClimate() {
             small country (approximately 50 km in width), most of the rain falls
             on the western side of the island.
           </p>
-          <div className="mb-8 container">
-            <BarChartRainFall />
-          </div>
+          {/*<div className="mb-8 container">*/}
+          {/*  <BarChartRainFall />*/}
+          {/*</div>*/}
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Temperature
           </h1>
@@ -85,7 +85,11 @@ function WikiClimate() {
           <div className="mb-8 container">
             <LineChartTemperature />
           </div>
-
+          <img
+            className="mb-8 object-cover object-center"
+            alt="Particular Matter (PM) 2.5"
+            src={require("../Static/Images/heatmap_tmp.png")}
+          />
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Relative Humidity
           </h1>
