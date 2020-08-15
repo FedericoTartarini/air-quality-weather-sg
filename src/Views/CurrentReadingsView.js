@@ -19,7 +19,7 @@ function CurrentReadingsView({
   return (
     <div>
       <Helmet>
-        <title>Air quality and weather Singapore</title>
+        <title>Air quality and Weather Singapore</title>
         <meta
           name="description"
           content="This page shows you the current temperature, relative humidity, PM 2.5, PSI readings."

@@ -29,35 +29,34 @@ function AboutView() {
         </picture>
         <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Air Quality and Weather Singapore
+            Air Quality and Weather SG
           </h1>
           <p className="mb-8 leading-relaxed">
             Hello! My name is Federico Tartarini, the developer of the Air
-            Quality and Weather - Singapore website and applications for
-            Android.
+            Quality and Weather SG website and applications for Android.
           </p>
           <p className="mb-8 leading-relaxed">
-            Air Quality and Weather - Singapore is an easy to use website that
-            allows you to check the weather forecast and air quality in
-            Singapore. You can monitor the current weather conditions in your
-            location as well as the 24-h and 2-h weather forecasts for
-            Singapore. It also features a rain radar.
+            Air Quality and Weather SG is an easy to use website that allows you
+            to check the weather forecast and air quality in Singapore. You can
+            monitor the current weather conditions in your location as well as
+            the 24-h and 2-h weather forecasts for Singapore. It also features a
+            rain radar.
           </p>
           <p className="mb-8 leading-relaxed">
-            This website is also a great tool to monitor outdoor pollutants
-            during the haze season in Singapore since it lets you to monitor and
-            track in real-time all the standard indices of the major outdoor
-            pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3),
+            Air Quality and Weather SG is also a great tool to monitor outdoor
+            pollutants during the haze season in Singapore since it lets you to
+            monitor and track in real-time all the standard indices of the major
+            outdoor pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3),
             Nitrogen Oxide (NOx), Sulphur Oxide (SOx) and Carbon Monoxide in
             Singapore. The websites also displays how these indices varied over
             the course of the last 24 hours. So you can take informed decision
             before heading out.
           </p>
           <p className="mb-8 leading-relaxed">
-            Air Quality and Weather - Singapore uses data from the National
-            Environment Agency (NEA) in Singapore, hence, you trust the data. We
-            update weather forecast, outdoor pollutants concentrations and rain
-            radar data in real-time.
+            Air Quality and Weather SG uses data from the National Environment
+            Agency (NEA) in Singapore, hence, you trust the data. We update
+            weather forecast, outdoor pollutants concentrations and rain radar
+            data in real-time.
           </p>
           <div className="flex w-full justify-center">
             <a href="https://www.buymeacoffee.com/FedericoT">
@@ -106,7 +105,8 @@ function AboutView() {
             developers at OpenStreetMap, Leaflet, React, FontAwesome, Inkscape,
             Google and Oleksii Schastlyvyi who created{" "}
             <a href="https://www.rainviewer.com/api.html">RainViewer</a>. <br />
-            I could now have created this website without their amazing work.
+            I could now have created Air Quality and WeatherSG without their
+            amazing work.
           </p>
           <p>
             I have released the website code open-source and upload it on

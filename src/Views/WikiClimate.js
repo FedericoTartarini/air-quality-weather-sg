@@ -85,6 +85,7 @@ function WikiClimate() {
           <div className="mb-8 container">
             <LineChartTemperature />
           </div>
+          {/* todo add chart title */}
           <img
             className="mb-8 object-cover object-center"
             alt="Particular Matter (PM) 2.5"

@@ -25,11 +25,11 @@ function Footer() {
             <img
               src={logo}
               className="w-3/6 rounded-full border-4 shadow-lg"
-              alt="logo website"
+              alt="logo Weather SG"
             />
           </picture>
           <div>
-            <p className="text-xl">Air Quality and Weather</p>
+            <p className="text-xl">Air Quality and Weather SG</p>
             <p className="text-xs ml-3">v 0.0.1</p>
           </div>
         </span>

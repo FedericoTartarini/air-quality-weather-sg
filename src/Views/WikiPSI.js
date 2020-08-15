@@ -25,8 +25,8 @@ function WikiPSI() {
           <p className="mb-8 leading-relaxed">
             The Pollutant Standards Index (PSI) it is an index that the National
             Environment Agency in Singapore uses to provide information about
-            daily levels of air quality in the country. The PSI is computed
-            based on the concentration levels of particulate matter (PM10), fine
+            daily levels of air quality in Singapore. The PSI is computed based
+            on the concentration levels of particulate matter (PM10), fine
             particulate matter (PM2.5), sulphur dioxide (SO2), nitrogen dioxide
             (NO2), ozone (O3), and carbon monoxide (CO). These six pollutant
             parameters determine the PSI, hence, it provides an overall index
