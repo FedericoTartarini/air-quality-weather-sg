@@ -42,7 +42,7 @@ function CurrentForecast({ dataFor2H, dataFor24H, locationUser, station }) {
         <img
           className="h-12 w-full object-contain my-3"
           src={iconSource}
-          alt="weather icon"
+          alt="current weather forecast icon"
         />
       </div>
     );

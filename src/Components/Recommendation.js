@@ -57,7 +57,7 @@ function Recommendation({ dataPSI, locationUser }) {
         <img
           className="w-full mt-3 object-contain"
           src={singaporeLine}
-          alt="Singapore's line"
+          alt="Image of Marina Bay Sands in Singapore"
         />
         <p className="mt-2 text-xs text-center text-gray-800">
           This app does not provide medical advice. It is intended for

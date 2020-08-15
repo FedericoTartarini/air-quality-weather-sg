@@ -25,7 +25,7 @@ function Footer() {
             <img
               src={logo}
               className="w-3/6 rounded-full border-4 shadow-lg"
-              alt="logo Weather SG"
+              alt="logo Air Quality and Weather SG"
             />
           </picture>
           <div>

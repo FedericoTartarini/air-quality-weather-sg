@@ -24,7 +24,7 @@ function AboutView() {
           <img
             src={require("../Static/Images/me.jpg")}
             className="lg:w-2/6 md:w-2/6 w-3/6 mb-8 rounded-full border-4 shadow-lg"
-            alt="author"
+            alt="Federico Tartarini profile image"
           />
         </picture>
         <div className="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">

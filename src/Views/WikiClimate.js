@@ -88,7 +88,7 @@ function WikiClimate() {
           {/* todo add chart title */}
           <img
             className="mb-8 object-cover object-center"
-            alt="Particular Matter (PM) 2.5"
+            alt="Singapore's climate"
             src={require("../Static/Images/heatmap_tmp.png")}
           />
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
