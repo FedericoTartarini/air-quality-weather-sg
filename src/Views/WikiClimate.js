@@ -46,24 +46,32 @@ function WikiClimate() {
           <h1 className="text-2xl mb-4 font-medium text-gray-900">Rainfall</h1>
           <p className="mb-8 leading-relaxed">
             In Singapore rains approximately every second day on average (167
-            days of rain). Rain if often heavy and afternoon thunderstorms are
+            days of rain). Rain is often heavy and afternoon thunderstorms are
             frequent. The NEA reports that the long term total mean annual
             rainfall is 2166 mm.
           </p>
           <p className="mb-8 leading-relaxed">
             While in Singapore often rains and there is not an official dry
-            season, it generally rains more between November and January. This
-            is caused bu the fact that the tropical rain-belt moves towards
-            Singapore. While the driest month on average is February since the
-            same rain-belt moves south towards Java. Rainfall frequently occurs
-            in the afternoon, consequently most of the rin falls during the day
-            and not at night. In addition, despite the fact that Singapore is a
-            small country (approximately 50 km in width), most of the rain falls
-            on the western side of the island.
+            season, it generally rains more between November and January, as it
+            can been seen in the Figure below. This is caused by the fact that
+            the tropical rain-belt moves towards Singapore. The bar chart shows
+            the monthly cumulative rainfall and the number of rain days at
+            Changi weather station between 1982 and 2020. The driest month on
+            average is February since the same rain-belt moves south towards
+            Java. Rainfall frequently occurs in the afternoon, consequently most
+            of the rin falls during the day and not at night. In addition,
+            despite the fact that Singapore is a small country (approximately 50
+            km in width), most of the rain falls on the western side of the
+            island.
           </p>
-          {/*<div className="mb-8 container">*/}
-          {/*  <BarChartRainFall />*/}
-          {/*</div>*/}
+          <div className="container">
+            <BarChartRainFall />
+          </div>
+          <p className="text-sm text-gray-600 mb-8 w-full">
+            This bar chart shows the monthly cumulative rainfall (blue) and the
+            number of rain days (green) at Changi weather station between 1982
+            and 2020.
+          </p>
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Temperature
           </h1>
@@ -82,15 +90,25 @@ function WikiClimate() {
             across different months of the year in Singapore from collected
             between 2016 and 2020 across all weather stations in Singapore.
           </p>
-          <div className="mb-8 container">
+          <div className="container">
             <LineChartTemperature />
           </div>
+          <p className="text-sm text-gray-600 mb-8 w-full">
+            This line chart shows the monthly maximum, mean daily maximum, mean
+            (average), mean daily minimum, and minimum temperatures recorded
+            outdoors in all Singapore between 2016 and 2020.
+          </p>
           {/* todo add chart title */}
           <img
-            className="mb-8 object-cover object-center"
+            className="mb-2 object-cover object-center"
             alt="Singapore's climate"
             src={require("../Static/Images/heatmap_tmp.png")}
           />
+          <p className="text-sm text-gray-600 mb-8 w-full">
+            The heatmap shows how the temperature outdoors in Singapore varies
+            by time of day and month. The figure was generated using data from
+            all Singaporean weather stations collected between 2016 and 2020.
+          </p>
           <h1 className="text-2xl mb-4 font-medium text-gray-900">
             Relative Humidity
           </h1>

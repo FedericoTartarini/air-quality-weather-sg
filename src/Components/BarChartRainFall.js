@@ -35,7 +35,7 @@ function BarChartRainFall() {
         borderWidth: 1,
         hoverBackgroundColor: "rgba(31,119,180,0.8)",
         hoverBorderColor: "rgba(31,119,180,1)",
-        data: [65, 59, 80, 81, 56, 55, 40, 80, 81, 56, 55, 40],
+        data: [226, 105, 160, 153, 166, 134, 146, 147, 146, 161, 256, 318],
         yAxisID: "y1",
       },
       {
@@ -45,7 +45,7 @@ function BarChartRainFall() {
         borderWidth: 1,
         hoverBackgroundColor: "rgba(44,160,44,0.8)",
         hoverBorderColor: "#2ca02c",
-        data: [65, 59, 80, 81, 56, 55, 40, 80, 81, 56, 55, 40],
+        data: [13, 8, 12, 14, 14, 13, 13, 14, 13, 15, 19, 19],
         yAxisID: "y2",
       },
     ],
@@ -76,15 +76,24 @@ function BarChartRainFall() {
               type: "linear",
               position: "left",
               gridLines: { color: "rgba(0, 0, 0, 0.05)" },
+              ticks: {
+                beginAtZero: true,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Monthly cumulative rainfall, mm",
+              },
             },
             {
               id: "y2",
               type: "linear",
               position: "right",
               ticks: {
-                // max: 1,
-                // min: 0
                 beginAtZero: true,
+              },
+              scaleLabel: {
+                display: true,
+                labelString: "Number of rain days",
               },
               gridLines: { color: "rgba(0, 0, 0, 0.05)" },
             },
