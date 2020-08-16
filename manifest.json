@@ -1,6 +1,6 @@
 {
-  "short_name": "AirQualitySG",
-  "name": "Air Quality and Weather - Singapore",
+  "short_name": "WeatherSG",
+  "name": "Air Quality and Weather SG",
   "icons": [
     {
       "src": "favicon.ico",
