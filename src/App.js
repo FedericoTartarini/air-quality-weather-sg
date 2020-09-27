@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import NavigationBar from "./Components/NavigationBar";
-import Footer from "./Components/Footer";
+import CurrentReadingsView from "./Views/CurrentReadingsView";
 import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "./Components/Loader";
@@ -12,8 +12,8 @@ const AboutView = lazy(() => import("./Views/AboutView"));
 const WikiPSI = lazy(() => import("./Views/WikiPSI"));
 const MapPollutionView = lazy(() => import("./Views/MapPollutionView"));
 const ForecastView = lazy(() => import("./Views/ForecastView"));
-const CurrentReadingsView = lazy(() => import("./Views/CurrentReadingsView"));
 const ChartsView = lazy(() => import("./Views/ChartsView"));
+const Footer = lazy(() => import("./Components/Footer"));
 
 function App() {
   let tzOffset = new Date().getTimezoneOffset(); //offset in milliseconds
@@ -153,21 +153,21 @@ function App() {
     <Router basename="/">
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
-        <Suspense fallback={<Loader />}>
-          <Switch>
-            <Route exact path="/">
-              <CurrentReadingsView
-                dataPSI={dataPSI}
-                dataTmp={dataTmp}
-                dataRH={dataRH}
-                dataFor2H={dataFor2H}
-                dataFor24H={dataFor24H}
-                dataPM25={dataPM25}
-                locationUser={locationUser}
-                RequestedUseLocation={RequestedUseLocation}
-                showRequestLocButton={showRequestLocButton}
-              />
-            </Route>
+        <Switch>
+          <Route exact path="/">
+            <CurrentReadingsView
+              dataPSI={dataPSI}
+              dataTmp={dataTmp}
+              dataRH={dataRH}
+              dataFor2H={dataFor2H}
+              dataFor24H={dataFor24H}
+              dataPM25={dataPM25}
+              locationUser={locationUser}
+              RequestedUseLocation={RequestedUseLocation}
+              showRequestLocButton={showRequestLocButton}
+            />
+          </Route>
+          <Suspense fallback={<Loader />}>
             <Route path="/charts">
               <ChartsView data={dataPSI} locationUser={locationUser} />
             </Route>
@@ -193,11 +193,13 @@ function App() {
             <Route path="/climate">
               <WikiClimate />
             </Route>
-          </Switch>
+          </Suspense>
+        </Switch>
+        <Suspense fallback={<Loader />}>
+          <div>
+            <Footer />
+          </div>
         </Suspense>
-        <div>
-          <Footer />
-        </div>
       </div>
     </Router>
   );

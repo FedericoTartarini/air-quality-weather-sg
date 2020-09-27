@@ -1,9 +1,12 @@
-import React from "react";
-import TopImage from "../Components/TopImage";
-import CurrentReadings from "../Components/CurrentReadings";
-import Recommendation from "../Components/Recommendation";
+import React, { Suspense, lazy } from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+
+import Loader from "../Components/Loader";
+
+const Recommendation = lazy(() => import("../Components/Recommendation"));
+const TopImage = lazy(() => import("../Components/TopImage"));
+const CurrentReadings = lazy(() => import("../Components/CurrentReadings"));
 
 function CurrentReadingsView({
   dataPSI,
@@ -25,10 +28,12 @@ function CurrentReadingsView({
           content="This page shows you the current temperature, relative humidity, PM 2.5, PSI readings."
         />
       </Helmet>
-      <div className="flex">
-        <TopImage dataPSI={dataPSI} locationUser={locationUser} />
-      </div>
-      <div>
+      <Suspense fallback={<Loader />}>
+        <div className="flex">
+          <TopImage dataPSI={dataPSI} locationUser={locationUser} />
+        </div>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
         <CurrentReadings
           dataPSI={dataPSI}
           dataTmp={dataTmp}
@@ -40,14 +45,14 @@ function CurrentReadingsView({
           RequestedUseLocation={RequestedUseLocation}
           showRequestLocButton={showRequestLocButton}
         />
-      </div>
-      <div>
+      </Suspense>
+      <Suspense fallback={<Loader />}>
         <Recommendation dataPSI={dataPSI} locationUser={locationUser} />
-      </div>
+      </Suspense>
       <div className="container mx-auto my-3 flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
         <div className="text-gray-800 mb-2">
           <div className="font-bold text-md mb-2">Learn more about:</div>
-          <ul class="list-disc list-inside">
+          <ul className="list-disc list-inside">
             <li>
               <Link to="/climate">Climate of Singapore</Link>
             </li>
