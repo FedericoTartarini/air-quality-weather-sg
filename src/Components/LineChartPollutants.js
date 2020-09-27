@@ -74,22 +74,6 @@ function LineChartPollutants({ data, pollutants, stationName, footNote }) {
         pointHitRadius: 10,
         data: [65, 59, 80, 81, 56, 55, 40],
       },
-      // {
-      //   label: "",
-      //   fill: true,
-      //   lineTension: 0.1,
-      //   backgroundColor: "rgba(17,167,7,0.18)",
-      //   borderCapStyle: "butt",
-      //   borderDash: [],
-      //   borderDashOffset: 0.0,
-      //   borderJoinStyle: "miter",
-      //   pointBorderWidth: 0,
-      //   pointHoverRadius: 0,
-      //   pointHoverBorderWidth: 0,
-      //   pointRadius: 0,
-      //   pointHitRadius: 0,
-      //   data: [50, 50],
-      // },
     ],
   };
 
