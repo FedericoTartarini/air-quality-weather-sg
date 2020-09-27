@@ -45,22 +45,22 @@ function NavigationBar() {
               Home
             </span>
           </Link>
-          <Link to="/charts">
+          <Link to="/air-pollution-singapore-haze">
             <span className="block mt-4 xl:inline-block xl:mt-0 hover:text-gray-600 ml-4">
               Charts
             </span>
           </Link>
-          <Link to="/forecast">
+          <Link to="/weather-forecast-singapore">
             <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
               Forecast
             </span>
           </Link>
-          <Link to="/mapPollution">
+          <Link to="/map-air-pollution-singapore-haze">
             <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
               Air Quality Map
             </span>
           </Link>
-          <Link to="/about">
+          <Link to="/about-air-quality-and-weather-sg">
             <span className="block mt-4 xl:inline-block xl:mt-0 over:text-gray-600 ml-4">
               About
             </span>

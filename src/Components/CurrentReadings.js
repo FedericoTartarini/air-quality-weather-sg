@@ -64,7 +64,7 @@ function CurrentReadings({
           </div>
           {/* horizontal line */}
           <div className="flex my-3 justify-center">
-            <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
+            <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex" />
           </div>
           <div className="flex flex-wrap content-between sm:-m-4 -mx-4 my-3">
             {/* show also AQI */}
@@ -81,10 +81,10 @@ function CurrentReadings({
           </div>
           <div className="text-center my-5">
             <div className="flex my-3 justify-center">
-              <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex"></div>
+              <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex" />
             </div>
             <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              <Link to="/weather">
+              <Link to="/weather-singapore">
                 Temperature:{" "}
                 <CurrentValue data={dataTmp} locationUser={locationUser} />
                 °C
@@ -92,12 +92,12 @@ function CurrentReadings({
             </div>
 
             <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
-              <Link to="/weather">
+              <Link to="/weather-singapore">
                 Relative humidity:{" "}
                 <CurrentValue data={dataRH} locationUser={locationUser} />%
               </Link>
             </div>
-            <Link to={"/forecast"}>
+            <Link to={"/weather-forecast-singapore"}>
               <CurrentForecast
                 locationUser={locationUser}
                 dataFor2H={dataFor2H}

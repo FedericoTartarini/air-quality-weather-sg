@@ -54,16 +54,18 @@ function CurrentReadingsView({
           <div className="font-bold text-md mb-2">Learn more about:</div>
           <ul className="list-disc list-inside">
             <li>
-              <Link to="/climate">Climate of Singapore</Link>
+              <Link to="/climate-of-singapore">Climate of Singapore</Link>
             </li>
             <li>
-              <Link to="/psi">Pollutant Standards Index (PSI)</Link>
+              <Link to="/pollutant-standards-index-singapore">
+                Pollutant Standards Index (PSI)
+              </Link>
             </li>
             <li>
               <Link to="/pm25">1-h Particular Matter 2.5 µm</Link>
             </li>
             <li>
-              <Link to="/weather">Weather forecast data source</Link>
+              <Link to="/weather-singapore">Weather forecast data source</Link>
             </li>
           </ul>
         </div>

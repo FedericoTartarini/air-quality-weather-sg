@@ -168,29 +168,28 @@ function App() {
             />
           </Route>
           <Suspense fallback={<Loader />}>
-            <Route path="/charts">
+            <Route path="/air-pollution-singapore-haze">
               <ChartsView data={dataPSI} locationUser={locationUser} />
             </Route>
-            <Route path="/forecast">
+            <Route path="/weather-forecast-singapore">
               <ForecastView dataFor2H={dataFor2H} dataFor24H={dataFor24H} />
             </Route>
-            <Route path="/mapPollution">
-              {/* todo change mapPollution to airQualityMap*/}
+            <Route path="/map-air-pollution-singapore-haze">
               <MapPollutionView data={dataPSI} />
             </Route>
-            <Route path="/about">
+            <Route path="/about-air-quality-and-weather-sg">
               <AboutView />
             </Route>
-            <Route path="/psi">
+            <Route path="/pollutant-standards-index-singapore">
               <WikiPSI />
             </Route>
             <Route path="/pm25">
               <WikiPM25 />
             </Route>
-            <Route path="/weather">
+            <Route path="/weather-singapore">
               <WikiWeather />
             </Route>
-            <Route path="/climate">
+            <Route path="/climate-of-singapore">
               <WikiClimate />
             </Route>
           </Suspense>

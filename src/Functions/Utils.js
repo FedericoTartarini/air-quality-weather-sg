@@ -87,7 +87,7 @@ export function MapNamePollutants(pollutant, abbreviated) {
 export function GetHelpURL(pollutant) {
   switch (pollutant) {
     case "psi_twenty_four_hourly":
-      return "/psi";
+      return "/pollutant-standards-index-singapore";
     case "pm25_one_hourly":
       return "/pm25";
     case "o3_sub_index":
