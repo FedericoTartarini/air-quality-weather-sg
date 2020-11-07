@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url> <loc>https://weathersg.com</loc> </url>
-<url> <loc>https://weathersg.com/?p=/air-pollution-singapore-haze</loc> </url>
-<url> <loc>https://weathersg.com/?p=/weather-forecast-singapore</loc> </url>
-<url> <loc>https://weathersg.com/?p=/map-air-pollution-singapore-haze</loc> </url>
-<url> <loc>https://weathersg.com/?p=/about-air-quality-and-weather-sg</loc> </url>
-<url> <loc>https://weathersg.com/?p=/pollutant-standards-index-singapore</loc> </url>
-<url> <loc>https://weathersg.com/?p=/pm25</loc> </url>
-<url> <loc>https://weathersg.com/?p=/weather-singapore</loc> </url>
-<url> <loc>https://weathersg.com/?p=/climate-of-singapore</loc> </url>
+<url> <loc>https://weathersg.com/air-pollution-singapore-haze</loc> </url>
+<url> <loc>https://weathersg.com/weather-forecast-singapore</loc> </url>
+<url> <loc>https://weathersg.com/map-air-pollution-singapore-haze</loc> </url>
+<url> <loc>https://weathersg.com/about-air-quality-and-weather-sg</loc> </url>
+<url> <loc>https://weathersg.com/pollutant-standards-index-singapore</loc> </url>
+<url> <loc>https://weathersg.com/pm25</loc> </url>
+<url> <loc>https://weathersg.com/weather-singapore</loc> </url>
+<url> <loc>https://weathersg.com/climate-of-singapore</loc> </url>
 </urlset>
