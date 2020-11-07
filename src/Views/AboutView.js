@@ -8,7 +8,15 @@ function AboutView() {
         <title>About Page</title>
         <meta
           name="description"
-          content="This page is about the author, Federico Tartarini."
+          content="Air Quality and Weather SG allows you to monitor and track in real-time the standard indexes of the major outdoor
+      pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3), Nitrogen Oxide (NOx), Sulfur Oxide (SOx) and Carbon
+      Monoxide in Singapore. Weather SG also shows how these indices varied over the course of the last 24 hours.
+      Weather SG is a great tool to track the air quality on a day-to-day basis or during the haze season.
+      In addition, Weather SG can be used to monitor the current weather conditions in your location as well as the
+      weather forecasts for Singapore. It also allows you to check the rain radar.
+      I have also created an android application which shows the above mentioned data.
+      I have released the code I used to create Weather SG open-source on Github.
+      Enjoy the app!"
         />
       </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">

@@ -36,7 +36,7 @@ function MapWeather2H({ data }) {
         <title>2-hour weather forecasts in Singapore</title>
         <meta
           name="description"
-          content="This page shows the next two hours weather forecasts for Singapore"
+          content="This page shows the next two hours weather forecasts for more than 20 locations in Singapore"
         />
       </Helmet>
       <Map

@@ -10,7 +10,7 @@ function WikiClimate() {
         <title>Climate Singapore</title>
         <meta
           name="description"
-          content="This page describes the tropical climate in Singapore."
+          content="This page describes in detail the climate of Singapore."
         />
       </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">

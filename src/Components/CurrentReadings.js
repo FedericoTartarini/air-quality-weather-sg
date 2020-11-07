@@ -83,7 +83,7 @@ function CurrentReadings({
             <div className="flex my-3 justify-center">
               <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex" />
             </div>
-            <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
               <Link to="/weather-singapore">
                 Temperature:{" "}
                 <CurrentValue data={dataTmp} locationUser={locationUser} />
@@ -91,7 +91,7 @@ function CurrentReadings({
               </Link>
             </div>
 
-            <div className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
               <Link to="/weather-singapore">
                 Relative humidity:{" "}
                 <CurrentValue data={dataRH} locationUser={locationUser} />%

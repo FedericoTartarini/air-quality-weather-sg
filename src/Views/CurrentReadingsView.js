@@ -25,7 +25,9 @@ function CurrentReadingsView({
         <title>Air quality and Weather Singapore</title>
         <meta
           name="description"
-          content="This page shows you the current temperature, relative humidity, PM 2.5, PSI readings."
+          content="This page allows you to monitor and track in real-time the standard indexes of the major outdoor
+      pollutants in Singapore. In addition you can monitor the current temperature and relative humidity in your location as well as the
+      weather forecasts for Singapore"
         />
       </Helmet>
       <Suspense fallback={<Loader />}>
@@ -53,18 +55,18 @@ function CurrentReadingsView({
         <div className="text-gray-800 mb-2">
           <div className="font-bold text-md mb-2">Learn more about:</div>
           <ul className="list-disc list-inside">
-            <li>
+            <li className="py-1">
               <Link to="/climate-of-singapore">Climate of Singapore</Link>
             </li>
-            <li>
+            <li className="py-1">
               <Link to="/pollutant-standards-index-singapore">
                 Pollutant Standards Index (PSI)
               </Link>
             </li>
-            <li>
+            <li className="py-1">
               <Link to="/pm25">1-h Particular Matter 2.5 µm</Link>
             </li>
-            <li>
+            <li className="py-1">
               <Link to="/weather-singapore">Weather forecast data source</Link>
             </li>
           </ul>

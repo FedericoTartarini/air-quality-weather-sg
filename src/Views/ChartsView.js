@@ -33,7 +33,9 @@ function ChartsView({ data, locationUser }) {
           <title>Historical pollution data</title>
           <meta
             name="description"
-            content="This page shows you the pollutants concentrations over the last 24 hours."
+            content="This page shows you the concentrations, over the last 24 hours, of the major outdoor
+      pollutants: Particulate matter (PM10 and PM2.5), Ozone (O3), Nitrogen Oxide (NOx), Sulfur Oxide (SOx) and Carbon
+      Monoxide in Singapore."
           />
         </Helmet>
         <div className="flex justify-center content-center">

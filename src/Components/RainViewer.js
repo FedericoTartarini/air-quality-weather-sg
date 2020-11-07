@@ -7,10 +7,13 @@ function RainViewer() {
   return (
     <div className="container-flex mx-auto">
       <Helmet>
-        <title>Rain Radar</title>
+        <title>Rain Radar Singapore</title>
         <meta
           name="description"
-          content="This page shows the rain radar data for the past two hours."
+          content="This page shows the rain radar data for the past two hours in Singapore.
+          The weather radar data is extremely useful since it allows you to assess where it is currently raining
+          and how the rain clouds are moving.
+          In addition you can also zoom out and see the weather radar for any location in the world."
         />
       </Helmet>
       <iframe
