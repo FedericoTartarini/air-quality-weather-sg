@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dc0bbb1a6155a2638fa12f4ab925fa55",
+    "revision": "6235adbe5a970a8faad40c98bb95e793",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/main.f1c4a49e.chunk.css"
   },
   {
-    "revision": "9bf3c68e02cd4579766b",
-    "url": "/static/js/0.6b6a6393.chunk.js"
+    "revision": "add1fb338ab38bff22b3",
+    "url": "/static/js/0.568b68a9.chunk.js"
   },
   {
     "revision": "04229b2b4c7c2800c8fa",
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/13.583f8eda.chunk.js"
   },
   {
-    "revision": "abccfd50fce88f2c1adc",
-    "url": "/static/js/14.2c402bd4.chunk.js"
+    "revision": "e5e9cb63739d6f9648f5",
+    "url": "/static/js/14.d5966c9a.chunk.js"
   },
   {
     "revision": "dcb21f7c539a53accf3d",
@@ -96,40 +96,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/8.07aa67fd.chunk.js"
   },
   {
-    "revision": "6212eeb6481feb36118d",
-    "url": "/static/js/9.ed703d95.chunk.js"
+    "revision": "be1d2c95930157709117",
+    "url": "/static/js/9.b296bdef.chunk.js"
   },
   {
     "revision": "a6f3f2dc2284342f91b7",
     "url": "/static/js/main.2c03eb3b.chunk.js"
   },
   {
-    "revision": "0f20512e6440202e4bac",
-    "url": "/static/js/runtime-main.66add848.js"
+    "revision": "19dc1315983f7bdfcdef",
+    "url": "/static/js/runtime-main.c71b99af.js"
   },
   {
-    "revision": "8787c55d661e3751144ff38fa02cb00c",
-    "url": "/static/media/good-day.8787c55d.jpg"
+    "revision": "28b9391e8a24f549a66160634e4dd2bc",
+    "url": "/static/media/good-day.28b9391e.webp"
   },
   {
-    "revision": "d0ccd565ec49c75a497ad42f0235ad08",
-    "url": "/static/media/good-day.d0ccd565.webp"
+    "revision": "a94cab5eb5faa7ac663db03772e1bb7b",
+    "url": "/static/media/good-day.a94cab5e.jpg"
   },
   {
-    "revision": "8233f5f99842a52da2f22310c8dbb9c2",
-    "url": "/static/media/good-night.8233f5f9.jpg"
+    "revision": "657c5220d52dfc51a24c7ceacf3c0445",
+    "url": "/static/media/good-night.657c5220.jpg"
   },
   {
-    "revision": "cdab1bb4b8b4429dd307ed321a81f0e8",
-    "url": "/static/media/good-night.cdab1bb4.webp"
+    "revision": "fcc6e2d1b7c3406679d93420922c9e9d",
+    "url": "/static/media/good-night.fcc6e2d1.webp"
   },
   {
-    "revision": "24dcd33a91c23995256bb0f26ca42428",
-    "url": "/static/media/hazarduos.24dcd33a.webp"
+    "revision": "9ffb7b2e94f4a7b2505cbae7101ac2ba",
+    "url": "/static/media/hazarduos.9ffb7b2e.webp"
   },
   {
-    "revision": "ab61dc3a12e51a9d405d9c8c2e2f958f",
-    "url": "/static/media/hazarduos.ab61dc3a.jpg"
+    "revision": "a7fb1edbc3e3d881b7be85d005510969",
+    "url": "/static/media/hazarduos.a7fb1edb.jpg"
   },
   {
     "revision": "52c8dcb0b4d425cf1b3ea24b843a0a2b",
@@ -156,20 +156,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/me.393f2edd.webp"
   },
   {
-    "revision": "36a5ca38c1c049e00676a63cc102a998",
-    "url": "/static/media/moderate-day.36a5ca38.webp"
+    "revision": "7cfb51765da4ba01f1dae7b012586d95",
+    "url": "/static/media/moderate-day.7cfb5176.webp"
   },
   {
-    "revision": "f0e85442e756ef47d6033135c7f5be36",
-    "url": "/static/media/moderate-day.f0e85442.jpg"
+    "revision": "e987a7b6032585011fd5d9581b45c57f",
+    "url": "/static/media/moderate-day.e987a7b6.jpg"
   },
   {
-    "revision": "3366b727a9bf8f7137b90a715ae97166",
-    "url": "/static/media/moderate-night.3366b727.webp"
+    "revision": "302c28ddae8cbe1f9d834b63f8ddd74b",
+    "url": "/static/media/moderate-night.302c28dd.webp"
   },
   {
-    "revision": "fcfbd3dbb0a795ce01cb478d671623f7",
-    "url": "/static/media/moderate-night.fcfbd3db.jpg"
+    "revision": "48220ac7120d3258d3d6059feb4be031",
+    "url": "/static/media/moderate-night.48220ac7.jpg"
   },
   {
     "revision": "54757c1260624c49c1adac0f976f98e7",
@@ -180,47 +180,47 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/singapore-line.d67ab07e.png"
   },
   {
-    "revision": "0733819efc6a926de956ade8d2aca215",
-    "url": "/static/media/tropical.0733819e.webp"
+    "revision": "a2dc232782a3346fd24caae353f75c29",
+    "url": "/static/media/tropical.a2dc2327.webp"
   },
   {
-    "revision": "c6ef86659639046d57fdd360e507f453",
-    "url": "/static/media/tropical.c6ef8665.jpg"
+    "revision": "bac9414b221d3661434da050701f1f53",
+    "url": "/static/media/tropical.bac9414b.jpg"
   },
   {
-    "revision": "0a84188432024cccaa3c8ba4373658df",
-    "url": "/static/media/unhealthy-day.0a841884.webp"
+    "revision": "56bc43dcf00a27fd4d9f450e212cd7e0",
+    "url": "/static/media/unhealthy-day.56bc43dc.jpg"
   },
   {
-    "revision": "f7b35daee9112599c7a3df794f08e3d7",
-    "url": "/static/media/unhealthy-day.f7b35dae.jpg"
+    "revision": "ccd525f6a5a695f9bde293012246209b",
+    "url": "/static/media/unhealthy-day.ccd525f6.webp"
   },
   {
-    "revision": "04bc030af505601f064d77c542e3615d",
-    "url": "/static/media/unhealty-night.04bc030a.jpg"
+    "revision": "02439cd772dd5d67b24f8f2dbd741cb4",
+    "url": "/static/media/unhealty-night.02439cd7.jpg"
   },
   {
-    "revision": "35e5620e00a2fa97afa28fed823ea15c",
-    "url": "/static/media/unhealty-night.35e5620e.webp"
+    "revision": "d1b8670c10448b6c03dda122388bb097",
+    "url": "/static/media/unhealty-night.d1b8670c.webp"
   },
   {
-    "revision": "31ed53102dffcba3bc8f12f29766027f",
-    "url": "/static/media/very-unhealthy-day.31ed5310.jpg"
+    "revision": "086feb2c55e7549eb0a522a6aa0a922e",
+    "url": "/static/media/very-unhealthy-day.086feb2c.webp"
   },
   {
-    "revision": "d87d46ae7eac91052b61fe896a6544bf",
-    "url": "/static/media/very-unhealthy-day.d87d46ae.webp"
+    "revision": "09dbd8f53fdb42c45663a1a7147295ae",
+    "url": "/static/media/very-unhealthy-day.09dbd8f5.jpg"
   },
   {
-    "revision": "8fe4a98eb5a59b2c758ab6cd7d7fb089",
-    "url": "/static/media/very-unhealthy-night.8fe4a98e.webp"
+    "revision": "2983e8181a145050c460fc7a4460fff6",
+    "url": "/static/media/very-unhealthy-night.2983e818.jpg"
   },
   {
-    "revision": "e8d0ff4e29dd8d0df320730aa980bf0e",
-    "url": "/static/media/very-unhealthy-night.e8d0ff4e.jpg"
+    "revision": "3db7793537a083793341ecd360038717",
+    "url": "/static/media/very-unhealthy-night.3db77935.webp"
   },
   {
-    "revision": "142c15bdc4606c9c19be4bc1c1564f75",
-    "url": "/static/media/weather.142c15bd.jpg"
+    "revision": "6d3f7eecf0a83a2c30d15a41f80c8ee3",
+    "url": "/static/media/weather.6d3f7eec.jpg"
   }
 ]);
