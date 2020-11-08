@@ -6,6 +6,7 @@ import {
   faDizzy,
   faSkullCrossbones,
 } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
 export function GetLatestReading(stationName, data) {
   const lastReading = data.items[data.items.length - 1].readings;
@@ -354,36 +355,58 @@ export function ForecastToIcon(description) {
   return imgURL;
 }
 
-export function ChooseTopImageSingapore(airQualityDescription) {
-  let imgURL;
+export function ChooseTopImageSingapore({ airQualityDescription }) {
+  let imgURL_jpg;
+  let imgURL_webp;
 
   const hour = new Date().getHours();
 
   // console.log('hour' + hour);
   if (hour > 7 && hour < 19) {
     if (airQualityDescription === "Good") {
-      imgURL = require("../Static/Images/good-day.jpg");
+      imgURL_jpg = require("../Static/Images/good-day.jpg");
+      imgURL_webp = require("../Static/Images/good-day.webp");
     } else if (airQualityDescription === "Moderate") {
-      imgURL = require("../Static/Images/moderate-day.jpg");
+      imgURL_jpg = require("../Static/Images/moderate-day.jpg");
+      imgURL_webp = require("../Static/Images/moderate-day.webp");
     } else if (airQualityDescription === "Unhealthy") {
-      imgURL = require("../Static/Images/unhealthy-day.jpg");
+      imgURL_jpg = require("../Static/Images/unhealthy-day.jpg");
+      imgURL_webp = require("../Static/Images/unhealthy-day.webp");
     } else if (airQualityDescription === "Very Unhealthy") {
-      imgURL = require("../Static/Images/very-unhealthy-day.jpg");
+      imgURL_jpg = require("../Static/Images/very-unhealthy-day.jpg");
+      imgURL_webp = require("../Static/Images/very-unhealthy-day.webp");
     } else {
-      imgURL = require("../Static/Images/hazarduos.jpg");
+      imgURL_jpg = require("../Static/Images/hazarduos.jpg");
+      imgURL_webp = require("../Static/Images/hazarduos.webp");
     }
   } else {
     if (airQualityDescription === "Good") {
-      imgURL = require("../Static/Images/good-night.jpg");
+      imgURL_jpg = require("../Static/Images/good-night.jpg");
+      imgURL_webp = require("../Static/Images/good-night.webp");
     } else if (airQualityDescription === "Moderate") {
-      imgURL = require("../Static/Images/moderate-night.jpg");
+      imgURL_jpg = require("../Static/Images/moderate-night.jpg");
+      imgURL_webp = require("../Static/Images/moderate-night.webp");
     } else if (airQualityDescription === "Unhealthy") {
-      imgURL = require("../Static/Images/unhealty-night.jpg");
+      imgURL_jpg = require("../Static/Images/unhealty-night.jpg");
+      imgURL_webp = require("../Static/Images/unhealty-night.webp");
     } else if (airQualityDescription === "Very Unhealthy") {
-      imgURL = require("../Static/Images/very-unhealthy-night.jpg");
+      imgURL_jpg = require("../Static/Images/very-unhealthy-night.jpg");
+      imgURL_webp = require("../Static/Images/very-unhealthy-night.webp");
     } else {
-      imgURL = require("../Static/Images/hazarduos.jpg");
+      imgURL_jpg = require("../Static/Images/hazarduos.jpg");
+      imgURL_webp = require("../Static/Images/hazarduos.webp");
     }
   }
-  return imgURL;
+  return (
+    <picture>
+      <source type="image/webp" srcSet={imgURL_webp} />
+      <source type="image/jpg" srcSet={imgURL_jpg} />
+      <img
+        // className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+        className="h-48 w-full rounded object-cover shadow-lg"
+        alt="Singapore"
+        src={imgURL_jpg}
+      />
+    </picture>
+  );
 }

@@ -32,12 +32,7 @@ function TopImage({ dataPSI, locationUser }) {
 
     content = (
       <div className="container mx-auto flex items-center justify-center shadow-lg">
-        <img
-          // className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
-          className="h-48 w-full rounded object-cover shadow-lg"
-          alt="Singapore"
-          src={ChooseTopImageSingapore(description)}
-        />
+        <ChooseTopImageSingapore airQualityDescription={description} />
       </div>
     );
   }
