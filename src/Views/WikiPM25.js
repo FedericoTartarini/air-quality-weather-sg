@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import { ChooseTopImageSingapore } from "../Functions/Utils";
 
 function WikiPM25() {
   return (
@@ -12,12 +13,8 @@ function WikiPM25() {
         />
       </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
-        <img
-          className="mb-8 object-cover object-center rounded-sm shadow-lg"
-          alt="Particular Matter (PM) 2.5"
-          src={require("../Static/Images/unhealthy-day.jpg")}
-        />
-        <div className="w-full flex flex-col mb-16 items-center text-center">
+        <ChooseTopImageSingapore airQualityDescription={"Unhealthy"} />
+        <div className="w-full flex flex-col mt-8 items-center text-center">
           <h1 className="text-3xl mb-4 font-medium text-gray-900">
             1-hour Particular Matter 2.5 µm (PM<sub>2.5</sub>)
           </h1>

@@ -10,7 +10,14 @@ function NavigationBar() {
     <nav className="container mx-auto flex items-center justify-between flex-wrap p-6">
       <Link to="/">
         <div className="flex items-center flex-shrink-0">
-          <img src={logo} alt="logo Air Quality and Weather SG" width={50} />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet={require("../Static/Icons/logo192.webp")}
+            />
+            <source type="image/png" srcSet={logo} />
+            <img src={logo} alt="logo Air Quality and Weather SG" width={50} />
+          </picture>
           <span className="font-semibold text-xl tracking-tight ml-3 w-40">
             Air Quality and Weather SG
           </span>

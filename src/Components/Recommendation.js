@@ -1,5 +1,4 @@
 import React from "react";
-import singaporeLine from "../Static/Icons/singapore-line.png";
 import {
   ClosestStation,
   GetLatestReading,
@@ -54,11 +53,21 @@ function Recommendation({ dataPSI, locationUser }) {
             {HealthAdvisory(description).sick}
           </p>
         </div>
-        <img
-          className="w-full mt-3 object-contain"
-          src={singaporeLine}
-          alt="Marina Bay Sands in Singapore"
-        />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet={require("../Static/Icons/singapore-line.webp")}
+          />
+          <source
+            type="image/png"
+            srcSet={require("../Static/Icons/singapore-line.png")}
+          />
+          <img
+            className="w-full mt-3 object-contain"
+            alt="Marina Bay Sands in Singapore"
+            src={require("../Static/Icons/singapore-line.png")}
+          />
+        </picture>
         <p className="mt-2 text-xs text-center text-gray-800">
           This app does not provide medical advice. It is intended for
           informational purposes only. It is not a substitute for professional

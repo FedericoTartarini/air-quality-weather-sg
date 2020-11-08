@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import TableIndicesCategories from "../Components/TableIndicesCategories";
+import { ChooseTopImageSingapore } from "../Functions/Utils";
 
 function WikiPSI() {
   return (
@@ -13,12 +14,8 @@ function WikiPSI() {
         />
       </Helmet>
       <div className="container mx-auto flex flex-col px-5 py-8 justify-center items-center">
-        <img
-          className="mb-8 object-cover object-center rounded-sm shadow-lg"
-          alt="Pollutant Standards Index"
-          src={require("../Static/Images/gas.jpg")}
-        />
-        <div className="w-full flex flex-col mb-16 items-center text-center">
+        <ChooseTopImageSingapore airQualityDescription={"Very Unhealthy"} />
+        <div className="w-full flex flex-col mt-8 items-center text-center">
           <h1 className="text-3xl mb-4 font-medium text-gray-900">
             Pollutant Standards Index (PSI)
           </h1>

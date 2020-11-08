@@ -3,7 +3,6 @@ import {
   faGithub,
   faGooglePlay,
   faLinkedin,
-  faResearchgate,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const logo = require("../Static/Icons/logo192.png");
@@ -18,10 +17,7 @@ function Footer() {
               type="image/webp"
               srcSet={require("../Static/Icons/logo192.webp")}
             />
-            <source
-              type="image/png"
-              srcSet={require("../Static/Icons/logo192.png")}
-            />
+            <source type="image/png" srcSet={logo} />
             <img
               src={logo}
               className="w-3/6 rounded-full border-4 shadow-lg"
