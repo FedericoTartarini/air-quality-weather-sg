@@ -21,20 +21,28 @@ function TopImage({ dataPSI, locationUser }) {
   }
 
   if (locationUser.data && dataPSI.data) {
-    const stationName = ClosestStation(dataPSI.data, locationUser.data).name;
+    if (dataPSI.data.items.length !== 0) {
+      const stationName = ClosestStation(dataPSI.data, locationUser.data).name;
 
-    const latestReading = GetLatestReading(stationName, dataPSI.data);
+      const latestReading = GetLatestReading(stationName, dataPSI.data);
 
-    const description = PollutantClass(
-      latestReading["psi_twenty_four_hourly"],
-      "psi_twenty_four_hourly"
-    ).description;
+      const description = PollutantClass(
+        latestReading["psi_twenty_four_hourly"],
+        "psi_twenty_four_hourly"
+      ).description;
 
-    content = (
-      <div className="container mx-auto flex items-center justify-center shadow-lg">
-        <ChooseTopImageSingapore airQualityDescription={description} />
-      </div>
-    );
+      content = (
+        <div className="container mx-auto flex items-center justify-center shadow-lg">
+          <ChooseTopImageSingapore airQualityDescription={description} />
+        </div>
+      );
+    } else {
+      content = (
+        <div className="container mx-auto flex items-center justify-center shadow-lg">
+          <ChooseTopImageSingapore airQualityDescription={"Good"} />
+        </div>
+      );
+    }
   }
 
   return content;

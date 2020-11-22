@@ -26,7 +26,7 @@ function MajorPollutants({ dataPSI, locationUser, pollutant }) {
     );
   }
 
-  if (locationUser.data && dataPSI.data) {
+  if (locationUser.data && dataPSI.data && dataPSI.data.items.length !== 0) {
     const stationName = ClosestStation(dataPSI.data, locationUser.data).name;
 
     const latestReading = GetLatestReading(stationName, dataPSI.data);
