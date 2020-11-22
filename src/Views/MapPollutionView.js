@@ -2,21 +2,48 @@ import React from "react";
 import MapPollution from "../Components/MapPollution";
 import { Helmet } from "react-helmet";
 import TableIndicesCategories from "../Components/TableIndicesCategories";
+import Loader from "../Components/Loader";
 
 function MapPollutionView({ data }) {
-  return (
-    <div>
-      <Helmet>
-        <title>Map of pollutants in Singapore</title>
-        <meta
-          name="description"
-          content="This page shows the main pollutants sub-indices and the PSI value across five locations in Singapore"
-        />
-      </Helmet>
-      <MapPollution data={data} />
-      <TableIndicesCategories index={"PSI value"} />
-    </div>
-  );
+  let content = "";
+
+  if (data.error) {
+    content = (
+      <div className="flex justify-center content-center my-5">
+        <p>Could download the necessary data to plot the results</p>
+      </div>
+    );
+  }
+
+  if (data.loading) {
+    content = <Loader />;
+  }
+
+  if (data.data) {
+    if (data.data.items.length !== 0) {
+      content = (
+        <div>
+          <Helmet>
+            <title>Map of pollutants in Singapore</title>
+            <meta
+              name="description"
+              content="This page shows the main pollutants sub-indices and the PSI value across five locations in Singapore"
+            />
+          </Helmet>
+          <MapPollution data={data} />
+          <TableIndicesCategories index={"PSI value"} />
+        </div>
+      );
+    } else {
+      content = (
+        <div className="flex justify-center content-center my-5">
+          <p>Could download the necessary data to plot the results</p>
+        </div>
+      );
+    }
+  }
+
+  return content;
 }
 
 export default MapPollutionView;
