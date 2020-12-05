@@ -1,21 +1,42 @@
 import React from "react";
 import Loader from "./Loader";
 import { ReadingAtUserLocation } from "../Functions/Utils";
+import { Link } from "react-router-dom";
 
-function CurrentValue({ data, locationUser }) {
+function CurrentValue({ dataTmp, dataRH, locationUser }) {
   let content = null;
 
-  if (data.error || locationUser.error) {
-    content = <div>Could not fetch API</div>;
-  }
-
-  if (data.loading && locationUser.loading) {
+  if (dataTmp.error || dataRH.error || locationUser.error) {
+    content =
+      // <p className="p-5">
+      //   Sorry. data.gov.sg is under maintenance and we could not download the
+      //   current weather conditions. Please try again later.
+      // </p>
+      "";
+  } else if (dataTmp.loading && dataRH.loading && locationUser.loading) {
     content = <Loader />;
-  }
-
-  if (data.data && locationUser.data) {
+  } else if (dataTmp.data && locationUser.data) {
     content = (
-      <span>{ReadingAtUserLocation(data.data, locationUser.data)}</span>
+      <div>
+        <div className="flex my-3 justify-center">
+          <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex" />
+        </div>
+        <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
+          <Link to="/weather-singapore">
+            Temperature:{" "}
+            <span>
+              {ReadingAtUserLocation(dataTmp.data, locationUser.data)}
+            </span>
+            °C
+          </Link>
+        </div>
+        <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
+          <Link to="/weather-singapore">
+            Relative humidity:{" "}
+            <span>{ReadingAtUserLocation(dataRH.data, locationUser.data)}</span>
+          </Link>
+        </div>
+      </div>
     );
   }
 

@@ -4,6 +4,7 @@ import L from "leaflet";
 import { Map, TileLayer, Marker, Popup, ZoomControl } from "react-leaflet";
 import { ForecastToIcon } from "../Functions/Utils";
 import { Helmet } from "react-helmet";
+import Loader from "./Loader";
 
 function GetIcon(description, _iconSize) {
   return L.icon({
@@ -61,79 +62,94 @@ function MapWeather24H({ data }) {
   }
 
   const position = [1.3521, 103.8198];
-  return (
-    <div className="relative">
-      <Helmet>
-        <title>24-hour weather forecasts</title>
-        <meta
-          name="description"
-          content="In this page you can monitor the next 24 hours weather forecasts for five locations across Singapore"
-        />
-      </Helmet>
-      <Map
-        center={position}
-        zoom={zoom}
-        style={{ height: height - 108 - 104, width: "100%" }}
-        className="z-0"
-        zoomControl={false}
-      >
-        <ZoomControl position="bottomleft" />
-        <TileLayer
-          className="leaflet-tile-pane"
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {data.data
-          ? Object.keys(data.data["items"][0]["periods"][0]["regions"]).map(
-              (marker) => (
-                <Marker
-                  key={marker}
-                  position={[
-                    regionsMetadata[marker].latitude,
-                    regionsMetadata[marker].longitude,
-                  ]}
-                  icon={GetIcon(
-                    data.data["items"][0]["periods"][indexForecast]["regions"][
-                      marker
-                    ],
-                    iconSize
-                  )}
-                >
-                  <Popup>
-                    <div className="text-center">
-                      <span className="text-lg capitalize">{marker}</span>{" "}
-                      <br />
-                      {
-                        data.data["items"][0]["periods"][indexForecast][
-                          "regions"
-                        ][marker]
-                      }
-                    </div>
-                  </Popup>
-                </Marker>
-              )
-            )
-          : ""}
-      </Map>
-      <div className="z-10 absolute top-0 right-0 left-0 mx-auto text-center">
-        <div className="inline-flex mt-2 shadow-lg">
+
+  let content;
+  if (data.error) {
+    content = (
+      <p className="p-5">
+        Sorry. data.gov.sg is under maintenance and we could not download the
+        current weather forecasts. Please try again later.
+      </p>
+    );
+  } else if (data.loading) {
+    content = <Loader />;
+  } else {
+    content = (
+      <div className="relative">
+        <Helmet>
+          <title>24-hour weather forecasts</title>
+          <meta
+            name="description"
+            content="In this page you can monitor the next 24 hours weather forecasts for five locations across Singapore"
+          />
+        </Helmet>
+        <Map
+          center={position}
+          zoom={zoom}
+          style={{ height: height - 108 - 104, width: "100%" }}
+          className="z-0"
+          zoomControl={false}
+        >
+          <ZoomControl position="bottomleft" />
+          <TileLayer
+            className="leaflet-tile-pane"
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
           {data.data
-            ? data.data["items"][0]["periods"].map((period, index) => (
-                <ButtonForecast
-                  key={period.time.start}
-                  text={
-                    period.time.start.split("T")[1].split(":")[0] +
-                    "-" +
-                    period.time.end.split("T")[1].split(":")[0]
-                  }
-                  index={index}
-                />
-              ))
+            ? Object.keys(data.data["items"][0]["periods"][0]["regions"]).map(
+                (marker) => (
+                  <Marker
+                    key={marker}
+                    position={[
+                      regionsMetadata[marker].latitude,
+                      regionsMetadata[marker].longitude,
+                    ]}
+                    icon={GetIcon(
+                      data.data["items"][0]["periods"][indexForecast][
+                        "regions"
+                      ][marker],
+                      iconSize
+                    )}
+                  >
+                    <Popup>
+                      <div className="text-center">
+                        <span className="text-lg capitalize">{marker}</span>{" "}
+                        <br />
+                        {
+                          data.data["items"][0]["periods"][indexForecast][
+                            "regions"
+                          ][marker]
+                        }
+                      </div>
+                    </Popup>
+                  </Marker>
+                )
+              )
             : ""}
+        </Map>
+        <div className="z-10 absolute top-0 right-0 left-0 mx-auto text-center">
+          <div className="inline-flex mt-2 shadow-lg">
+            {data.data
+              ? data.data["items"][0]["periods"].map((period, index) => (
+                  <ButtonForecast
+                    key={period.time.start}
+                    text={
+                      period.time.start.split("T")[1].split(":")[0] +
+                      "-" +
+                      period.time.end.split("T")[1].split(":")[0]
+                    }
+                    index={index}
+                  />
+                ))
+              : ""}
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  return content;
 }
 
 export default MapWeather24H;

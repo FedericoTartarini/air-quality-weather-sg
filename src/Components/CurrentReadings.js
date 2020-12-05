@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import MajorPollutants from "./MajorPollutants";
-import CurrentValue from "./CurrentValue";
 import { ClosestStation } from "../Functions/Utils";
 import CurrentForecast from "./CurrentForecast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCrosshairs } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import CurrentValue from "./CurrentValue";
 
 function CurrentReadings({
   dataPSI,
@@ -80,23 +80,11 @@ function CurrentReadings({
             />
           </div>
           <div className="text-center my-5">
-            <div className="flex my-3 justify-center">
-              <div className="w-16 h-1 rounded-full bg-gray-400 inline-flex" />
-            </div>
-            <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
-              <Link to="/weather-singapore">
-                Temperature:{" "}
-                <CurrentValue data={dataTmp} locationUser={locationUser} />
-                °C
-              </Link>
-            </div>
-
-            <div className="text-base leading-relaxed py-1 xl:w-2/4 lg:w-3/4 mx-auto">
-              <Link to="/weather-singapore">
-                Relative humidity:{" "}
-                <CurrentValue data={dataRH} locationUser={locationUser} />%
-              </Link>
-            </div>
+            <CurrentValue
+              dataTmp={dataTmp}
+              dataRH={dataRH}
+              locationUser={locationUser}
+            />
             <Link to={"/weather-forecast-singapore"}>
               <CurrentForecast
                 locationUser={locationUser}

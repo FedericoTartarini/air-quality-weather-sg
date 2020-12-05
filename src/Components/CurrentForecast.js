@@ -9,17 +9,18 @@ import Loader from "./Loader";
 function CurrentForecast({ dataFor2H, dataFor24H, locationUser, station }) {
   let content = "";
   if (dataFor2H.error || dataFor24H.error || locationUser.error) {
-    content = <div>Could not fetch API</div>;
-  }
-
-  if (dataFor2H.loading || dataFor24H.loading || locationUser.loading) {
+    content = (
+      <p className="p-5">
+        Sorry. data.gov.sg is under maintenance and we could not download the
+        current weather forecasts. Please try again later.
+      </p>
+    );
+  } else if (dataFor2H.loading || dataFor24H.loading || locationUser.loading) {
     content = <Loader />;
-  }
-
-  if (dataFor2H.data && dataFor24H.data && locationUser.data) {
-    let text = "";
-    let stringForecast = "";
-    let iconSource = "";
+  } else if (dataFor2H.data && dataFor24H.data && locationUser.data) {
+    let text;
+    let stringForecast;
+    let iconSource;
 
     if (Object.entries(dataFor2H.data.items[0]).length === 0) {
       text = "next 6-h weather forecast";

@@ -57,6 +57,24 @@ function App() {
   const dataFor2H = useHttpRequest(urlWeather2H);
   const dataFor24H = useHttpRequest(urlWeather24H);
 
+  if (dataFor24H.data) {
+    if (dataFor24H.data.items.length === 1) {
+      dataFor24H.error = true;
+    }
+  }
+
+  if (dataTmp.data) {
+    if (dataTmp.data.items.length === 1) {
+      dataTmp.error = true;
+    }
+  }
+
+  if (dataFor24H.data) {
+    if (dataFor24H.data.items.length === 1) {
+      dataFor24H.error = true;
+    }
+  }
+
   const [locationUser, setLocationUser] = useState({
     loading: false,
     data: {

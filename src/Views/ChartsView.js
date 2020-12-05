@@ -20,8 +20,11 @@ function ChartsView({ data, locationUser }) {
 
   if (data.error) {
     content = (
-      <div className="flex justify-center content-center my-5">
-        <p>Could download the necessary data to plot the results</p>
+      <div className="flex justify-center content-center">
+        <p className="p-5">
+          Sorry. data.gov.sg is under maintenance and we could not download the
+          data to generate the plots. Please try again later.
+        </p>
       </div>
     );
   }
@@ -79,8 +82,11 @@ function ChartsView({ data, locationUser }) {
       );
     } else {
       content = (
-        <div className="flex justify-center content-center my-5">
-          <p>Could download the necessary data to plot the results</p>
+        <div className="flex justify-center content-center">
+          <p className="p-5">
+            Sorry. data.gov.sg is under maintenance and we could not download
+            the data to generate the plots. Please try again later.
+          </p>
         </div>
       );
     }

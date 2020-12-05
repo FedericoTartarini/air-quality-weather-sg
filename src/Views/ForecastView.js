@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import MapWeather2H from "../Components/MapWeather2H";
 import MapWeather24H from "../Components/MapWeather24H";
 import RainViewer from "../Components/RainViewer";
@@ -13,6 +13,15 @@ function ForecastView({ dataFor2H, dataFor24H }) {
       subViews.unshift("2-h Forecast");
     }
   }
+
+  useEffect(() => {
+    if (dataFor24H.data) {
+      if (dataFor24H.data.items.length === 1) {
+        // subViews = subViews.filter((e) => e !== "24-h Forecast");
+        setButtonSelection("Rain Radar");
+      }
+    }
+  }, [dataFor24H]);
 
   function LinkViewSelector({ text }) {
     return (
@@ -48,6 +57,7 @@ function ForecastView({ dataFor2H, dataFor24H }) {
     if (selection === "2-h Forecast") {
       return <MapWeather2H data={dataFor2H} />;
     } else if (selection === "24-h Forecast") {
+      console.log(dataFor24H);
       return <MapWeather24H data={dataFor24H} />;
     } else {
       return <RainViewer />;
