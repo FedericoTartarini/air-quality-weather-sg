@@ -51,23 +51,25 @@ function CurrentReadingsView({
       <Suspense fallback={<Loader />}>
         <Recommendation dataPSI={dataPSI} locationUser={locationUser} />
       </Suspense>
-      <div className="container mx-auto my-3 flex-col p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
+      <div className="container mx-auto my-3 p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
         <div className="text-gray-800 mb-2">
           <div className="font-bold text-md mb-2">Learn more about:</div>
           <ul className="list-disc list-inside">
             <li className="py-1">
-              <Link to="/climate-of-singapore">Climate of Singapore</Link>
+              <Link to="/climate-of-singapore">The climate of Singapore</Link>
             </li>
             <li className="py-1">
               <Link to="/pollutant-standards-index-singapore">
-                Pollutant Standards Index (PSI)
+                What the Pollutant Standards Index (PSI) measures
               </Link>
             </li>
             <li className="py-1">
-              <Link to="/pm25">1-h Particular Matter 2.5 µm</Link>
+              <Link to="/pm25">What is 1-h Particular Matter 2.5 µm</Link>
             </li>
             <li className="py-1">
-              <Link to="/weather-singapore">Weather forecast data source</Link>
+              <Link to="/weather-singapore">
+                Where we are getting the data from
+              </Link>
             </li>
           </ul>
         </div>
