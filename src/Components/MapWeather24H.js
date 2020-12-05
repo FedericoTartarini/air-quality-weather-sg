@@ -67,8 +67,8 @@ function MapWeather24H({ data }) {
   if (data.error) {
     content = (
       <p className="p-5">
-        Sorry. data.gov.sg is under maintenance and we could not download the
-        current weather forecasts. Please try again later.
+        data.gov.sg is under maintenance and we could not download the
+        current weather forecasts. Please try again later. Sorry for the inconvenience.
       </p>
     );
   } else if (data.loading) {

@@ -11,8 +11,8 @@ function CurrentForecast({ dataFor2H, dataFor24H, locationUser, station }) {
   if (dataFor2H.error || dataFor24H.error || locationUser.error) {
     content = (
       <p className="p-5">
-        Sorry. data.gov.sg is under maintenance and we could not download the
-        current weather forecasts. Please try again later.
+        data.gov.sg is under maintenance and we could not download the
+        current weather forecasts. Please try again later. Sorry for the inconvenience.
       </p>
     );
   } else if (dataFor2H.loading || dataFor24H.loading || locationUser.loading) {

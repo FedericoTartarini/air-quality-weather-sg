@@ -9,8 +9,8 @@ function CurrentValue({ dataTmp, dataRH, locationUser }) {
   if (dataTmp.error || dataRH.error || locationUser.error) {
     content =
       // <p className="p-5">
-      //   Sorry. data.gov.sg is under maintenance and we could not download the
-      //   current weather conditions. Please try again later.
+      //   data.gov.sg is under maintenance and we could not download the
+      //   current weather conditions. Please try again later. Sorry for the inconvenience.
       // </p>
       "";
   } else if (dataTmp.loading && dataRH.loading && locationUser.loading) {

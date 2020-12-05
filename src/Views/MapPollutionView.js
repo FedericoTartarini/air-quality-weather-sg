@@ -11,8 +11,8 @@ function MapPollutionView({ data }) {
     content = (
       <div className="flex justify-center content-center">
         <p className="p-5">
-          Sorry. data.gov.sg is under maintenance and we could not download the
-          data to generate the plots. Please try again later.
+          data.gov.sg is under maintenance and we could not download the
+          data to generate the plots. Please try again later. Sorry for the inconvenience.
         </p>
       </div>
     );
@@ -41,8 +41,8 @@ function MapPollutionView({ data }) {
       content = (
         <div className="flex justify-center content-center p-5">
           <p className="p-5">
-            Sorry. data.gov.sg is under maintenance and we could not download
-            the data to generate the plots. Please try again later.
+            data.gov.sg is under maintenance and we could not download
+            the data to generate the plots. Please try again later. Sorry for the inconvenience.
           </p>
         </div>
       );
