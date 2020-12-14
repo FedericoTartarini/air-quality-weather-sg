@@ -54,24 +54,26 @@ function CurrentReadingsView({
       <div className="container mx-auto my-3 p-8 items-center justify-center rounded overflow-hidden border shadow-lg">
         <div className="text-gray-800 mb-2">
           <div className="font-bold text-md mb-2">Learn more about:</div>
-          <ul className="list-disc list-inside">
-            <li className="py-1">
-              <Link to="/climate-of-singapore">The climate of Singapore</Link>
-            </li>
-            <li className="py-1">
-              <Link to="/pollutant-standards-index-singapore">
-                What the Pollutant Standards Index (PSI) measures
-              </Link>
-            </li>
-            <li className="py-1">
-              <Link to="/pm25">What is 1-h Particular Matter 2.5 µm</Link>
-            </li>
-            <li className="py-1">
-              <Link to="/weather-singapore">
-                Where we are getting the data from
-              </Link>
-            </li>
-          </ul>
+          <div>
+            <ul className="list-disc list-inside">
+              <li className="py-1">
+                <Link to="/climate-of-singapore">The climate of Singapore</Link>
+              </li>
+              <li className="py-1">
+                <Link to="/pollutant-standards-index-singapore">
+                  What the Pollutant Standards Index (PSI) measures
+                </Link>
+              </li>
+              <li className="py-1">
+                <Link to="/pm25">What is 1-h Particular Matter 2.5 µm</Link>
+              </li>
+              <li className="py-1">
+                <Link to="/weather-singapore">
+                  Where we are getting the data from
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
