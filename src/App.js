@@ -57,23 +57,22 @@ function App() {
   const dataFor2H = useHttpRequest(urlWeather2H);
   const dataFor24H = useHttpRequest(urlWeather24H);
 
-  if (dataFor24H.data) {
-    if (dataFor24H.data.items.length === 1) {
-      dataFor24H.error = true;
-    }
-  }
-
   if (dataTmp.data) {
-    if (dataTmp.data.items.length === 1) {
+    // console.log(dataTmp.data.items[0].readings.length);
+    // fixme the code below is not very good
+    if (dataTmp.data.items[0].readings.length === 1) {
       dataTmp.error = true;
     }
   }
 
-  if (dataFor24H.data) {
-    if (dataFor24H.data.items.length === 1) {
-      dataFor24H.error = true;
-    }
-  }
+  // fixme if there are no data the website crashes
+  // if (dataFor24H.data) {
+  //   console.log(dataFor24H.data.items.length);
+  //   console.log(dataFor24H.data.items);
+  //   if (dataFor24H.data.items.length === 1) {
+  //     dataFor24H.error = true;
+  //   }
+  // }
 
   const [locationUser, setLocationUser] = useState({
     loading: false,

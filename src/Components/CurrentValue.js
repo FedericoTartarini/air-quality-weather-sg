@@ -15,7 +15,7 @@ function CurrentValue({ dataTmp, dataRH, locationUser }) {
       "";
   } else if (dataTmp.loading && dataRH.loading && locationUser.loading) {
     content = <Loader />;
-  } else if (dataTmp.data && locationUser.data) {
+  } else if (dataTmp.data && dataRH.data && locationUser.data) {
     content = (
       <div>
         <div className="flex my-3 justify-center">
