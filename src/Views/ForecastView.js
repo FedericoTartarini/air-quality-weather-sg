@@ -4,9 +4,9 @@ import MapWeather24H from "../Components/MapWeather24H";
 import RainViewer from "../Components/RainViewer";
 
 function ForecastView({ dataFor2H, dataFor24H }) {
-  const [buttonSelection, setButtonSelection] = useState("24-h Forecast");
+  const [buttonSelection, setButtonSelection] = useState("Rain Radar");
 
-  let subViews = ["24-h Forecast", "Rain Radar"];
+  let subViews = ["Rain Radar"];
 
   if (dataFor2H.data) {
     if (Object.entries(dataFor2H.data.items[0]).length !== 0) {
@@ -14,14 +14,11 @@ function ForecastView({ dataFor2H, dataFor24H }) {
     }
   }
 
-  useEffect(() => {
-    if (dataFor24H.data) {
-      if (dataFor24H.data.items.length === 1) {
-        // subViews = subViews.filter((e) => e !== "24-h Forecast");
-        setButtonSelection("Rain Radar");
-      }
+  if (dataFor24H.data) {
+    if (Object.entries(dataFor24H.data.items[0]).length !== 0) {
+      subViews.unshift("24-h Forecast");
     }
-  }, [dataFor24H]);
+  }
 
   function LinkViewSelector({ text }) {
     return (
