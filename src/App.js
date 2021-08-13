@@ -167,7 +167,7 @@ function App() {
   }
 
   return (
-    <Router basename="/">
+    <Router basename="/air-quality-weather-sg">
       <div className="relative pb-10 min-h-screen">
         <NavigationBar />
         <Switch>
