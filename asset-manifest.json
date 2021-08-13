@@ -12,8 +12,8 @@
     "static/js/4.28a12443.chunk.js": "/air-quality-weather-sg/static/js/4.28a12443.chunk.js",
     "static/js/4.28a12443.chunk.js.map": "/air-quality-weather-sg/static/js/4.28a12443.chunk.js.map",
     "main.css": "/air-quality-weather-sg/static/css/main.f2174e45.chunk.css",
-    "main.js": "/air-quality-weather-sg/static/js/main.15f800e0.chunk.js",
-    "main.js.map": "/air-quality-weather-sg/static/js/main.15f800e0.chunk.js.map",
+    "main.js": "/air-quality-weather-sg/static/js/main.5c93f140.chunk.js",
+    "main.js.map": "/air-quality-weather-sg/static/js/main.5c93f140.chunk.js.map",
     "runtime-main.js": "/air-quality-weather-sg/static/js/runtime-main.5ad25da0.js",
     "runtime-main.js.map": "/air-quality-weather-sg/static/js/runtime-main.5ad25da0.js.map",
     "static/js/7.0c901709.chunk.js": "/air-quality-weather-sg/static/js/7.0c901709.chunk.js",
@@ -45,7 +45,7 @@
     "static/js/20.cea2a1ea.chunk.js": "/air-quality-weather-sg/static/js/20.cea2a1ea.chunk.js",
     "static/js/20.cea2a1ea.chunk.js.map": "/air-quality-weather-sg/static/js/20.cea2a1ea.chunk.js.map",
     "index.html": "/air-quality-weather-sg/index.html",
-    "precache-manifest.71b050b70068ed965c6a23fa347b75a6.js": "/air-quality-weather-sg/precache-manifest.71b050b70068ed965c6a23fa347b75a6.js",
+    "precache-manifest.a8b6f7e1b16b07ff6b60c88d464db523.js": "/air-quality-weather-sg/precache-manifest.a8b6f7e1b16b07ff6b60c88d464db523.js",
     "service-worker.js": "/air-quality-weather-sg/service-worker.js",
     "static/css/4.7d011da2.chunk.css.map": "/air-quality-weather-sg/static/css/4.7d011da2.chunk.css.map",
     "static/css/main.f2174e45.chunk.css.map": "/air-quality-weather-sg/static/css/main.f2174e45.chunk.css.map",
@@ -89,6 +89,6 @@
     "static/js/runtime-main.5ad25da0.js",
     "static/js/7.0c901709.chunk.js",
     "static/css/main.f2174e45.chunk.css",
-    "static/js/main.15f800e0.chunk.js"
+    "static/js/main.5c93f140.chunk.js"
   ]
 }
