@@ -26,7 +26,7 @@ function Footer() {
           </picture>
           <div>
             <p className="text-xl">Air Quality and Weather SG</p>
-            <p className="text-xs ml-3">v 0.0.1</p>
+            <p className="text-xs ml-3">v 0.0.2</p>
           </div>
         </span>
         <p className="text-sm sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
