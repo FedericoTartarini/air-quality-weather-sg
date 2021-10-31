@@ -1,9 +1,9 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import NavigationBar from "./Components/NavigationBar";
 import CurrentReadingsView from "./Views/CurrentReadingsView";
-import { useHttpRequest } from "./Hooks/HttpRequest";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Loader from "./Components/Loader";
+import { useQuery } from "react-query";
 
 const WikiClimate = lazy(() => import("./Views/WikiClimate"));
 const WikiPM25 = lazy(() => import("./Views/WikiPM25"));
@@ -50,12 +50,19 @@ function App() {
   const urlPM25 =
     "https://api.data.gov.sg/v1/environment/pm25?date=" + dateString;
 
-  const dataPSI = useHttpRequest(urlPSI);
-  const dataTmp = useHttpRequest(urlTmp);
-  const dataRH = useHttpRequest(urlRH);
-  const dataPM25 = useHttpRequest(urlPM25);
-  const dataFor2H = useHttpRequest(urlWeather2H);
-  const dataFor24H = useHttpRequest(urlWeather24H);
+  const Query = (url) => {
+    const { isLoading, error, data } = useQuery(url, () =>
+      fetch(url).then((res) => res.json())
+    );
+    return { data: data, loading: isLoading, error: error };
+  };
+
+  const dataPSI = Query(urlPSI);
+  const dataFor2H = Query(urlWeather2H);
+  const dataTmp = Query(urlTmp);
+  const dataRH = Query(urlRH);
+  const dataPM25 = Query(urlPM25);
+  const dataFor24H = Query(urlWeather24H);
 
   if (dataTmp.data) {
     // console.log(dataTmp.data.items[0].readings.length);

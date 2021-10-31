@@ -3,12 +3,24 @@ import "./tailwind.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { hydrate, render } from "react-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>,
+    rootElement
+  );
 } else {
-  render(<App />, rootElement);
+  render(
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>,
+    rootElement
+  );
 }
 
 // If you want your app to work offline and load faster, you can change
